@@ -9,6 +9,7 @@ class OdooFeatureImplementation(models.Model):
     _name = "odoo_feature_implementation"
     _inherit = [
         "mixin.transaction_open",
+        "mixin.transaction_cancel",
     ]
     _description = "Odoo Feature Implementation"
     _approval_from_state = "draft"
@@ -20,11 +21,13 @@ class OdooFeatureImplementation(models.Model):
 
     _policy_field_order = [
         "open_ok",
+        "cancel_ok",
         "restart_ok",
         "manual_number_ok",
     ]
     _header_button_order = [
         "action_open",
+        "action_cancel",
         "action_restart",
     ]
 
@@ -32,6 +35,7 @@ class OdooFeatureImplementation(models.Model):
     _state_filter_order = [
         "dom_draft",
         "dom_open",
+        "dom_cancel",
     ]
 
     _create_sequence_state = "open"
@@ -72,6 +76,7 @@ class OdooFeatureImplementation(models.Model):
         selection=[
             ("draft", "Initial Preparation"),
             ("open", "Running"),
+            ("cancel", "Installed Not Used"),
         ],
         copy=False,
         default="draft",
@@ -88,6 +93,7 @@ class OdooFeatureImplementation(models.Model):
         res = super(OdooFeatureImplementation, self)._get_policy_field()
         policy_field = [
             "open_ok",
+            "cancel_ok",
             "restart_ok",
             "manual_number_ok",
         ]
