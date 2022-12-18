@@ -61,6 +61,12 @@ class OdooFeatureImplementation(models.Model):
         ondelete="restrict",
         required=True,
     )
+    category_id = fields.Many2one(
+        string="Category",
+        comodel_name="odoo_feature_category",
+        related="feature_id.category_id",
+        store=True,
+    )
     state = fields.Selection(
         string="State",
         selection=[

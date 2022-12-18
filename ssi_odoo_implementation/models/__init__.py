@@ -4,6 +4,7 @@
 
 from . import (
     odoo_version,
+    odoo_feature_category,
     odoo_feature,
     odoo_environment,
     odoo_implementation,

@@ -27,6 +27,7 @@
                 <field name="implementation_id" />
                 <field name="partner_id" />
                 <field name="feature_id" />
+                <field name="category_id" />
                 <field name="date" />
             </xpath>
         </data>
@@ -49,6 +50,7 @@
                 </xpath>
                 <xpath expr="//group[@name='header_right']" position="inside">
                     <field name="feature_id" />
+                    <field name="category_id" />
                     <field name="date" />
                 </xpath>
             </data>
