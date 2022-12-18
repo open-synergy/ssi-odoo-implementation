@@ -1,6 +1,8 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_odoo_version_configurator,odoo_version - configurator,model_odoo_version,odoo_version_group,1,1,1,1
 access_odoo_version_all,odoo_version - all user,model_odoo_version,,1,0,0,0
+access_odoo_feature_category_configurator,odoo_feature_category - configurator,model_odoo_feature_category,odoo_feature_category_group,1,1,1,1
+access_odoo_feature_category_all,odoo_feature_category - all user,model_odoo_feature_category,,1,0,0,0
 access_odoo_feature_configurator,odoo_feature - configurator,model_odoo_feature,odoo_feature_group,1,1,1,1
 access_odoo_feature_all,odoo_feature - all user,model_odoo_feature,,1,0,0,0
 access_odoo_environment_configurator,odoo_environment - configurator,model_odoo_environment,odoo_environment_group,1,1,1,1
