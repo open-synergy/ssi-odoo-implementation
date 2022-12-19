@@ -4,6 +4,7 @@
      License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
 <odoo>
 <data noupdate="1">
+<!-- Odoo Implementation -->
 <record id="policy_template_odoo_implementation" model="policy.template">
     <field name="name">Standard</field>
     <field name="model_id" ref="model_odoo_implementation" />
@@ -15,7 +16,7 @@
     <field name="python_code">result=True</field>
 </record>
 
-<!-- overtime  restart_ok -->
+<!-- Odoo Implementation: Open -->
 <record id="policy_template_odoo_implementation_open" model="policy.template_detail">
     <field name="template_id" ref="policy_template_odoo_implementation" />
     <field
@@ -33,6 +34,7 @@
     <field name="restrict_additional" eval="0" />
 </record>
 
+<!-- Odoo Implementation: Done -->
 <record id="policy_template_odoo_implementation_done" model="policy.template_detail">
     <field name="template_id" ref="policy_template_odoo_implementation" />
     <field
@@ -50,7 +52,7 @@
     <field name="restrict_additional" eval="0" />
 </record>
 
-<!-- overtime  restart_ok -->
+<!-- Odoo Implementation: Restart -->
 <record id="policy_template_odoo_implementation_restart" model="policy.template_detail">
     <field name="template_id" ref="policy_template_odoo_implementation" />
     <field
@@ -71,7 +73,7 @@
     <field name="restrict_additional" eval="0" />
 </record>
 
-<!-- overtime  manual_number_ok -->
+<!-- Odoo Implementation: Manual Number -->
 <record
             id="policy_template_odoo_implementation_manual_number"
             model="policy.template_detail"
@@ -95,6 +97,7 @@
     <field name="restrict_additional" eval="0" />
 </record>
 
+<!-- Odoo Feature Implementation -->
 <record id="policy_template_odoo_feature_implementation" model="policy.template">
     <field name="name">Standard</field>
     <field name="model_id" ref="model_odoo_feature_implementation" />
@@ -104,6 +107,100 @@
             />
     <field name="sequence" eval="100" />
     <field name="python_code">result=True</field>
+</record>
+
+<record
+            id="policy_template_odoo_feature_implementation_confirm"
+            model="policy.template_detail"
+        >
+    <field name="template_id" ref="policy_template_odoo_feature_implementation" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','odoo_feature_implementation'),('name','=','confirm_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','odoo_feature_implementation'),('value','=','draft')]"
+            />
+    <field name="restrict_user" eval="1" />
+    <field name="computation_method">use_group</field>
+    <field
+                name="group_ids"
+                eval="[(6,0,[ref('odoo_feature_implementation_user_group')])]"
+            />
+    <field name="restrict_additional" eval="0" />
+</record>
+
+<!-- Odoo Implementation: Open -->
+<record
+            id="policy_template_odoo_feature_implementation_approve"
+            model="policy.template_detail"
+        >
+    <field name="template_id" ref="policy_template_odoo_feature_implementation" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','odoo_feature_implementation'),('name','=','approve_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','odoo_feature_implementation'),('value','=','confirm')]"
+            />
+    <field name="restrict_user" eval="0" />
+    <field name="restrict_additional" eval="1" />
+    <field name="additional_python_code">result = False
+if env.user.id in document.active_approver_user_ids.ids:
+    result = True</field>
+</record>
+
+<!-- overtime  reject_ok -->
+<record
+            id="policy_template_odoo_feature_implementation_reject"
+            model="policy.template_detail"
+        >
+    <field name="template_id" ref="policy_template_odoo_feature_implementation" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','odoo_feature_implementation'),('name','=','reject_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','odoo_feature_implementation'),('value','=','confirm')]"
+            />
+    <field name="restrict_user" eval="0" />
+    <field name="restrict_additional" eval="1" />
+    <field name="additional_python_code">result = False
+if env.user.id in document.active_approver_user_ids.ids:
+    result = True</field>
+</record>
+
+<!-- overtime  restart_approval_ok -->
+<record
+            id="policy_template_odoo_feature_implementation_restart_approval"
+            model="policy.template_detail"
+        >
+    <field name="template_id" ref="policy_template_odoo_feature_implementation" />
+    <field
+                name="field_id"
+                search="[('model_id.model','=','odoo_feature_implementation'),('name','=','restart_approval_ok')]"
+            />
+    <field name="restrict_state" eval="1" />
+    <field
+                name="state_ids"
+                search="[('field_id.model_id.model','=','odoo_feature_implementation'),('value','in',['confirm'])]"
+            />
+    <field name="restrict_user" eval="1" />
+    <field name="computation_method">use_group</field>
+    <field
+                name="group_ids"
+                eval="[(6,0,[ref('odoo_feature_implementation_validator_group')])]"
+            />
+    <field name="restrict_additional" eval="1" />
+    <field name="additional_python_code">result = False
+if not document.approval_template_id:
+    result = True</field>
 </record>
 
 <!-- overtime  restart_ok -->
@@ -142,7 +239,7 @@
     <field name="restrict_state" eval="1" />
     <field
                 name="state_ids"
-                search="[('field_id.model_id.model','=','odoo_feature_implementation'),('value','in',['draft','open'])]"
+                search="[('field_id.model_id.model','=','odoo_feature_implementation'),('value','in',['draft','open','done','cancel'])]"
             />
     <field name="restrict_user" eval="1" />
     <field name="computation_method">use_group</field>
@@ -166,7 +263,7 @@
     <field name="restrict_state" eval="1" />
     <field
                 name="state_ids"
-                search="[('field_id.model_id.model','=','odoo_feature_implementation'),('value','=','open')]"
+                search="[('field_id.model_id.model','=','odoo_feature_implementation'),('value','in',['open','cancel','reject'])]"
             />
     <field name="restrict_user" eval="1" />
     <field name="computation_method">use_group</field>
