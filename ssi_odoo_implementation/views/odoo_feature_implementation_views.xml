@@ -28,7 +28,7 @@
                 <field name="partner_id" />
                 <field name="feature_id" />
                 <field name="category_id" />
-                <field name="date" />
+                <field name="date" optional="hide" />
             </xpath>
         </data>
     </field>
