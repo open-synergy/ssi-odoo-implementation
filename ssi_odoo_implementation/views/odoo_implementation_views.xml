@@ -12,7 +12,14 @@
             ref="ssi_transaction_mixin.mixin_transaction_view_search"
         />
     <field name="arch" type="xml">
-        <data />
+        <data>
+            <xpath expr="//field[@name='user_id']" position="after">
+                <field name="partner_id" />
+                <field name="domain" />
+                <field name="version_id" />
+                <field name="environment_id" />
+            </xpath>
+        </data>
     </field>
 </record>
 
