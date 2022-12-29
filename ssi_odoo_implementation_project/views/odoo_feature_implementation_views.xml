@@ -70,4 +70,30 @@
         </data>
     </field>
 </record>
+
+<record id="odoo_feature_implementation_view_search" model="ir.ui.view">
+    <field name="name">odoo_feature_implementation search</field>
+    <field name="model">odoo_feature_implementation</field>
+    <field
+            name="inherit_id"
+            ref="ssi_odoo_implementation.odoo_feature_implementation_view_search"
+        />
+    <field name="arch" type="xml">
+        <data>
+            <xpath expr="//separator[@name='activity']" position="before">
+                <separator name="task" />
+                <filter
+                        name="with_open_task"
+                        string="With Open Task"
+                        domain="[('num_total_open_task','>',0)]"
+                    />
+               <filter
+                        name="without_open_task"
+                        string="Without Open Task"
+                        domain="[('num_total_open_task','=',0)]"
+                    />
+            </xpath>
+        </data>
+    </field>
+</record>
 </odoo>
