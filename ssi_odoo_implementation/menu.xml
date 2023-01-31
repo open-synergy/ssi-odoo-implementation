@@ -9,6 +9,8 @@
         web_icon="ssi_odoo_implementation,static/description/icon.png"
     />
 
+<menuitem id="menu_github" name="Github" parent="menu_root_odoo" sequence="97" />
+
 <menuitem
         id="menu_odoo_reporting"
         name="Reporting"

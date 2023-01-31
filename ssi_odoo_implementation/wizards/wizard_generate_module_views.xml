@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2023 OpenSynergy Indonesia
+     Copyright 2023 PT. Simetri Sinergi Indonesia
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<odoo>
+    <record id="wizard_generate_module_view_form" model="ir.ui.view">
+        <field name="model">wizard.generate_module</field>
+        <field name="arch" type="xml">
+            <form>
+                <group name="header">
+                    <field name="repository_id" />
+                    <field name="odoo_version_ids" widget="many2many_tags" />
+                </group>
+                <footer>
+                    <button
+                        name="generate"
+                        string="Generate"
+                        type="object"
+                        class="oe_highlight"
+                    />
+                    or
+                    <button string="Cancel" class="oe_link" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="wizard_generate_module_action" model="ir.actions.act_window">
+        <field name="name">Generate Modules</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">wizard.generate_module</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem
+        id="wizard_generate_module_menu"
+        parent="menu_github"
+        sequence="2"
+        action="wizard_generate_module_action"
+    />
+</odoo>
