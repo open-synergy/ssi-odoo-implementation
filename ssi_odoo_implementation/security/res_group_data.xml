@@ -40,6 +40,51 @@
         />
 </record>
 
+<record id="odoo_repository_group" model="res.groups">
+    <field name="name">Odoo Repository</field>
+    <field name="category_id" ref="odoo_configurator_module_category" />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+
+<record id="odoo_module_group" model="res.groups">
+    <field name="name">Odoo Module</field>
+    <field name="category_id" ref="odoo_configurator_module_category" />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+
+<record id="odoo_technical_requirement_group" model="res.groups">
+    <field name="name">Odoo Technical Requirement</field>
+    <field name="category_id" ref="odoo_configurator_module_category" />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+
+<record id="odoo_wizard_generate_repo_group" model="res.groups">
+    <field name="name">Generate Repositories</field>
+    <field name="category_id" ref="odoo_configurator_module_category" />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+
+<record id="odoo_wizard_generate_modules_group" model="res.groups">
+    <field name="name">Generate Modules</field>
+    <field name="category_id" ref="odoo_configurator_module_category" />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+
 <record id="odoo_implementation_viewer_group" model="res.groups">
     <field name="name">Viewer</field>
     <field name="category_id" ref="odoo_implementation_workflow_module_category" />

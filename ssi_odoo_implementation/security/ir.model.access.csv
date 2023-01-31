@@ -7,9 +7,19 @@ access_odoo_feature_configurator,odoo_feature - configurator,model_odoo_feature,
 access_odoo_feature_all,odoo_feature - all user,model_odoo_feature,,1,0,0,0
 access_odoo_environment_configurator,odoo_environment - configurator,model_odoo_environment,odoo_environment_group,1,1,1,1
 access_odoo_environment_all,odoo_environment - all user,model_odoo_environment,,1,0,0,0
+access_odoo_repository_configurator,odoo_repository - configurator,model_odoo_repository,odoo_repository_group,1,1,1,1
+access_odoo_repository_all,odoo_repository - all user,model_odoo_repository,,1,0,0,0
+access_odoo_module_configurator,odoo_module - configurator,model_odoo_module,odoo_module_group,1,1,1,1
+access_odoo_module_all,odoo_module - all user,model_odoo_module,,1,0,0,0
+access_odoo_technical_requirement_configurator,odoo_technical_requirement - configurator,model_odoo_technical_requirement,odoo_technical_requirement_group,1,1,1,1
+access_odoo_technical_requirement_all,odoo_technical_requirement - all user,model_odoo_technical_requirement,,1,0,0,0
 access_odoo_implementation_all,odoo_implementation - user,model_odoo_implementation,,1,0,0,0
 access_odoo_implementation_viewer,odoo_implementation - viewer,model_odoo_implementation,odoo_implementation_viewer_group,1,0,0,0
 access_odoo_implementation_user,odoo_implementation - all,model_odoo_implementation,odoo_implementation_user_group,1,1,1,1
 access_odoo_feature_implementation_all,odoo_feature_implementation - user,model_odoo_feature_implementation,,1,0,0,0
 access_odoo_feature_implementation_viewer,odoo_feature_implementation - viewer,model_odoo_feature_implementation,odoo_feature_implementation_viewer_group,1,0,0,0
 access_odoo_feature_implementation_user,odoo_feature_implementation - all,model_odoo_feature_implementation,odoo_feature_implementation_user_group,1,1,1,1
+access_wizard_generate_repo_all,wizard.generate.repo - configurator,model_wizard_generate_repo,,1,0,0,0
+access_wizard_generate_repo_configurator,wizard.generate.repo - all user,model_wizard_generate_repo,odoo_wizard_generate_repo_group,1,1,1,1
+access_wizard_generate_module_all,wizard.generate.module - configurator,model_wizard_generate_module,,1,0,0,0
+access_wizard_generate_module_configurator,wizard.generate.module - all user,model_wizard_generate_module,odoo_wizard_generate_modules_group,1,1,1,1

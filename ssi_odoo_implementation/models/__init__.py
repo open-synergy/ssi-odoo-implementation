@@ -9,4 +9,7 @@ from . import (
     odoo_environment,
     odoo_implementation,
     odoo_feature_implementation,
+    odoo_repository,
+    odoo_module,
+    odoo_technical_requirement,
 )
