@@ -54,9 +54,9 @@ class WizardGenerateRepo(models.TransientModel):
         self.ensure_one()
         OdooRepo = self.env["odoo_repository"]
         for repo in repos:
-            check = self._check_repository(repo.name)
-            if not check:
-                OdooRepo.create(self._prepare_repo_data(repo))
+            # check = self._check_repository(repo.name)
+            # if not check:
+            OdooRepo.create(self._prepare_repo_data(repo))
 
     def get_github_connector(self):
         ICP = self.env["ir.config_parameter"]

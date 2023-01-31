@@ -37,6 +37,10 @@ install:
   - travis_install_nightly
   - pip install PyPDF2==1.26.0
   - pip list
+  - pip install PyGitHub
+  - pip install pygount
+  - pip install pathspec
+  - pip install GitPython
 
 script:
   - travis_run_tests
