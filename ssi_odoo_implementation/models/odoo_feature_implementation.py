@@ -74,6 +74,10 @@ class OdooFeatureImplementation(models.Model):
         related="implementation_id.partner_id",
         store=True,
     )
+    contact_id = fields.Many2one(
+        string="Contact",
+        comodel_name="res.partner",
+    )
     feature_id = fields.Many2one(
         string="Feature",
         comodel_name="odoo_feature",
@@ -120,3 +124,9 @@ class OdooFeatureImplementation(models.Model):
         ]
         res += policy_field
         return res
+
+    @api.onchange(
+        "partner_id",
+    )
+    def onchange_contact_id(self):
+        self.contact_id = False
