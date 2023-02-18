@@ -106,3 +106,13 @@ class OdooImplementation(models.Model):
         ]
         res += policy_field
         return res
+
+    def name_get(self):
+        result = []
+        for record in self:
+            if getattr(record, self._document_number_field) == "/":
+                name = record.domain
+            else:
+                name = record.domain + " (" + record.name + ")"
+            result.append((record.id, name))
+        return result
