@@ -42,6 +42,22 @@
                 <field name="ttype" />
                 <field name="category_id" />
             </xpath>
+            <xpath expr="//page[1]" position="before">
+                <page name="use_case" string="Use Cases">
+                    <group name="common_use_case" string="Common" colspan="4" col="2" />
+                    <field
+                            name="common_use_case_ids"
+                            domain="[('feature_id','=',False)]"
+                        />
+                    <group
+                            name="specific_use_case"
+                            string="Specific"
+                            colspan="4"
+                            col="2"
+                        />
+                    <field name="specific_use_case_ids" />
+                </page>
+            </xpath>
         </data>
     </field>
 </record>

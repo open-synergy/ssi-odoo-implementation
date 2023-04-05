@@ -24,3 +24,15 @@ class OdooFeature(models.Model):
         required=True,
         default="transaction",
     )
+    specific_use_case_ids = fields.One2many(
+        string="Specific Use Cases",
+        comodel_name="odoo_use_case",
+        inverse_name="feature_id",
+    )
+    common_use_case_ids = fields.Many2many(
+        string="Common Use Cases",
+        comodel_name="odoo_use_case",
+        relation="rel_odoo_feature_2_common_use_case",
+        column1="feature_id",
+        column2="use_case_id",
+    )
