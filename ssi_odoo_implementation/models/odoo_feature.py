@@ -14,3 +14,13 @@ class OdooFeature(models.Model):
         string="Category",
         comodel_name="odoo_feature_category",
     )
+    ttype = fields.Selection(
+        string="Type",
+        selection=[
+            ("transaction", "Transaction"),
+            ("master", "Master Data"),
+            ("report", "Report"),
+        ],
+        required=True,
+        default="transaction",
+    )
