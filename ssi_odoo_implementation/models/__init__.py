@@ -9,5 +9,6 @@ from . import (
     odoo_environment,
     odoo_implementation,
     odoo_feature_implementation,
+    odoo_feature_issue,
     odoo_use_case,
 )

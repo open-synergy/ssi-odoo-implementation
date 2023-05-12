@@ -15,3 +15,6 @@ access_odoo_feature_implementation_viewer,odoo_feature_implementation - viewer,m
 access_odoo_feature_implementation_user,odoo_feature_implementation - all,model_odoo_feature_implementation,odoo_feature_implementation_user_group,1,1,1,1
 access_odoo_use_case_configurator,odoo_use_case - configurator,model_odoo_use_case,odoo_use_case_group,1,1,1,1
 access_odoo_use_case_all,odoo_use_case - all user,model_odoo_use_case,,1,0,0,0
+access_odoo_feature_issue_all,odoo_feature_issue - user,model_odoo_feature_issue,,1,0,0,0
+access_odoo_feature_issue_viewer,odoo_feature_issue - viewer,model_odoo_feature_issue,odoo_feature_issue_viewer_group,1,0,0,0
+access_odoo_feature_issue_user,odoo_feature_issue - all,model_odoo_feature_issue,odoo_feature_issue_user_group,1,1,1,1
