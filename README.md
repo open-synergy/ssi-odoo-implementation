@@ -14,7 +14,12 @@ None
 
 [//]: # (addons)
 
-This part will be replaced when running the oca-gen-addons-table script from OCA/maintainer-tools.
+Available addons
+----------------
+addon | version | maintainers | summary
+--- | --- | --- | ---
+[ssi_odoo_implementation](ssi_odoo_implementation/) | 14.0.2.0.1 |  | Odoo Implementation
+[ssi_odoo_implementation_project](ssi_odoo_implementation_project/) | 14.0.1.4.1 |  | Odoo Implementation - Project Integration
 
 [//]: # (end addons)
 
