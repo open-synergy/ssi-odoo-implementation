@@ -5,15 +5,15 @@
 from odoo import fields, models
 
 
-class OdooVersion(models.Model):
-    _name = "odoo_version"
+class OdooModule(models.Model):
+    _name = "odoo_module"
     _inherit = ["mixin.master_data"]
-    _description = "Odoo Version"
+    _description = "Odoo Module"
 
-    all_module_ids = fields.Many2many(
-        string="All Modules",
-        comodel_name="odoo_module",
+    version_ids = fields.Many2many(
+        string="Versions",
+        comodel_name="odoo_version",
         relation="rel_odoo_version_2_module",
-        column1="version_id",
-        column2="module_id",
+        column1="module_id",
+        column2="version_id",
     )
