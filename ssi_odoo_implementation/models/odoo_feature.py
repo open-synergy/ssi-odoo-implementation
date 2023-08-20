@@ -14,6 +14,13 @@ class OdooFeature(models.Model):
         string="Category",
         comodel_name="odoo_feature_category",
     )
+    version_ids = fields.Many2many(
+        string="Versions",
+        comodel_name="odoo_version",
+        relation="rel_odoo_feature_2_version",
+        column1="feature_id",
+        column2="version_id",
+    )
     ttype = fields.Selection(
         string="Type",
         selection=[

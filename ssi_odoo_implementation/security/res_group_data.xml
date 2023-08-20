@@ -13,6 +13,15 @@
         />
 </record>
 
+<record id="odoo_module_group" model="res.groups">
+    <field name="name">Odoo Module</field>
+    <field name="category_id" ref="odoo_configurator_module_category" />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+
 <record id="odoo_feature_group" model="res.groups">
     <field name="name">Odoo Feature</field>
     <field name="category_id" ref="odoo_configurator_module_category" />
