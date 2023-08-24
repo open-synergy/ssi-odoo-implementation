@@ -40,6 +40,9 @@
             <xpath expr="//field[@name='active']" position="after">
                 <field name="version_ids" widget="many2many_tags" />
             </xpath>
+            <xpath expr="//page[1]" position="before">
+                <field name="dependency_ids" />
+            </xpath>
         </data>
     </field>
 </record>

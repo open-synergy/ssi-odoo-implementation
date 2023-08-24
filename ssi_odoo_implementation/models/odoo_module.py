@@ -17,3 +17,10 @@ class OdooModule(models.Model):
         column1="module_id",
         column2="version_id",
     )
+    dependency_ids = fields.Many2many(
+        string="Dependencies",
+        comodel_name="odoo_module",
+        relation="rel_odoo_module_2_dependency",
+        column1="module_id",
+        column2="dependency_id",
+    )

@@ -89,6 +89,17 @@
                     <field name="category_id" />
                     <field name="date" />
                 </xpath>
+                <xpath expr="//page[1]" position="before">
+                    <page name="module" string="Modules">
+                        <group
+                            name="installed_module"
+                            string="Installed Modules"
+                            colspan="4"
+                            col="2"
+                        />
+                        <field name="installed_module_ids" />
+                    </page>
+                </xpath>
             </data>
         </field>
     </record>
