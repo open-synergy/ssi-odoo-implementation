@@ -67,6 +67,15 @@
                     >
                         <field name="feature_implementation_ids" />
                     </page>
+                    <page name="module" string="Modules">
+                        <group
+                            name="installed_module"
+                            string="Installed Version Modules"
+                            colspan="4"
+                            col="2"
+                        />
+                        <field name="installed_version_module_ids" />
+                    </page>
                 </xpath>
 
             </data>

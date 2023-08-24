@@ -67,6 +67,13 @@ class OdooImplementation(models.Model):
         ondelete="restrict",
         required=True,
     )
+    installed_version_module_ids = fields.Many2many(
+        string="Installed Version Modules",
+        comodel_name="odoo_module",
+        relation="rel_odoo_implementation_2_installed_version_module",
+        column1="implementation_id",
+        column2="module_id",
+    )
     environment_id = fields.Many2one(
         string="Environment",
         comodel_name="odoo_environment",

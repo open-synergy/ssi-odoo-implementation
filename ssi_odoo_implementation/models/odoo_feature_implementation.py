@@ -90,6 +90,13 @@ class OdooFeatureImplementation(models.Model):
         related="feature_id.category_id",
         store=True,
     )
+    installed_module_ids = fields.Many2many(
+        string="Installed Modules",
+        comodel_name="odoo_module",
+        relation="rel_odoo_feature_implementation_2_installed_module",
+        column1="feature_implementation_id",
+        column2="module_id",
+    )
     state = fields.Selection(
         string="State",
         selection=[
