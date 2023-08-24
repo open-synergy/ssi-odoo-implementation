@@ -45,6 +45,9 @@
                 <field name="category_id" />
             </xpath>
             <xpath expr="//page[1]" position="before">
+                <page name="module" string="Modules">
+                    <field name="default_module_ids" />
+                </page>
                 <page name="use_case" string="Use Cases">
                     <group name="common_use_case" string="Common" colspan="4" col="2" />
                     <field
