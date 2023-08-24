@@ -41,6 +41,10 @@
                             widget="many2many_tags"
                             invisible="1"
                         />
+                    <field
+                            name="default_module_ids"
+                            domain="[('id','in',all_module_ids)]"
+                        />
                 </page>
             </xpath>
         </data>

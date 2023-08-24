@@ -21,6 +21,13 @@ class OdooFeature(models.Model):
         column1="feature_id",
         column2="version_id",
     )
+    default_module_ids = fields.Many2many(
+        string="Default Modules",
+        comodel_name="odoo_module",
+        relation="rel_odoo_feature_2_default_module",
+        column1="feature_id",
+        column2="module_id",
+    )
     ttype = fields.Selection(
         string="Type",
         selection=[
