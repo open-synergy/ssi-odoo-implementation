@@ -69,8 +69,22 @@
                     </page>
                     <page name="module" string="Modules">
                         <group
+                            name="extra_module"
+                            string="Extra Modules"
+                            colspan="4"
+                            col="2"
+                        />
+                        <field name="extra_module_ids" />
+                        <group
+                            name="missing_module"
+                            string="Missing Modules"
+                            colspan="4"
+                            col="2"
+                        />
+                        <field name="missing_module_ids" />
+                        <group
                             name="installed_module"
-                            string="Installed Version Modules"
+                            string="Installed Modules"
                             colspan="4"
                             col="2"
                         />
