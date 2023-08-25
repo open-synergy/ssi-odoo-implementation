@@ -122,8 +122,12 @@ class OdooImplementation(models.Model):
     def _compute_module(self):
         for record in self:
             record.default_module_ids = record.version_id.default_module_ids
+            for default_module in record.version_id.default_module_ids:
+                record.default_module_ids += default_module.all_dependency_ids
             for feature in record.feature_implementation_ids:
                 record.default_module_ids += feature.feature_id.default_module_ids
+                for default_module in feature.feature_id.default_module_ids:
+                    record.default_module_ids += default_module.all_dependency_ids
             record.extra_module_ids = (
                 record.installed_version_module_ids - record.default_module_ids
             )
