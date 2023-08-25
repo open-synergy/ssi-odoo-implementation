@@ -68,11 +68,29 @@ class OdooImplementation(models.Model):
         required=True,
     )
     installed_version_module_ids = fields.Many2many(
-        string="Installed Version Modules",
+        string="Installed Modules",
         comodel_name="odoo_module",
         relation="rel_odoo_implementation_2_installed_version_module",
         column1="implementation_id",
         column2="module_id",
+    )
+    default_module_ids = fields.Many2many(
+        string="Default Modules",
+        comodel_name="odoo_module",
+        compute="_compute_module",
+        store=False,
+    )
+    extra_module_ids = fields.Many2many(
+        string="Extra Modules",
+        comodel_name="odoo_module",
+        compute="_compute_module",
+        store=False,
+    )
+    missing_module_ids = fields.Many2many(
+        string="Missing Modules",
+        comodel_name="odoo_module",
+        compute="_compute_module",
+        store=False,
     )
     environment_id = fields.Many2one(
         string="Environment",
@@ -97,6 +115,21 @@ class OdooImplementation(models.Model):
         required=True,
         readonly=True,
     )
+
+    @api.depends(
+        "version_id",
+    )
+    def _compute_module(self):
+        for record in self:
+            record.default_module_ids = record.version_id.default_module_ids
+            for feature in record.feature_implementation_ids:
+                record.default_module_ids += feature.feature_id.default_module_ids
+            record.extra_module_ids = (
+                record.installed_version_module_ids - record.default_module_ids
+            )
+            record.missing_module_ids = (
+                record.default_module_ids - record.installed_version_module_ids
+            )
 
     @api.model
     def _default_date(self):
