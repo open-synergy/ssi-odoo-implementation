@@ -41,7 +41,12 @@
                 <field name="version_ids" widget="many2many_tags" />
             </xpath>
             <xpath expr="//page[1]" position="before">
-                <field name="dependency_ids" />
+                <page name="dependency" string="Dependencies">
+                    <group name="dependency_1" colspan="4" col="2" string="Direct" />
+                    <field name="dependency_ids" />
+                    <group name="dependency_2" colspan="4" col="2" string="All" />
+                    <field name="all_dependency_ids" />
+                </page>
             </xpath>
         </data>
     </field>

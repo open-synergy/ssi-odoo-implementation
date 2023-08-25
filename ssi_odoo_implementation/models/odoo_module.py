@@ -2,7 +2,7 @@
 # Copyright 2022 PT. Simetri Sinergi Indonesia
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from odoo import fields, models
+from odoo import api, fields, models
 
 
 class OdooModule(models.Model):
@@ -24,3 +24,18 @@ class OdooModule(models.Model):
         column1="module_id",
         column2="dependency_id",
     )
+    all_dependency_ids = fields.Many2many(
+        string="Dependencies",
+        comodel_name="odoo_module",
+        compute="_compute_dependency",
+        store=False,
+    )
+
+    @api.depends(
+        "dependency_ids",
+    )
+    def _compute_dependency(self):
+        for record in self:
+            record.all_dependency_ids = record.dependency_ids
+            for module in record.dependency_ids:
+                record.all_dependency_ids += module.all_dependency_ids
