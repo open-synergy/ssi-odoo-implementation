@@ -98,6 +98,18 @@ class OdooImplementation(models.Model):
         ondelete="restrict",
         required=True,
     )
+    xmlrpc_login = fields.Char(
+        string="XMLRPC Login",
+    )
+    xmlrpc_password = fields.Char(
+        string="XMLRPC Password",
+    )
+    xmlrpc_port = fields.Char(
+        string="XMLRPC Port",
+    )
+    temp_odoo_module_list = fields.Text(
+        string="Temp Odoo Module List",
+    )
     feature_implementation_ids = fields.One2many(
         string="Feature Implementations",
         comodel_name="odoo_feature_implementation",
@@ -160,3 +172,45 @@ class OdooImplementation(models.Model):
                 name = record.domain + " (" + record.name + ")"
             result.append((record.id, name))
         return result
+
+    def action_get_installed_module(self):
+        for record in self.sudo():
+            record._get_installed_module()
+
+    def _get_installed_module(self):
+        self.ensure_one()
+        module_list = self.temp_odoo_module_list.split(",")
+        valid_module_ids = []
+        failed_module_list = []
+        for module in module_list:
+            module_id, failed_module = self._add_installed_module(module)
+            if module_id:
+                valid_module_ids.append(module_id)
+
+            if failed_module:
+                failed_module_list.append(module)
+        installed_module_ids = self.installed_version_module_ids.ids + valid_module_ids
+        self.write({"installed_version_module_ids": [(6, 0, installed_module_ids)]})
+
+        if len(failed_module_list) > 0:
+            self.write({"temp_odoo_module_list": ",".join(failed_module_list)})
+        else:
+            self.write(
+                {
+                    "temp_odoo_module_list": "",
+                }
+            )
+
+    def _add_installed_module(self, module_name):
+        self.ensure_one()
+
+        criteria = [("name", "=", module_name)]
+        OdooModule = self.env["odoo_module"]
+        module = OdooModule.search(criteria)
+        if len(module) != 1:
+            return False, module_name
+
+        if module.id in self.installed_version_module_ids.ids:
+            return False, False
+
+        return module.id, False

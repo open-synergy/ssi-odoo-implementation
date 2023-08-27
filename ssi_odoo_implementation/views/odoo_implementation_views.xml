@@ -90,6 +90,20 @@
                         />
                         <field name="installed_version_module_ids" />
                     </page>
+                    <page name="xmlrpc" string="XMLRPC">
+                        <button
+                            name="action_get_installed_module"
+                            string="Get Installed Modules"
+                            type="object"
+                            class="oe_highlight"
+                        />
+                        <group name="xmlrpc_1" colspan="4" col="2">
+                            <field name="xmlrpc_login" />
+                            <field name="xmlrpc_password" password="True" />
+                            <field name="xmlrpc_port" widget="char" />
+                            <field name="temp_odoo_module_list" />
+                        </group>
+                    </page>
                 </xpath>
 
             </data>
