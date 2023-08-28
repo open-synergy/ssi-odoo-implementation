@@ -8,6 +8,8 @@ from . import (
     odoo_feature,
     odoo_environment,
     odoo_implementation,
+    odoo_deployment,
+    odoo_deployment_new_feature,
     odoo_feature_implementation,
     odoo_feature_issue,
     odoo_use_case,

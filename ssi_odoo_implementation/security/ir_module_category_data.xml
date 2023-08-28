@@ -78,4 +78,15 @@
     <field name="parent_id" ref="odoo_data_ownership_module_category" />
 </record>
 
+<!-- Odoo Deployment -->
+<record id="odoo_deployment_workflow_module_category" model="ir.module.category">
+    <field name="name">Odoo Deployment</field>
+    <field name="parent_id" ref="odoo_workflow_module_category" />
+</record>
+
+<record id="odoo_deployment_data_ownership_module_category" model="ir.module.category">
+    <field name="name">Odoo Deployment</field>
+    <field name="parent_id" ref="odoo_data_ownership_module_category" />
+</record>
+
 </odoo>

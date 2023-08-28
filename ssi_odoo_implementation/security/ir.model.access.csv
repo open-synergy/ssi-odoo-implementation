@@ -20,3 +20,9 @@ access_odoo_use_case_all,odoo_use_case - all user,model_odoo_use_case,,1,0,0,0
 access_odoo_feature_issue_all,odoo_feature_issue - user,model_odoo_feature_issue,,1,0,0,0
 access_odoo_feature_issue_viewer,odoo_feature_issue - viewer,model_odoo_feature_issue,odoo_feature_issue_viewer_group,1,0,0,0
 access_odoo_feature_issue_user,odoo_feature_issue - all,model_odoo_feature_issue,odoo_feature_issue_user_group,1,1,1,1
+access_odoo_deployment_all,odoo_deployment - user,model_odoo_deployment,,1,0,0,0
+access_odoo_deployment_viewer,odoo_deployment - viewer,model_odoo_deployment,odoo_deployment_viewer_group,1,0,0,0
+access_odoo_deployment_user,odoo_deployment - all,model_odoo_deployment,odoo_deployment_user_group,1,1,1,1
+access_odoo_deployment_new_feature_all,odoo_deployment_new_feature - user,model_odoo_deployment_new_feature,,1,0,0,0
+access_odoo_deployment_new_feature_viewer,odoo_deployment_new_feature - viewer,model_odoo_deployment_new_feature,odoo_deployment_viewer_group,1,0,0,0
+access_odoo_deployment_new_feature_user,odoo_deployment_new_feature - all,model_odoo_deployment_new_feature,odoo_deployment_user_group,1,1,1,1

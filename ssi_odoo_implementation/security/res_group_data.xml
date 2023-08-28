@@ -58,6 +58,7 @@
         />
 </record>
 
+<!-- Odoo Implementation: Workflow -->
 <record id="odoo_implementation_viewer_group" model="res.groups">
     <field name="name">Viewer</field>
     <field name="category_id" ref="odoo_implementation_workflow_module_category" />
@@ -79,6 +80,7 @@
         />
 </record>
 
+<!-- Odoo Implementation: Data Ownership -->
 <record id="odoo_implementation_company_group" model="res.groups">
     <field name="name">Company</field>
     <field
@@ -112,6 +114,7 @@
         />
 </record>
 
+<!-- Odoo Feature Implementation: Workflow -->
 <record id="odoo_feature_implementation_viewer_group" model="res.groups">
     <field name="name">Viewer</field>
     <field
@@ -148,6 +151,7 @@
         />
 </record>
 
+<!-- Odoo Feature Implementation: Data Ownership -->
 <record id="odoo_feature_implementation_company_group" model="res.groups">
     <field name="name">Company</field>
     <field
@@ -184,6 +188,7 @@
         />
 </record>
 
+<!-- Odoo Feature Issue: Workflow -->
 <record id="odoo_feature_issue_viewer_group" model="res.groups">
     <field name="name">Viewer</field>
     <field name="category_id" ref="odoo_feature_issue_workflow_module_category" />
@@ -205,6 +210,7 @@
         />
 </record>
 
+<!-- Odoo Feature Issue: Data Ownership -->
 <record id="odoo_feature_issue_company_group" model="res.groups">
     <field name="name">Company</field>
     <field name="category_id" ref="odoo_feature_issue_data_ownership_module_category" />
@@ -222,6 +228,53 @@
     <field
             name="implied_ids"
             eval="[(4, ref('odoo_feature_issue_company_child_group'))]"
+        />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+
+<!-- Odoo Deployment: Workflow -->
+<record id="odoo_deployment_viewer_group" model="res.groups">
+    <field name="name">Viewer</field>
+    <field name="category_id" ref="odoo_deployment_workflow_module_category" />
+</record>
+
+<record id="odoo_deployment_user_group" model="res.groups">
+    <field name="name">User</field>
+    <field name="category_id" ref="odoo_deployment_workflow_module_category" />
+    <field name="implied_ids" eval="[(4, ref('odoo_deployment_viewer_group'))]" />
+</record>
+
+<record id="odoo_deployment_validator_group" model="res.groups">
+    <field name="name">Validator</field>
+    <field name="category_id" ref="odoo_deployment_workflow_module_category" />
+    <field name="implied_ids" eval="[(4, ref('odoo_deployment_user_group'))]" />
+    <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+</record>
+
+<!-- Odoo Deployment: Data Ownership -->
+<record id="odoo_deployment_company_group" model="res.groups">
+    <field name="name">Company</field>
+    <field name="category_id" ref="odoo_deployment_data_ownership_module_category" />
+</record>
+
+<record id="odoo_deployment_company_child_group" model="res.groups">
+    <field name="name">Company and All Child Companies</field>
+    <field name="category_id" ref="odoo_deployment_data_ownership_module_category" />
+    <field name="implied_ids" eval="[(4, ref('odoo_deployment_company_group'))]" />
+</record>
+
+<record id="odoo_deployment_all_group" model="res.groups">
+    <field name="name">All</field>
+    <field name="category_id" ref="odoo_deployment_data_ownership_module_category" />
+    <field
+            name="implied_ids"
+            eval="[(4, ref('odoo_deployment_company_child_group'))]"
         />
     <field
             name="users"
