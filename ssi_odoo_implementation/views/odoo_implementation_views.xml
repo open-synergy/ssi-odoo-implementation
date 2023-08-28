@@ -97,9 +97,18 @@
                             type="object"
                             class="oe_highlight"
                         />
+                        -
+                        <button
+                            name="action_get_installed_module_xmlrpc"
+                            string="XMLRPC"
+                            type="object"
+                            class="oe_highlight"
+                        />
                         <group name="xmlrpc_1" colspan="4" col="2">
+                            <field name="xmlrpc_url" />
                             <field name="xmlrpc_login" />
                             <field name="xmlrpc_password" password="True" />
+                            <field name="xmlrpc_db" />
                             <field name="xmlrpc_port" widget="char" />
                             <field name="temp_odoo_module_list" />
                         </group>
