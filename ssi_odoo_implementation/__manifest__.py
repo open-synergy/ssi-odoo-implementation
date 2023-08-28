@@ -32,6 +32,7 @@
         "views/odoo_feature_views.xml",
         "views/odoo_feature_category_views.xml",
         "views/odoo_environment_views.xml",
+        "views/odoo_deployment_views.xml",
         "views/odoo_implementation_views.xml",
         "views/odoo_feature_implementation_views.xml",
         "views/odoo_use_case_views.xml",
