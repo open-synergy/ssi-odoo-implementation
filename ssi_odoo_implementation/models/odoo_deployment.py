@@ -34,6 +34,7 @@ class OdooDeployment(models.Model):
         "confirm_ok",
         "approve_ok",
         "reject_ok",
+        "done_ok",
         "restart_approval_ok",
         "cancel_ok",
         "restart_ok",

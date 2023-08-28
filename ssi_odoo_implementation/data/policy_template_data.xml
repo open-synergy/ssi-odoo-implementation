@@ -556,7 +556,7 @@ if env.user.id in document.active_approver_user_ids.ids:
             />
     <field name="restrict_user" eval="1" />
     <field name="computation_method">use_group</field>
-    <field name="group_ids" eval="[(6,0,[ref('odoo_implementation_user_group')])]" />
+    <field name="group_ids" eval="[(6,0,[ref('odoo_deployment_user_group')])]" />
     <field name="restrict_additional" eval="0" />
 </record>
 
