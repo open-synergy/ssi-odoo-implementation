@@ -2,7 +2,10 @@
 # Copyright 2022 PT. Simetri Sinergi Indonesia
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from odoo import api, fields, models
+import xmlrpc.client
+
+from odoo import _, api, fields, models
+from odoo.exceptions import UserError
 
 
 class OdooImplementation(models.Model):
@@ -98,11 +101,18 @@ class OdooImplementation(models.Model):
         ondelete="restrict",
         required=True,
     )
+    # XMLRPC
+    xmlrpc_url = fields.Char(
+        string="XMLRPC URL",
+    )
     xmlrpc_login = fields.Char(
         string="XMLRPC Login",
     )
     xmlrpc_password = fields.Char(
         string="XMLRPC Password",
+    )
+    xmlrpc_db = fields.Char(
+        string="XMLRPC DB",
     )
     xmlrpc_port = fields.Char(
         string="XMLRPC Port",
@@ -173,33 +183,88 @@ class OdooImplementation(models.Model):
             result.append((record.id, name))
         return result
 
+    def action_get_installed_module_xmlrpc(self):
+        for record in self.sudo():
+            record._get_installed_module_xmlrpc()
+            record._get_installed_module()
+
     def action_get_installed_module(self):
         for record in self.sudo():
             record._get_installed_module()
 
+    def _get_credentials(self):
+        if not self.xmlrpc_url:
+            raise UserError(_("XMLRPC Url not found"))
+        if not self.xmlrpc_login:
+            raise UserError(_("XMLRPC Login not found"))
+        if not self.xmlrpc_password:
+            raise UserError(_("XMLRPC Password not found"))
+        if not self.xmlrpc_db:
+            raise UserError(_("XMLRPC DB not found"))
+        return {
+            "url": self.xmlrpc_url,
+            "login": self.xmlrpc_login,
+            "password": self.xmlrpc_password,
+            "db": self.xmlrpc_db,
+        }
+
+    def _get_installed_module_xmlrpc(self):
+        self.ensure_one()
+        resultList = ""
+        self.temp_odoo_module_list = resultList
+        credentials = self._get_credentials()
+        url = credentials["url"]
+        db = credentials["db"]
+        username = credentials["login"]
+        password = credentials["password"]
+
+        try:
+            common = xmlrpc.client.ServerProxy("{}/xmlrpc/2/common".format(url))
+            uid = common.authenticate(db, username, password, {})
+            object = xmlrpc.client.ServerProxy("{}/xmlrpc/2/object".format(url))
+            result = object.execute_kw(
+                db,
+                uid,
+                password,
+                "ir.module.module",
+                "search_read",
+                [[["state", "=", "installed"]]],
+                {"fields": ["name", "installed_version"]},
+            )
+        except Exception as e:
+            raise UserError(_("%s") % (e))
+
+        for value in result:
+            resultList += value["name"] + ","
+
+        self.temp_odoo_module_list = resultList
+
     def _get_installed_module(self):
         self.ensure_one()
-        module_list = self.temp_odoo_module_list.split(",")
-        valid_module_ids = []
-        failed_module_list = []
-        for module in module_list:
-            module_id, failed_module = self._add_installed_module(module)
-            if module_id:
-                valid_module_ids.append(module_id)
+        if self.temp_odoo_module_list:
+            module_list = self.temp_odoo_module_list.split(",")
+            valid_module_ids = []
+            failed_module_list = []
+            for module in module_list:
+                module_id, failed_module = self._add_installed_module(module)
+                if module_id:
+                    valid_module_ids.append(module_id)
 
-            if failed_module:
-                failed_module_list.append(module)
-        installed_module_ids = self.installed_version_module_ids.ids + valid_module_ids
-        self.write({"installed_version_module_ids": [(6, 0, installed_module_ids)]})
-
-        if len(failed_module_list) > 0:
-            self.write({"temp_odoo_module_list": ",".join(failed_module_list)})
-        else:
-            self.write(
-                {
-                    "temp_odoo_module_list": "",
-                }
+                if failed_module:
+                    failed_module_list.append(module)
+            installed_module_ids = (
+                self.installed_version_module_ids.ids + valid_module_ids
             )
+            self.write({"installed_version_module_ids": [(6, 0, installed_module_ids)]})
+
+            if len(failed_module_list) > 0:
+                self.write({"temp_odoo_module_list": ",".join(failed_module_list)})
+            else:
+                self.write(
+                    {
+                        "temp_odoo_module_list": "",
+                    }
+                )
 
     def _add_installed_module(self, module_name):
         self.ensure_one()
