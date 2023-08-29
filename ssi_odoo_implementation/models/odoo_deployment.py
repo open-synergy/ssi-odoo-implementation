@@ -26,6 +26,7 @@ class OdooDeployment(models.Model):
 
     # Attributes related to add element on form view automatically
     _automatically_insert_open_policy_fields = False
+    _automatically_insert_done_policy_fields = True
     _automatically_insert_open_button = False
 
     _statusbar_visible_label = "draft,confirm,open"
@@ -44,6 +45,7 @@ class OdooDeployment(models.Model):
         "action_confirm",
         "action_approve_approval",
         "action_reject_approval",
+        "action_done",
         "%(ssi_transaction_cancel_mixin.base_select_cancel_reason_action)d",
         "action_restart",
     ]
@@ -196,6 +198,7 @@ class OdooDeployment(models.Model):
             "approve_ok",
             "reject_ok",
             "open_ok",
+            "done_ok",
             "cancel_ok",
             "restart_ok",
             "restart_approval_ok",
