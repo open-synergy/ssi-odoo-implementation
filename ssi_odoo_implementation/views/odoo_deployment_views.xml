@@ -87,10 +87,10 @@
                         string="Installed Modules"
                         invisible="1"
                     >
-                        <field name="installed_module_ids" force_save="1" />
+                        <field name="installed_module_ids" />
                     </page>
                     <page name="new_module" string="New Module To Install">
-                        <field name="new_module_ids" />
+                        <field name="new_module_ids" force_save="1" />
                     </page>
                     <page name="core_module" string="Missing Core Modules">
                         <field name="core_module_ids" force_save="1" />
