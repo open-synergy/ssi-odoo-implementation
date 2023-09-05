@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+<data>
+<record id="repo_type_odoo_addons" model="git_repo_type">
+    <field name="name">Odoo Addons</field>
+    <field name="code">ODOO</field>
+</record>
+
+<record id="repo_type_odoo_doodba" model="git_repo_type">
+    <field name="name">Doodba Odoo Project</field>
+    <field name="code">DOODBA</field>
+</record>
+
+</data>
+</odoo>

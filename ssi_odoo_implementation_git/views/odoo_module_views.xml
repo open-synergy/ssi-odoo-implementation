@@ -10,7 +10,10 @@
     <field name="arch" type="xml">
         <data>
             <xpath expr="//field[@name='version_ids']" position="after">
-                <field name="git_repo_id" />
+                <field
+                        name="git_repo_id"
+                        domain="[('type_id','=',%(ssi_odoo_implementation_git.repo_type_odoo_addons)d)]"
+                    />
             </xpath>
         </data>
     </field>
