@@ -4,4 +4,5 @@
 
 from . import (
     odoo_module,
+    odoo_implementation,
 )

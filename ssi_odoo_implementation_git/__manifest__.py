@@ -15,7 +15,9 @@
         "ssi_git",
     ],
     "data": [
+        "data/git_repo_type_data.xml",
         "views/odoo_module_views.xml",
+        "views/odoo_implementation_views.xml",
     ],
     "demo": [],
 }
