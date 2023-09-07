@@ -6,5 +6,6 @@ from . import (
     odoo_feature,
     odoo_implementation,
     odoo_feature_implementation,
+    odoo_deployment,
     project_task,
 )

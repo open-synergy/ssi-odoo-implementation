@@ -12,8 +12,21 @@
         />
     <field name="arch" type="xml">
         <data>
-            <xpath expr="//field[@name='partner_id']" position="after">
-                <field name="project_id" domain="[('partner_id','=',partner_id)]" />
+            <xpath expr="//page[1]" position="after">
+                <page name="project" string="Project">
+                    <group name="project_1" colspan="4" col="2">
+                        <group name="project_1_1" colspan="1" col="2">
+                            <field
+                                    name="project_id"
+                                    domain="[('partner_id','=',partner_id)]"
+                                />
+                        </group>
+                        <group name="project_1_2" colspan="1" col="2">
+                            <field name="task_type_id" />
+                            <field name="task_stage_id" />
+                        </group>
+                    </group>
+                </page>
             </xpath>
         </data>
     </field>

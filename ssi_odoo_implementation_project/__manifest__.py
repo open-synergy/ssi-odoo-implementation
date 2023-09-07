@@ -19,6 +19,7 @@
         "views/odoo_feature_views.xml",
         "views/odoo_implementation_views.xml",
         "views/odoo_feature_implementation_views.xml",
+        "views/odoo_deployment_views.xml",
     ],
     "demo": [],
 }
