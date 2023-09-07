@@ -15,6 +15,14 @@ class OdooImplementation(models.Model):
         string="Project",
         comodel_name="project.project",
     )
+    task_type_id = fields.Many2one(
+        string="Task Type",
+        comodel_name="task.type",
+    )
+    task_stage_id = fields.Many2one(
+        string="Task Stage",
+        comodel_name="project.task.type",
+    )
 
     @api.onchange(
         "partner_id",
