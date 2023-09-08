@@ -12,6 +12,9 @@ access_odoo_environment_all,odoo_environment - all user,model_odoo_environment,,
 access_odoo_implementation_all,odoo_implementation - user,model_odoo_implementation,,1,0,0,0
 access_odoo_implementation_viewer,odoo_implementation - viewer,model_odoo_implementation,odoo_implementation_viewer_group,1,0,0,0
 access_odoo_implementation_user,odoo_implementation - all,model_odoo_implementation,odoo_implementation_user_group,1,1,1,1
+access_odoo_implementation_update_all,odoo_implementation.update - user,model_odoo_implementation_update,,1,0,0,0
+access_odoo_implementation_update_viewer,odoo_implementation.update - viewer,model_odoo_implementation_update,odoo_implementation_viewer_group,1,0,0,0
+access_odoo_implementation_update_user,odoo_implementation.update - all,model_odoo_implementation_update,odoo_implementation_user_group,1,1,1,1
 access_odoo_feature_implementation_all,odoo_feature_implementation - user,model_odoo_feature_implementation,,1,0,0,0
 access_odoo_feature_implementation_viewer,odoo_feature_implementation - viewer,model_odoo_feature_implementation,odoo_feature_implementation_viewer_group,1,0,0,0
 access_odoo_feature_implementation_user,odoo_feature_implementation - all,model_odoo_feature_implementation,odoo_feature_implementation_user_group,1,1,1,1

@@ -96,6 +96,7 @@
                             string="Get Installed Modules"
                             type="object"
                             class="oe_highlight"
+                            icon="fa-refresh"
                         />
                         -
                         <button
@@ -103,6 +104,7 @@
                             string="XMLRPC"
                             type="object"
                             class="oe_highlight"
+                            icon="fa-handshake-o"
                         />
                         <group name="xmlrpc_1" colspan="4" col="2">
                             <field name="xmlrpc_url" />
@@ -112,6 +114,23 @@
                             <field name="xmlrpc_port" widget="char" />
                             <field name="temp_odoo_module_list" />
                         </group>
+                    </page>
+                    <page name="update" string="Updates">
+                        <field name="update_ids">
+                            <tree editable="bottom">
+                                <field name="date_maintenance" />
+                                <field name="user_id" />
+                            </tree>
+                            <form>
+                                <group name="update_1" colspan="4" col="2">
+                                    <group name="update_1_1" colspan="1" col="2">
+                                        <field name="date_maintenance" />
+                                        <field name="user_id" />
+                                    </group>
+                                    <group name="update_1_2" colspan="1" col="2" />
+                                </group>
+                            </form>
+                        </field>
                     </page>
                 </xpath>
 
