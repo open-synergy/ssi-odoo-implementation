@@ -125,6 +125,14 @@ class OdooImplementation(models.Model):
         comodel_name="odoo_feature_implementation",
         inverse_name="implementation_id",
     )
+
+    # Update related fields
+    update_ids = fields.One2many(
+        string="Updates",
+        comodel_name="odoo_implementation.update",
+        inverse_name="implementation_id",
+    )
+
     state = fields.Selection(
         string="State",
         selection=[
