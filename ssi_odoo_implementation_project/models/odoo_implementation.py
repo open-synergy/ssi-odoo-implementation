@@ -16,11 +16,19 @@ class OdooImplementation(models.Model):
         comodel_name="project.project",
     )
     task_type_id = fields.Many2one(
-        string="Task Type",
+        string="Deployment Task Type",
         comodel_name="task.type",
     )
     task_stage_id = fields.Many2one(
-        string="Task Stage",
+        string="Deployment Task Stage",
+        comodel_name="project.task.type",
+    )
+    update_task_type_id = fields.Many2one(
+        string="Manintenance Task Type",
+        comodel_name="task.type",
+    )
+    update_task_stage_id = fields.Many2one(
+        string="Manintenance Task Stage",
         comodel_name="project.task.type",
     )
 
