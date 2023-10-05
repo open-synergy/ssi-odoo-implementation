@@ -3,6 +3,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from odoo import api, fields, models
+from odoo.exceptions import ValidationError
 
 
 class OdooFeatureImplementation(models.Model):
@@ -137,3 +138,15 @@ class OdooFeatureImplementation(models.Model):
     )
     def onchange_contact_id(self):
         self.contact_id = False
+
+    @api.constrains('feature_id')
+    def _check_feature_id(self):
+        for record in self:
+            features = self.env["odoo_feature_implementation"].search([
+                ('feature_id', '=', record.feature_id.id),
+                ('implementation_id', '=', record.implementation_id.id),
+                ('id', '!=', record.id)
+            ])
+            if features:
+                raise ValidationError(
+                    "The feature '%s - %s' is already used." % (record.feature_id.name, record.implementation_id.name))
