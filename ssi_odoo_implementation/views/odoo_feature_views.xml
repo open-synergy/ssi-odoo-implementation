@@ -12,7 +12,25 @@
         />
     <field name="mode">primary</field>
     <field name="arch" type="xml">
-        <data />
+        <data>
+            <xpath expr="//field[@name='code']" position="after">
+                <field name="ttype"/>
+                <field name="category_id"/>
+                <field name="version_ids"/>
+            </xpath>
+            <xpath expr="//search" position="inside">
+                <filter name="with_common_use_case" string="With Common Use Case" domain="[('common_use_case_ids', '!=', False)]"/>
+                <filter name="without_common_use_case" string="Without Common Use Case" domain="[('common_use_case_ids', '=', False)]"/>
+                <filter name="with_specific_use_case" string="With Specific Use Case" domain="[('specific_use_case_ids', '!=', False)]"/>
+                <filter name="without_specific_use_case" string="Without Specific Use Case" domain="[('specific_use_case_ids', '=', False)]"/>
+                <filter name="with_modules" string="With Modules" domain="[('default_module_ids', '!=', False)]"/>
+                <filter name="without_modules" string="Without Modules" domain="[('default_module_ids', '=', False)]"/>
+                <group expand="0" string="Group By">
+                    <filter string="Type" name="group_by_ttype" context="{'group_by':'ttype'}"/>
+                    <filter string="Category" name="group_by_category_id" context="{'group_by':'category_id'}"/>
+                </group>
+            </xpath>
+        </data>
     </field>
 </record>
 
