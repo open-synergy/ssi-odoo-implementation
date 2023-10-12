@@ -2,8 +2,8 @@
 # Copyright 2022 PT. Simetri Sinergi Indonesia
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from odoo import api, fields, models
-from odoo.exceptions import ValidationError
+from odoo import _, api, fields, models
+from odoo.exceptions import Warning as UserError
 
 
 class OdooFeatureImplementation(models.Model):
@@ -139,14 +139,29 @@ class OdooFeatureImplementation(models.Model):
     def onchange_contact_id(self):
         self.contact_id = False
 
-    @api.constrains('feature_id')
+    @api.constrains("feature_id")
     def _check_feature_id(self):
         for record in self:
-            features = self.env["odoo_feature_implementation"].search([
-                ('feature_id', '=', record.feature_id.id),
-                ('implementation_id', '=', record.implementation_id.id),
-                ('id', '!=', record.id)
-            ])
+            features = self.env["odoo_feature_implementation"].search(
+                [
+                    ("feature_id", "=", record.feature_id.id),
+                    ("implementation_id", "=", record.implementation_id.id),
+                    ("id", "!=", record.id),
+                ]
+            )
             if features:
-                raise ValidationError(
-                    "The feature '%s - %s' is already used." % (record.feature_id.name, record.implementation_id.name))
+                error_message = _(
+                    """
+                Context: Create Odoo Feature Implementation
+                Database ID: %s
+                Problem: The feature '%s' for '%s(%s)' is already used.
+                Solution: Change Features or Contact Supervisor/Administrator
+                """
+                    % (
+                        record.id,
+                        record.feature_id.name,
+                        record.implementation_id.domain,
+                        record.implementation_id.name,
+                    )
+                )
+                raise UserError(error_message)
