@@ -1,0 +1,333 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ssi_odoo_implementation_project
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ssi_odoo_implementation_project
+#: code:addons/ssi_odoo_implementation_project/models/odoo_deployment.py:0
+#: code:addons/ssi_odoo_implementation_project/models/odoo_implementation_update.py:0
+#, python-format
+msgid ""
+"\n"
+"            Context: Create task from odoo deployment\n"
+"            Database ID: %s\n"
+"            Problem: No timebox\n"
+"            Solution: Create timebox\n"
+"            "
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_deployment__auto_create_task
+msgid "Auto Create Task"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_deployment__create_task_ok
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_implementation_update__create_task_ok
+msgid "Can Create Task"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_deployment__delete_task_ok
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_implementation_update__delete_task_ok
+msgid "Can Delete Task"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation_project.odoo_feature_implementation_view_form
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation_project.odoo_feature_view_form
+msgid "Cancel"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation_project.odoo_deployment_view_form
+msgid "Create Task"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation_project.odoo_deployment_view_form
+msgid "Delete Task"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_implementation__task_stage_id
+msgid "Deployment Task Stage"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_implementation__task_type_id
+msgid "Deployment Task Type"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_project_task__direct_feature_implementation_ids
+msgid "Direct Feature Implementation"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_feature_implementation__task_ids
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation_project.odoo_feature_implementation_view_form
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation_project.odoo_feature_view_form
+msgid "Direct Tasks"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_deployment__display_name
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_feature__display_name
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_feature_implementation__display_name
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_implementation__display_name
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_implementation_update__display_name
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_project_task__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation_project.odoo_feature_implementation_view_form
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation_project.odoo_feature_view_form
+msgid "Done"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation_project.odoo_feature_implementation_view_form
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation_project.odoo_feature_view_form
+msgid "Draft"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_deployment__id
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_feature__id
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_feature_implementation__id
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_implementation__id
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_implementation_update__id
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_project_task__id
+msgid "ID"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation_project.odoo_feature_implementation_view_form
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation_project.odoo_feature_view_form
+msgid "In Progress"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_deployment____last_update
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_feature____last_update
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_feature_implementation____last_update
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_implementation____last_update
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_implementation_update____last_update
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_project_task____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_implementation__update_task_stage_id
+msgid "Manintenance Task Stage"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_implementation__update_task_type_id
+msgid "Manintenance Task Type"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation_project.odoo_feature_view_form
+msgid "Num. of Direct Task"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_feature__num_cancel_task
+msgid "Number of Cancel Tasks"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_feature_implementation__num_direct_task
+msgid "Number of Direct Tasks"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_feature_implementation__num_direct_done_task
+msgid "Number of Done Direct Tasks"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_feature_implementation__num_feature_done_task
+msgid "Number of Done Feature Tasks"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_feature__num_done_task
+msgid "Number of Done Tasks"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_feature_implementation__num_total_done_task
+msgid "Number of Done Total Tasks"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_feature_implementation__num_direct_cancel_task
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_feature_implementation__num_direct_draft_task
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_feature_implementation__num_direct_pending_task
+msgid "Number of Draft Direct Tasks"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_feature_implementation__num_feature_cancel_task
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_feature_implementation__num_feature_draft_task
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_feature_implementation__num_feature_pending_task
+msgid "Number of Draft Feature Tasks"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_feature__num_draft_task
+msgid "Number of Draft Tasks"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_feature_implementation__num_total_cancel_task
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_feature_implementation__num_total_draft_task
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_feature_implementation__num_total_pending_task
+msgid "Number of Draft Total Tasks"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_feature_implementation__num_feature_task
+msgid "Number of Feature Tasks"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_feature_implementation__num_direct_open_task
+msgid "Number of Open Direct Tasks"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_feature_implementation__num_feature_open_task
+msgid "Number of Open Feature Tasks"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_feature__num_open_task
+msgid "Number of Open Tasks"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_feature_implementation__num_total_open_task
+msgid "Number of Open Total Tasks"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_feature__num_pending_task
+msgid "Number of Pending Tasks"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_feature__num_task
+msgid "Number of Tasks"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_feature_implementation__num_total_task
+msgid "Number of Total Tasks"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model:ir.model,name:ssi_odoo_implementation_project.model_odoo_deployment
+msgid "Odoo Deployment"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model:ir.model,name:ssi_odoo_implementation_project.model_odoo_feature
+msgid "Odoo Feature"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model:ir.model,name:ssi_odoo_implementation_project.model_odoo_feature_implementation
+msgid "Odoo Feature Implementation"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model:ir.model,name:ssi_odoo_implementation_project.model_odoo_implementation
+msgid "Odoo Implementation"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model:ir.model,name:ssi_odoo_implementation_project.model_odoo_implementation_update
+msgid "Odoo Implementation - Update"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation_project.odoo_feature_implementation_view_form
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation_project.odoo_feature_view_form
+msgid "Pending"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_deployment__project_id
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_feature__project_id
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_feature_implementation__project_id
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_implementation__project_id
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_implementation_update__project_id
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation_project.odoo_implementation_view_form
+msgid "Project"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation_project.odoo_implementation_view_form
+msgid "Stage"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation_project.odoo_implementation_view_form
+msgid "State"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model:ir.model,name:ssi_odoo_implementation_project.model_project_task
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_deployment__task_id
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_implementation_update__task_id
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation_project.odoo_deployment_view_form
+msgid "Task"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_deployment__task_stage_id
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_implementation_update__task_stage_id
+msgid "Task Stage"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_deployment__task_state
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_implementation_update__task_state
+msgid "Task State"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_project.field_odoo_feature__task_ids
+msgid "Tasks"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation_project.odoo_feature_implementation_view_form
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation_project.odoo_feature_view_form
+msgid "Total"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation_project.odoo_feature_implementation_view_search
+msgid "With Open Task"
+msgstr ""
+
+#. module: ssi_odoo_implementation_project
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation_project.odoo_feature_implementation_view_search
+msgid "Without Open Task"
+msgstr ""
