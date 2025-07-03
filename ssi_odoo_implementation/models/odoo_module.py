@@ -24,6 +24,13 @@ class OdooModule(models.Model):
         column1="module_id",
         column2="dependency_id",
     )
+    upstream_dependency_ids = fields.Many2many(
+        string="Upstream Dependencies",
+        comodel_name="odoo_module",
+        relation="rel_odoo_module_2_dependency",
+        column1="dependency_id",
+        column2="module_id",
+    )
     all_dependency_ids = fields.Many2many(
         string="Dependencies",
         comodel_name="odoo_module",
