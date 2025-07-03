@@ -1622,6 +1622,16 @@ msgid "Updates"
 msgstr ""
 
 #. module: ssi_odoo_implementation
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_module_view_form
+msgid "Upstream"
+msgstr ""
+
+#. module: ssi_odoo_implementation
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_module__upstream_dependency_ids
+msgid "Upstream Dependencies"
+msgstr ""
+
+#. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case__use_case
 #: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_view_form
 msgid "Use Case"
