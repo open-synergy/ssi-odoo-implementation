@@ -46,6 +46,8 @@
                     <field name="dependency_ids" />
                     <group name="dependency_2" colspan="4" col="2" string="All" />
                     <field name="all_dependency_ids" />
+                    <group name="dependency_3" colspan="4" col="2" string="Upstream" />
+                    <field name="upstream_dependency_ids" />
                 </page>
             </xpath>
         </data>
