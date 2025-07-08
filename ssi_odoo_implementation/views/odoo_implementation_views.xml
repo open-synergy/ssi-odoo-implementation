@@ -67,28 +67,27 @@
                     >
                         <field name="feature_implementation_ids" />
                     </page>
-                    <page name="module" string="Modules">
+                    <page name="installed_module" string="Installed Modules">
+                        <field name="installed_version_module_ids" />
+                    </page>
+                    <page name="missing_module" string="Missing Modules">
                         <group
-                            name="extra_module"
-                            string="Extra Modules"
+                            name="missing_core_module"
+                            string="Core"
                             colspan="4"
                             col="2"
                         />
-                        <field name="extra_module_ids" />
+                        <field name="missing_core_module_ids" />
                         <group
-                            name="missing_module"
-                            string="Missing Modules"
+                            name="all_missing_module"
+                            string="All"
                             colspan="4"
                             col="2"
                         />
                         <field name="missing_module_ids" />
-                        <group
-                            name="installed_module"
-                            string="Installed Modules"
-                            colspan="4"
-                            col="2"
-                        />
-                        <field name="installed_version_module_ids" />
+                    </page>
+                    <page name="extra_module" string="Extra Modules">
+                        <field name="extra_module_ids" />
                     </page>
                     <page name="xmlrpc" string="XMLRPC">
                         <button

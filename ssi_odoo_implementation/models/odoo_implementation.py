@@ -95,6 +95,12 @@ class OdooImplementation(models.Model):
         compute="_compute_module",
         store=False,
     )
+    missing_core_module_ids = fields.Many2many(
+        string="Missing Core Modules",
+        comodel_name="odoo_module",
+        compute="_compute_module",
+        store=False,
+    )
     environment_id = fields.Many2one(
         string="Environment",
         comodel_name="odoo_environment",
@@ -148,22 +154,25 @@ class OdooImplementation(models.Model):
 
     @api.depends(
         "version_id",
+        "installed_version_module_ids",
     )
     def _compute_module(self):
         for record in self:
-            record.default_module_ids = record.version_id.default_module_ids
-            for default_module in record.version_id.default_module_ids:
-                record.default_module_ids += default_module.all_dependency_ids
+            core_modules = default_modules = record.version_id.default_module_ids
+            for core_module in core_modules:
+                default_modules += core_module.all_dependency_ids
+                core_modules += core_module.all_dependency_ids
             for feature in record.feature_implementation_ids:
-                record.default_module_ids += feature.feature_id.default_module_ids
+                default_modules += feature.feature_id.default_module_ids
                 for default_module in feature.feature_id.default_module_ids:
-                    record.default_module_ids += default_module.all_dependency_ids
-            record.extra_module_ids = (
-                record.installed_version_module_ids - record.default_module_ids
-            )
-            record.missing_module_ids = (
-                record.default_module_ids - record.installed_version_module_ids
-            )
+                    default_modules += default_module.all_dependency_ids
+            extra_modules = record.installed_version_module_ids - default_modules
+            missing_modules = default_modules - record.installed_version_module_ids
+            missing_core_modules = core_modules - record.installed_version_module_ids
+            record.default_module_ids = default_modules
+            record.extra_module_ids = extra_modules
+            record.missing_module_ids = missing_modules
+            record.missing_core_module_ids = missing_core_modules
 
     @api.model
     def _default_date(self):
@@ -171,7 +180,7 @@ class OdooImplementation(models.Model):
 
     @api.model
     def _get_policy_field(self):
-        res = super(OdooImplementation, self)._get_policy_field()
+        res = super()._get_policy_field()
         policy_field = [
             "open_ok",
             "done_ok",
