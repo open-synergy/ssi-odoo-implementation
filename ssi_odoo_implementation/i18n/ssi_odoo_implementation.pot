@@ -162,6 +162,7 @@ msgstr ""
 #: model:res.groups,name:ssi_odoo_implementation.odoo_feature_implementation_all_group
 #: model:res.groups,name:ssi_odoo_implementation.odoo_feature_issue_all_group
 #: model:res.groups,name:ssi_odoo_implementation.odoo_implementation_all_group
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_implementation_view_form
 #: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_module_view_form
 msgid "All"
 msgstr ""
@@ -419,6 +420,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__contact_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_implementation__contact_id
 msgid "Contact"
+msgstr ""
+
+#. module: ssi_odoo_implementation
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_implementation_view_form
+msgid "Core"
 msgstr ""
 
 #. module: ssi_odoo_implementation
@@ -971,6 +977,7 @@ msgid "Messages"
 msgstr ""
 
 #. module: ssi_odoo_implementation
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_implementation__missing_core_module_ids
 #: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_deployment_view_form
 msgid "Missing Core Modules"
 msgstr ""
@@ -992,7 +999,6 @@ msgstr ""
 #: model:ir.ui.menu,name:ssi_odoo_implementation.odoo_module_menu
 #: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_feature_implementation_view_form
 #: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_feature_view_form
-#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_implementation_view_form
 #: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_version_view_form
 msgid "Modules"
 msgstr ""
