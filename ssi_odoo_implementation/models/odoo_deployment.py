@@ -114,6 +114,12 @@ class OdooDeployment(models.Model):
         readonly=True,
         states={"draft": [("readonly", False)]},
     )
+    install_website_theme = fields.Boolean(
+        string="Install Website Theme",
+        default=False,
+        readonly=True,
+        states={"draft": [("readonly", False)]},
+    )
     extra_module_ids = fields.Many2many(
         string="Extra Modules",
         comodel_name="odoo_module",
@@ -122,6 +128,23 @@ class OdooDeployment(models.Model):
         column2="module_id",
         readonly=True,
         states={"draft": [("readonly", False)]},
+    )
+    website_theme_ids = fields.Many2many(
+        string="Website Themes",
+        comodel_name="odoo_website_theme",
+        relation="rel_odoo_deployment_2_website_theme",
+        column1="deployment_id",
+        column2="website_theme_id",
+        readonly=True,
+        states={"draft": [("readonly", False)]},
+    )
+    missing_website_theme_module_ids = fields.Many2many(
+        string="Missing Website Themes Modules",
+        comodel_name="odoo_module",
+        relation="rel_odoo_deployment_2_missing_website_theme_module",
+        column1="deployment_id",
+        column2="module_id",
+        readonly=True,
     )
     core_module_ids = fields.Many2many(
         string="Core Modules",
@@ -283,10 +306,28 @@ class OdooDeployment(models.Model):
                 )
 
     @api.onchange(
+        "install_website_theme",
+        "implementation_id",
+    )
+    def onchange_website_theme_ids(self):
+        self.missing_website_theme_module_ids = False
+        if self.install_website_theme and self.implementation_id:
+            result = self.env["odoo_module"]
+            for website_thene in self.website_theme_ids:
+                result = result + website_thene.default_module_ids
+                for module in website_thene.default_module_ids:
+                    result = result + module.all_dependency_ids
+            if len(result) > 0:
+                self.missing_website_theme_module_ids = (
+                    result - self.implementation_id.installed_version_module_ids
+                )
+
+    @api.onchange(
         "new_feature_module_ids",
         "missing_feature_module_ids",
         "core_module_ids",
         "extra_module_ids",
+        "missing_website_theme_module_ids",
     )
     def onchange_new_module_ids(self):
         self.new_module_ids = (
@@ -294,6 +335,7 @@ class OdooDeployment(models.Model):
             + self.missing_feature_module_ids
             + self.core_module_ids
             + self.extra_module_ids
+            + self.missing_website_theme_module_ids
         )
 
     @ssi_decorator.post_done_action()
@@ -301,7 +343,51 @@ class OdooDeployment(models.Model):
         for new_feature in self.new_feature_ids:
             new_feature._create_feature_implementation()
 
+    @ssi_decorator.post_done_action()
+    def _20_update_installed_modules(self):
+        modules = (
+            self.implementation_id.installed_version_module_ids + self.new_module_ids
+        )
+        self.implementation_id.write(
+            {
+                "installed_version_module_ids": [(6, 0, modules.ids)],
+            }
+        )
+
+    @ssi_decorator.post_done_action()
+    def _30_update_website_theme(self):
+        website_themes = (
+            self.implementation_id.installed_website_theme_ids + self.website_theme_ids
+        )
+        self.implementation_id.write(
+            {
+                "installed_website_theme_ids": [(6, 0, website_themes.ids)],
+            }
+        )
+
     @ssi_decorator.post_cancel_action()
     def _10_delete_feature_implementation(self):
         for new_feature in self.new_feature_ids:
             new_feature._delete_feature_implementation()
+
+    @ssi_decorator.post_cancel_action()
+    def _20_delete_installed_modules(self):
+        modules = (
+            self.implementation_id.installed_version_module_ids - self.new_module_ids
+        )
+        self.implementation_id.write(
+            {
+                "installed_version_module_ids": [(6, 0, modules.ids)],
+            }
+        )
+
+    @ssi_decorator.post_cancel_action()
+    def _30_delete_website_theme(self):
+        website_themes = (
+            self.implementation_id.installed_website_theme_ids - self.website_theme_ids
+        )
+        self.implementation_id.write(
+            {
+                "installed_website_theme_ids": [(6, 0, website_themes.ids)],
+            }
+        )

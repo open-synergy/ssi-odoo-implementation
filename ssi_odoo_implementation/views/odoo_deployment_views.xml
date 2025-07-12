@@ -84,6 +84,7 @@
                         string="Missing Feature Modules"
                     />
                     <field name="install_extra_module" string="Extra Modules" />
+                    <field name="install_website_theme" string="Website Themes" />
                 </xpath>
                 <xpath expr="//page[1]" position="before">
                     <page
@@ -114,6 +115,10 @@
                         string="Missing Feature Modules"
                     >
                         <field name="missing_feature_module_ids" force_save="1" />
+                    </page>
+                    <page name="website_theme" string="Website Themes">
+                        <field name="website_theme_ids" />
+                        <field name="missing_website_theme_module_ids" />
                     </page>
                     <page name="extra_module" string="Extra Modules">
                         <field
