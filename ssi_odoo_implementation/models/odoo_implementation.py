@@ -77,6 +77,13 @@ class OdooImplementation(models.Model):
         column1="implementation_id",
         column2="module_id",
     )
+    installed_website_theme_ids = fields.Many2many(
+        string="Installed Website Theme",
+        comodel_name="odoo_website_theme",
+        relation="rel_odoo_implementation_2_installed_website_theme",
+        column1="implementation_id",
+        column2="theme_id",
+    )
     default_module_ids = fields.Many2many(
         string="Default Modules",
         comodel_name="odoo_module",
@@ -97,6 +104,12 @@ class OdooImplementation(models.Model):
     )
     missing_core_module_ids = fields.Many2many(
         string="Missing Core Modules",
+        comodel_name="odoo_module",
+        compute="_compute_module",
+        store=False,
+    )
+    missing_website_theme_module_ids = fields.Many2many(
+        string="Missing Website Theme Modules",
         comodel_name="odoo_module",
         compute="_compute_module",
         store=False,
@@ -159,6 +172,7 @@ class OdooImplementation(models.Model):
     def _compute_module(self):
         for record in self:
             core_modules = default_modules = record.version_id.default_module_ids
+            website_modules = self.env["odoo_module"]
             for core_module in core_modules:
                 default_modules += core_module.all_dependency_ids
                 core_modules += core_module.all_dependency_ids
@@ -166,13 +180,23 @@ class OdooImplementation(models.Model):
                 default_modules += feature.feature_id.default_module_ids
                 for default_module in feature.feature_id.default_module_ids:
                     default_modules += default_module.all_dependency_ids
+            for theme in record.installed_website_theme_ids:
+                website_modules += theme.default_module_ids
+                default_modules += theme.default_module_ids
+                for theme_module in theme.default_module_ids:
+                    website_modules += theme_module.all_dependency_ids
+                    default_modules += theme_module.all_dependency_ids
             extra_modules = record.installed_version_module_ids - default_modules
             missing_modules = default_modules - record.installed_version_module_ids
             missing_core_modules = core_modules - record.installed_version_module_ids
+            missing_website_theme_modules = (
+                website_modules - record.installed_version_module_ids
+            )
             record.default_module_ids = default_modules
             record.extra_module_ids = extra_modules
             record.missing_module_ids = missing_modules
             record.missing_core_module_ids = missing_core_modules
+            record.missing_website_theme_module_ids = missing_website_theme_modules
 
     @api.model
     def _default_date(self):
