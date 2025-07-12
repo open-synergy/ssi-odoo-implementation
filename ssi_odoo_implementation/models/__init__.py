@@ -15,4 +15,5 @@ from . import (
     odoo_feature_issue,
     odoo_use_case,
     odoo_module,
+    odoo_website_theme,
 )

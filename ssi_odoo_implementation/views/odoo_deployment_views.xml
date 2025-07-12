@@ -76,11 +76,15 @@
                 </xpath>
                 <xpath expr="//group[@name='header_right']" position="inside">
                     <field name="date" />
-                    <separator string="Modules To Install" />
-                    <field name="install_core_module" />
-                    <field name="install_new_feature" />
-                    <field name="install_missing_feature_module" />
-                    <field name="install_extra_module" />
+                    <separator string="Component to Install" />
+                    <field name="install_core_module" string="Missing Core Modules" />
+                    <field name="install_new_feature" string="New Feature" />
+                    <field
+                        name="install_missing_feature_module"
+                        string="Missing Feature Modules"
+                    />
+                    <field name="install_extra_module" string="Extra Modules" />
+                    <field name="install_website_theme" string="Website Themes" />
                 </xpath>
                 <xpath expr="//page[1]" position="before">
                     <page
@@ -111,6 +115,10 @@
                         string="Missing Feature Modules"
                     >
                         <field name="missing_feature_module_ids" force_save="1" />
+                    </page>
+                    <page name="website_theme" string="Website Themes">
+                        <field name="website_theme_ids" />
+                        <field name="missing_website_theme_module_ids" />
                     </page>
                     <page name="extra_module" string="Extra Modules">
                         <field
