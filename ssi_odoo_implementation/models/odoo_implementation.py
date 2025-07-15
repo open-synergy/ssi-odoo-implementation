@@ -361,7 +361,7 @@ class OdooImplementation(models.Model):
             valid_module_ids = []
             failed_module_list = []
             for module in module_list:
-                module_id, failed_module = self._add_installed_module(module)
+                module_id, failed_module = self._add_available_module(module)
                 if module_id:
                     valid_module_ids.append(module_id)
 
@@ -389,6 +389,20 @@ class OdooImplementation(models.Model):
             return False, module_name
 
         if module.id in self.installed_version_module_ids.ids:
+            return False, False
+
+        return module.id, False
+
+    def _add_available_module(self, module_name):
+        self.ensure_one()
+
+        criteria = [("name", "=", module_name)]
+        OdooModule = self.env["odoo_module"]
+        module = OdooModule.search(criteria)
+        if len(module) != 1:
+            return False, module_name
+
+        if module.id in self.available_module_ids.ids:
             return False, False
 
         return module.id, False
