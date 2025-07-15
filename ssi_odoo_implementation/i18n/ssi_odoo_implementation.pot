@@ -240,6 +240,12 @@ msgid "Attachment Count"
 msgstr ""
 
 #. module: ssi_odoo_implementation
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_implementation__available_module_ids
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_implementation_view_form
+msgid "Available Modules"
+msgstr ""
+
+#. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__approve_ok
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_implementation__approve_ok
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__approve_ok
@@ -681,6 +687,11 @@ msgstr ""
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_version__activity_type_icon
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_website_theme__activity_type_icon
 msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: ssi_odoo_implementation
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_implementation_view_form
+msgid "Get Available Modules"
 msgstr ""
 
 #. module: ssi_odoo_implementation
