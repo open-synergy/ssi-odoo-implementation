@@ -67,7 +67,40 @@
                     >
                         <field name="feature_implementation_ids" />
                     </page>
+                    <page name="available_module" string="Available Modules">
+                        <button
+                            name="action_get_available_module"
+                            string="Get Available Modules"
+                            type="object"
+                            class="oe_highlight"
+                            icon="fa-refresh"
+                        />
+                        -
+                        <button
+                            name="action_get_available_module_xmlrpc"
+                            string="XMLRPC"
+                            type="object"
+                            class="oe_highlight"
+                            icon="fa-handshake-o"
+                        />
+                        <field name="available_module_ids" />
+                    </page>
                     <page name="installed_module" string="Installed Modules">
+                        <button
+                            name="action_get_installed_module"
+                            string="Get Installed Modules"
+                            type="object"
+                            class="oe_highlight"
+                            icon="fa-refresh"
+                        />
+                        -
+                        <button
+                            name="action_get_installed_module_xmlrpc"
+                            string="XMLRPC"
+                            type="object"
+                            class="oe_highlight"
+                            icon="fa-handshake-o"
+                        />
                         <field name="installed_version_module_ids" />
                     </page>
                     <page
@@ -103,21 +136,6 @@
                         <field name="extra_module_ids" />
                     </page>
                     <page name="xmlrpc" string="XMLRPC">
-                        <button
-                            name="action_get_installed_module"
-                            string="Get Installed Modules"
-                            type="object"
-                            class="oe_highlight"
-                            icon="fa-refresh"
-                        />
-                        -
-                        <button
-                            name="action_get_installed_module_xmlrpc"
-                            string="XMLRPC"
-                            type="object"
-                            class="oe_highlight"
-                            icon="fa-handshake-o"
-                        />
                         <group name="xmlrpc_1" colspan="4" col="2">
                             <field name="xmlrpc_url" />
                             <field name="xmlrpc_login" />
