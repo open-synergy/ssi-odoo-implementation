@@ -77,6 +77,13 @@ class OdooImplementation(models.Model):
         column1="implementation_id",
         column2="module_id",
     )
+    available_module_ids = fields.Many2many(
+        string="Available Modules",
+        comodel_name="odoo_module",
+        relation="rel_odoo_implementation_2_available_module",
+        column1="implementation_id",
+        column2="module_id",
+    )
     installed_website_theme_ids = fields.Many2many(
         string="Installed Website Theme",
         comodel_name="odoo_website_theme",
@@ -186,11 +193,11 @@ class OdooImplementation(models.Model):
                 for theme_module in theme.default_module_ids:
                     website_modules += theme_module.all_dependency_ids
                     default_modules += theme_module.all_dependency_ids
-            extra_modules = record.installed_version_module_ids - default_modules
-            missing_modules = default_modules - record.installed_version_module_ids
-            missing_core_modules = core_modules - record.installed_version_module_ids
+            extra_modules = record.available_module_ids - default_modules
+            missing_modules = default_modules - record.available_module_ids
+            missing_core_modules = core_modules - record.available_module_ids
             missing_website_theme_modules = (
-                website_modules - record.installed_version_module_ids
+                website_modules - record.available_module_ids
             )
             record.default_module_ids = default_modules
             record.extra_module_ids = extra_modules
@@ -229,9 +236,18 @@ class OdooImplementation(models.Model):
             record._get_installed_module_xmlrpc()
             record._get_installed_module()
 
+    def action_get_available_module_xmlrpc(self):
+        for record in self.sudo():
+            record._get_available_module_xmlrpc()
+            record._get_available_module()
+
     def action_get_installed_module(self):
         for record in self.sudo():
             record._get_installed_module()
+
+    def action_get_available_module(self):
+        for record in self.sudo():
+            record._get_available_module()
 
     def _get_credentials(self):
         if not self.xmlrpc_url:
@@ -280,6 +296,37 @@ class OdooImplementation(models.Model):
 
         self.temp_odoo_module_list = resultList
 
+    def _get_available_module_xmlrpc(self):
+        self.ensure_one()
+        resultList = ""
+        self.temp_odoo_module_list = resultList
+        credentials = self._get_credentials()
+        url = credentials["url"]
+        db = credentials["db"]
+        username = credentials["login"]
+        password = credentials["password"]
+
+        try:
+            common = xmlrpc.client.ServerProxy("{}/xmlrpc/2/common".format(url))
+            uid = common.authenticate(db, username, password, {})
+            object = xmlrpc.client.ServerProxy("{}/xmlrpc/2/object".format(url))
+            result = object.execute_kw(
+                db,
+                uid,
+                password,
+                "ir.module.module",
+                "search_read",
+                [[]],
+                {"fields": ["name", "installed_version"]},
+            )
+        except Exception as e:
+            raise UserError(_("%s") % (e))
+
+        for value in result:
+            resultList += value["name"] + ","
+
+        self.temp_odoo_module_list = resultList
+
     def _get_installed_module(self):
         self.ensure_one()
         if self.temp_odoo_module_list:
@@ -297,6 +344,31 @@ class OdooImplementation(models.Model):
                 self.installed_version_module_ids.ids + valid_module_ids
             )
             self.write({"installed_version_module_ids": [(6, 0, installed_module_ids)]})
+
+            if len(failed_module_list) > 0:
+                self.write({"temp_odoo_module_list": ",".join(failed_module_list)})
+            else:
+                self.write(
+                    {
+                        "temp_odoo_module_list": "",
+                    }
+                )
+
+    def _get_available_module(self):
+        self.ensure_one()
+        if self.temp_odoo_module_list:
+            module_list = self.temp_odoo_module_list.split(",")
+            valid_module_ids = []
+            failed_module_list = []
+            for module in module_list:
+                module_id, failed_module = self._add_installed_module(module)
+                if module_id:
+                    valid_module_ids.append(module_id)
+
+                if failed_module:
+                    failed_module_list.append(module)
+            available_module_ids = self.available_module_ids.ids + valid_module_ids
+            self.write({"available_module_ids": [(6, 0, available_module_ids)]})
 
             if len(failed_module_list) > 0:
                 self.write({"temp_odoo_module_list": ",".join(failed_module_list)})
