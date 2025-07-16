@@ -237,7 +237,7 @@ class OdooImplementation(models.Model):
                 for theme_module in theme.default_module_ids:
                     website_modules += theme_module.all_dependency_ids
                     default_modules += theme_module.all_dependency_ids
-            extra_modules = record.available_module_ids - default_modules
+            extra_modules = record.installed_version_module_ids - default_modules
             missing_modules = default_modules - record.available_module_ids
             missing_core_modules = core_modules - record.available_module_ids
             missing_website_theme_modules = (
