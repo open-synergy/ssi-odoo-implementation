@@ -67,6 +67,12 @@
                     >
                         <field name="feature_implementation_ids" />
                     </page>
+                    <page
+                        name="installed_website_theme"
+                        string="Installed Website Themes"
+                    >
+                        <field name="installed_website_theme_ids" />
+                    </page>
                     <page name="available_module" string="Available Modules">
                         <button
                             name="action_get_available_module"
@@ -103,12 +109,6 @@
                         />
                         <field name="installed_version_module_ids" />
                     </page>
-                    <page
-                        name="installed_website_theme"
-                        string="Installed Website Themes"
-                    >
-                        <field name="installed_website_theme_ids" />
-                    </page>
                     <page name="missing_module" string="Missing Modules">
                         <group
                             name="missing_core_module"
@@ -131,6 +131,39 @@
                             col="2"
                         />
                         <field name="missing_module_ids" />
+                    </page>
+                    <page
+                        name="to_be_installed_module"
+                        string="To Be Installed Modules"
+                    >
+                        <group
+                            name="to_be_installed_module"
+                            string="All"
+                            colspan="4"
+                            col="2"
+                        />
+                        <field name="to_be_installed_module_ids" />
+                        <group
+                            name="to_be_installed_core_module"
+                            string="Core"
+                            colspan="4"
+                            col="2"
+                        />
+                        <field name="to_be_installed_core_module_ids" />
+                        <group
+                            name="to_be_installed_feature_module"
+                            string="Feature"
+                            colspan="4"
+                            col="2"
+                        />
+                        <field name="to_be_installed_feature_module_ids" />
+                        <group
+                            name="to_be_installed_website_theme_module"
+                            string="Website Theme"
+                            colspan="4"
+                            col="2"
+                        />
+                        <field name="to_be_installed_website_theme_module_ids" />
                     </page>
                     <page name="extra_module" string="Extra Modules">
                         <field name="extra_module_ids" />
