@@ -452,6 +452,11 @@ msgid "Core Modules"
 msgstr ""
 
 #. module: ssi_odoo_implementation
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_implementation__to_be_installed_core_module_ids
+msgid "Core Modules To Be Installed"
+msgstr ""
+
+#. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__create_uid
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment_new_feature__create_uid
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_environment__create_uid
@@ -592,6 +597,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case__feature_id
 #: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_feature_implementation_view_search
 #: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_feature_issue_view_search
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_implementation_view_form
 msgid "Feature"
 msgstr ""
 
@@ -616,6 +622,11 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.ui.menu,name:ssi_odoo_implementation.odoo_feature_issue_menu
 msgid "Feature Issues"
+msgstr ""
+
+#. module: ssi_odoo_implementation
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_implementation__to_be_installed_feature_module_ids
+msgid "Feature Modules To Be Installed"
 msgstr ""
 
 #. module: ssi_odoo_implementation
@@ -1074,6 +1085,11 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_version_view_form
 #: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_website_theme_view_form
 msgid "Modules"
+msgstr ""
+
+#. module: ssi_odoo_implementation
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_implementation__to_be_installed_module_ids
+msgid "Modules To Be Installed"
 msgstr ""
 
 #. module: ssi_odoo_implementation
@@ -1635,6 +1651,11 @@ msgid "Timebox Initial Date Start"
 msgstr ""
 
 #. module: ssi_odoo_implementation
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_implementation_view_form
+msgid "To Be Installed Modules"
+msgstr ""
+
+#. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__total_task
 msgid "Total Task"
 msgstr ""
@@ -1838,6 +1859,11 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_implementation_view_form
 msgid "Website Theme"
+msgstr ""
+
+#. module: ssi_odoo_implementation
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_implementation__to_be_installed_website_theme_module_ids
+msgid "Website Theme Modules To Be Installed"
 msgstr ""
 
 #. module: ssi_odoo_implementation
