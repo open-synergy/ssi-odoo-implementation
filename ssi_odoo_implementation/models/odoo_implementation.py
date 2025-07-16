@@ -121,6 +121,12 @@ class OdooImplementation(models.Model):
         compute="_compute_module",
         store=False,
     )
+    missing_module_count = fields.Integer(
+        string="Missing Module Count",
+        compute="_compute_module",
+        store=True,
+    )
+
     # To-Be Installed Modules
     to_be_installed_module_ids = fields.Many2many(
         string="Modules To Be Installed",
@@ -145,6 +151,11 @@ class OdooImplementation(models.Model):
         comodel_name="odoo_module",
         compute="_compute_module",
         store=False,
+    )
+    to_be_installed_module_count = fields.Integer(
+        string="To Be Installed Module Count",
+        compute="_compute_module",
+        store=True,
     )
 
     environment_id = fields.Many2one(
@@ -255,6 +266,8 @@ class OdooImplementation(models.Model):
             record.to_be_installed_website_theme_module_ids = (
                 to_be_installed_website_theme_modules
             )
+            record.missing_module_count = len(missing_modules)
+            record.to_be_installed_module_count = len(to_be_installed_modules)
 
     @api.model
     def _default_date(self):

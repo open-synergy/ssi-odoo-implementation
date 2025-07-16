@@ -110,6 +110,9 @@
                         <field name="installed_version_module_ids" />
                     </page>
                     <page name="missing_module" string="Missing Modules">
+                        <group name="missing_module_count" colspan="4" col="2">
+                            <field name="missing_module_count" />
+                        </group>
                         <group
                             name="missing_core_module"
                             string="Core"
@@ -136,6 +139,9 @@
                         name="to_be_installed_module"
                         string="To Be Installed Modules"
                     >
+                        <group name="to_be_installed_count" colspan="4" col="2">
+                            <field name="to_be_installed_module_count" />
+                        </group>
                         <group
                             name="to_be_installed_module"
                             string="All"
