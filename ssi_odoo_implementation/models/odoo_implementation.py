@@ -121,6 +121,32 @@ class OdooImplementation(models.Model):
         compute="_compute_module",
         store=False,
     )
+    # To-Be Installed Modules
+    to_be_installed_module_ids = fields.Many2many(
+        string="Modules To Be Installed",
+        comodel_name="odoo_module",
+        compute="_compute_module",
+        store=False,
+    )
+    to_be_installed_core_module_ids = fields.Many2many(
+        string="Core Modules To Be Installed",
+        comodel_name="odoo_module",
+        compute="_compute_module",
+        store=False,
+    )
+    to_be_installed_feature_module_ids = fields.Many2many(
+        string="Feature Modules To Be Installed",
+        comodel_name="odoo_module",
+        compute="_compute_module",
+        store=False,
+    )
+    to_be_installed_website_theme_module_ids = fields.Many2many(
+        string="Website Theme Modules To Be Installed",
+        comodel_name="odoo_module",
+        compute="_compute_module",
+        store=False,
+    )
+
     environment_id = fields.Many2one(
         string="Environment",
         comodel_name="odoo_environment",
@@ -175,18 +201,25 @@ class OdooImplementation(models.Model):
     @api.depends(
         "version_id",
         "installed_version_module_ids",
+        "available_module_ids",
     )
     def _compute_module(self):
         for record in self:
             core_modules = default_modules = record.version_id.default_module_ids
-            website_modules = self.env["odoo_module"]
+            website_modules = feature_modules = to_be_installed_modules = (
+                to_be_installed_core_modules
+            ) = to_be_installed_feature_modules = (
+                to_be_installed_website_theme_modules
+            ) = self.env["odoo_module"]
             for core_module in core_modules:
                 default_modules += core_module.all_dependency_ids
                 core_modules += core_module.all_dependency_ids
             for feature in record.feature_implementation_ids:
                 default_modules += feature.feature_id.default_module_ids
+                feature_modules += feature.feature_id.default_module_ids
                 for default_module in feature.feature_id.default_module_ids:
                     default_modules += default_module.all_dependency_ids
+                    feature_modules += default_module.all_dependency_ids
             for theme in record.installed_website_theme_ids:
                 website_modules += theme.default_module_ids
                 default_modules += theme.default_module_ids
@@ -199,11 +232,29 @@ class OdooImplementation(models.Model):
             missing_website_theme_modules = (
                 website_modules - record.available_module_ids
             )
+            to_be_installed_modules = (
+                default_modules & record.available_module_ids
+            ) - record.installed_version_module_ids
+            to_be_installed_core_modules = (
+                core_modules & record.available_module_ids
+            ) - record.installed_version_module_ids
+            to_be_installed_feature_modules = (
+                feature_modules & record.available_module_ids
+            ) - record.installed_version_module_ids
+            to_be_installed_website_theme_modules = (
+                website_modules & record.available_module_ids
+            ) - record.installed_version_module_ids
             record.default_module_ids = default_modules
             record.extra_module_ids = extra_modules
             record.missing_module_ids = missing_modules
             record.missing_core_module_ids = missing_core_modules
             record.missing_website_theme_module_ids = missing_website_theme_modules
+            record.to_be_installed_module_ids = to_be_installed_modules
+            record.to_be_installed_core_module_ids = to_be_installed_core_modules
+            record.to_be_installed_feature_module_ids = to_be_installed_feature_modules
+            record.to_be_installed_website_theme_module_ids = (
+                to_be_installed_website_theme_modules
+            )
 
     @api.model
     def _default_date(self):
