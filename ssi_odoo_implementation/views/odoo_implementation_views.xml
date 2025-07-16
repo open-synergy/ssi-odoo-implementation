@@ -65,7 +65,20 @@
                         name="feature_implementation"
                         string="Feature Implementations"
                     >
+                        <group
+                            name="feature_implementation"
+                            string="Features"
+                            colspan="4"
+                            col="2"
+                        />
                         <field name="feature_implementation_ids" />
+                        <group
+                            name="additional_functionality"
+                            string="Additional Functionalities"
+                            colspan="4"
+                            col="2"
+                        />
+                        <field name="feature_additional_functionality_ids" />
                     </page>
                     <page
                         name="installed_website_theme"
@@ -110,6 +123,9 @@
                         <field name="installed_version_module_ids" />
                     </page>
                     <page name="missing_module" string="Missing Modules">
+                        <group name="missing_module_count" colspan="4" col="2">
+                            <field name="missing_module_count" />
+                        </group>
                         <group
                             name="missing_core_module"
                             string="Core"
@@ -136,6 +152,9 @@
                         name="to_be_installed_module"
                         string="To Be Installed Modules"
                     >
+                        <group name="to_be_installed_count" colspan="4" col="2">
+                            <field name="to_be_installed_module_count" />
+                        </group>
                         <group
                             name="to_be_installed_module"
                             string="All"

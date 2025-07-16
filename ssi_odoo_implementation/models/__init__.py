@@ -16,4 +16,6 @@ from . import (
     odoo_use_case,
     odoo_module,
     odoo_website_theme,
+    odoo_additional_functionality,
+    odoo_feature_additional_functionality,
 )

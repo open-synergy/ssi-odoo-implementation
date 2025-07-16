@@ -121,6 +121,12 @@ class OdooImplementation(models.Model):
         compute="_compute_module",
         store=False,
     )
+    missing_module_count = fields.Integer(
+        string="Missing Module Count",
+        compute="_compute_module",
+        store=True,
+    )
+
     # To-Be Installed Modules
     to_be_installed_module_ids = fields.Many2many(
         string="Modules To Be Installed",
@@ -145,6 +151,11 @@ class OdooImplementation(models.Model):
         comodel_name="odoo_module",
         compute="_compute_module",
         store=False,
+    )
+    to_be_installed_module_count = fields.Integer(
+        string="To Be Installed Module Count",
+        compute="_compute_module",
+        store=True,
     )
 
     environment_id = fields.Many2one(
@@ -176,6 +187,13 @@ class OdooImplementation(models.Model):
         string="Feature Implementations",
         comodel_name="odoo_feature_implementation",
         inverse_name="implementation_id",
+    )
+    feature_additional_functionality_ids = fields.Many2many(
+        string="Feature Additional Functionalities",
+        comodel_name="odoo_feature_additional_functionality",
+        relation="rel_odoo_implementation_2_feature_additional_functionality",
+        column1="implementation_id",
+        column2="feature_additional_functionality_id",
     )
 
     # Update related fields
@@ -220,13 +238,21 @@ class OdooImplementation(models.Model):
                 for default_module in feature.feature_id.default_module_ids:
                     default_modules += default_module.all_dependency_ids
                     feature_modules += default_module.all_dependency_ids
+
+            for additional in record.feature_additional_functionality_ids:
+                default_modules += additional.default_module_ids
+                feature_modules += additional.default_module_ids
+                for default_module in additional.default_module_ids:
+                    default_modules += default_module.all_dependency_ids
+                    feature_modules += default_module.all_dependency_ids
+
             for theme in record.installed_website_theme_ids:
                 website_modules += theme.default_module_ids
                 default_modules += theme.default_module_ids
                 for theme_module in theme.default_module_ids:
                     website_modules += theme_module.all_dependency_ids
                     default_modules += theme_module.all_dependency_ids
-            extra_modules = record.available_module_ids - default_modules
+            extra_modules = record.installed_version_module_ids - default_modules
             missing_modules = default_modules - record.available_module_ids
             missing_core_modules = core_modules - record.available_module_ids
             missing_website_theme_modules = (
@@ -255,6 +281,8 @@ class OdooImplementation(models.Model):
             record.to_be_installed_website_theme_module_ids = (
                 to_be_installed_website_theme_modules
             )
+            record.missing_module_count = len(missing_modules)
+            record.to_be_installed_module_count = len(to_be_installed_modules)
 
     @api.model
     def _default_date(self):

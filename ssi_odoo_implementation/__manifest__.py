@@ -40,6 +40,8 @@
         "views/odoo_feature_issue_views.xml",
         "views/odoo_module_views.xml",
         "views/odoo_website_theme_views.xml",
+        "views/odoo_additional_functionality_views.xml",
+        "views/odoo_feature_additional_functionality_views.xml",
     ],
     "demo": [],
 }
