@@ -7,6 +7,10 @@ access_odoo_website_theme_configurator,odoo_website_theme - configurator,model_o
 access_odoo_website_theme_all,odoo_website_theme - all user,model_odoo_website_theme,,1,0,0,0
 access_odoo_feature_category_configurator,odoo_feature_category - configurator,model_odoo_feature_category,odoo_feature_category_group,1,1,1,1
 access_odoo_feature_category_all,odoo_feature_category - all user,model_odoo_feature_category,,1,0,0,0
+access_odoo_additional_functionality_configurator,odoo_additional_functionality - configurator,model_odoo_additional_functionality,odoo_additional_functionality_group,1,1,1,1
+access_odoo_additional_functionality_all,odoo_additional_functionality - all user,model_odoo_additional_functionality,,1,0,0,0
+access_odoo_feature_additional_functionality_configurator,odoo_feature_additional_functionality - configurator,model_odoo_feature_additional_functionality,odoo_feature_additional_functionality_group,1,1,1,1
+access_odoo_feature_additional_functionality_all,odoo_feature_additional_functionality - all user,model_odoo_feature_additional_functionality,,1,0,0,0
 access_odoo_feature_configurator,odoo_feature - configurator,model_odoo_feature,odoo_feature_group,1,1,1,1
 access_odoo_feature_all,odoo_feature - all user,model_odoo_feature,,1,0,0,0
 access_odoo_environment_configurator,odoo_environment - configurator,model_odoo_environment,odoo_environment_group,1,1,1,1

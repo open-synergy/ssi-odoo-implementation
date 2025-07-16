@@ -188,6 +188,13 @@ class OdooImplementation(models.Model):
         comodel_name="odoo_feature_implementation",
         inverse_name="implementation_id",
     )
+    feature_additional_functionality_ids = fields.Many2many(
+        string="Feature Additional Functionalities",
+        comodel_name="odoo_feature_additional_functionality",
+        relation="rel_odoo_implementation_2_feature_additional_functionality",
+        column1="implementation_id",
+        column2="feature_additional_functionality_id",
+    )
 
     # Update related fields
     update_ids = fields.One2many(
@@ -231,6 +238,14 @@ class OdooImplementation(models.Model):
                 for default_module in feature.feature_id.default_module_ids:
                     default_modules += default_module.all_dependency_ids
                     feature_modules += default_module.all_dependency_ids
+
+            for additional in record.feature_additional_functionality_ids:
+                default_modules += additional.default_module_ids
+                feature_modules += additional.default_module_ids
+                for default_module in additional.default_module_ids:
+                    default_modules += default_module.all_dependency_ids
+                    feature_modules += default_module.all_dependency_ids
+
             for theme in record.installed_website_theme_ids:
                 website_modules += theme.default_module_ids
                 default_modules += theme.default_module_ids
