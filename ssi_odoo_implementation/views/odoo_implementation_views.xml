@@ -61,17 +61,9 @@
                     <field name="environment_id" />
                 </xpath>
                 <xpath expr="//page[1]" position="before">
-                    <page
-                        name="feature_implementation"
-                        string="Feature Implementations"
-                    >
-                        <group
-                            name="feature_implementation"
-                            string="Features"
-                            colspan="4"
-                            col="2"
-                        />
-                        <field name="feature_implementation_ids" />
+                    <page name="feature_implementation" string="Feature">
+                        <group name="feature" string="Features" colspan="4" col="2" />
+                        <field name="feature_ids" />
                         <group
                             name="additional_functionality"
                             string="Additional Functionalities"
@@ -80,10 +72,7 @@
                         />
                         <field name="feature_additional_functionality_ids" />
                     </page>
-                    <page
-                        name="installed_website_theme"
-                        string="Installed Website Themes"
-                    >
+                    <page name="installed_website_theme" string="Website Themes">
                         <field name="installed_website_theme_ids" />
                     </page>
                     <page name="available_module" string="Available Modules">

@@ -188,6 +188,13 @@ class OdooImplementation(models.Model):
         comodel_name="odoo_feature_implementation",
         inverse_name="implementation_id",
     )
+    feature_ids = fields.Many2many(
+        string="Features",
+        comodel_name="odoo_feature",
+        relation="rel_odoo_implementation_2_feature",
+        column1="implementation_id",
+        column2="feature_id",
+    )
     feature_additional_functionality_ids = fields.Many2many(
         string="Feature Additional Functionalities",
         comodel_name="odoo_feature_additional_functionality",
@@ -220,6 +227,7 @@ class OdooImplementation(models.Model):
         "version_id",
         "installed_version_module_ids",
         "available_module_ids",
+        "feature_ids",
     )
     def _compute_module(self):
         for record in self:
@@ -232,10 +240,10 @@ class OdooImplementation(models.Model):
             for core_module in core_modules:
                 default_modules += core_module.all_dependency_ids
                 core_modules += core_module.all_dependency_ids
-            for feature in record.feature_implementation_ids:
-                default_modules += feature.feature_id.default_module_ids
-                feature_modules += feature.feature_id.default_module_ids
-                for default_module in feature.feature_id.default_module_ids:
+            for feature in record.feature_ids:
+                default_modules += feature.default_module_ids
+                feature_modules += feature.default_module_ids
+                for default_module in feature.default_module_ids:
                     default_modules += default_module.all_dependency_ids
                     feature_modules += default_module.all_dependency_ids
 
