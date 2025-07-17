@@ -658,7 +658,6 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_implementation__feature_implementation_ids
 #: model:ir.ui.menu,name:ssi_odoo_implementation.odoo_feature_implementation_menu
-#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_implementation_view_form
 msgid "Feature Implementations"
 msgstr ""
 
@@ -674,6 +673,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.actions.act_window,name:ssi_odoo_implementation.odoo_feature_action
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_implementation__feature_ids
 #: model:ir.ui.menu,name:ssi_odoo_implementation.odoo_feature_menu
 #: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_implementation_view_form
 msgid "Features"
@@ -925,11 +925,6 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_implementation__installed_website_theme_ids
 msgid "Installed Website Theme"
-msgstr ""
-
-#. module: ssi_odoo_implementation
-#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_implementation_view_form
-msgid "Installed Website Themes"
 msgstr ""
 
 #. module: ssi_odoo_implementation
@@ -2010,6 +2005,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__website_theme_ids
 #: model:ir.ui.menu,name:ssi_odoo_implementation.odoo_website_theme_menu
 #: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_deployment_view_form
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_implementation_view_form
 msgid "Website Themes"
 msgstr ""
 
