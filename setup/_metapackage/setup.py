@@ -12,6 +12,7 @@ setuptools.setup(
         'odoo14-addon-ssi_odoo_implementation_git',
         'odoo14-addon-ssi_odoo_implementation_infrastructure',
         'odoo14-addon-ssi_odoo_implementation_project',
+        'odoo14-addon-ssi_odoo_implementation_work_log',
     ],
     classifiers=[
         'Programming Language :: Python',
