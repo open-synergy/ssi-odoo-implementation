@@ -90,7 +90,7 @@ class OdooFeatureIssue(models.Model):
         string="Feature",
         comodel_name="odoo_feature",
         ondelete="restrict",
-        required=True,
+        required=False,
         readonly=True,
         states={"draft": [("readonly", False)]},
     )
