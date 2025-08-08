@@ -10,6 +10,7 @@
     "installable": True,
     "depends": [
         "ssi_odoo_implementation",
+        "ssi_work_log_mixin",
     ],
     "data": [],
     "demo": [],
