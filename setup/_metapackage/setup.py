@@ -9,6 +9,7 @@ setuptools.setup(
     version=version,
     install_requires=[
         'odoo14-addon-ssi_odoo_implementation',
+        'odoo14-addon-ssi_odoo_implementation_data_requirement',
         'odoo14-addon-ssi_odoo_implementation_git',
         'odoo14-addon-ssi_odoo_implementation_infrastructure',
         'odoo14-addon-ssi_odoo_implementation_project',
