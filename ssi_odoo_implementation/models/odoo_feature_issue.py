@@ -12,27 +12,27 @@ class OdooFeatureIssue(models.Model):
     _inherit = [
         "mixin.transaction_cancel",
         "mixin.transaction_done",
-        "mixin.transaction_confirm",
         "mixin.transaction_open",
         "mixin.transaction_ready",
+        "mixin.transaction_confirm",
         "mixin.task",
     ]
     _description = "Odoo Feature Issue"
-    _approval_from_state = "open"
-    _approval_to_state = "done"
+    _approval_from_state = "draft"
+    _approval_to_state = "ready"
     _approval_state = "confirm"
-    _after_approved_method = "action_done"
+    _after_approved_method = "action_ready"
 
     # Attributes related to add element on view automatically
     _automatically_insert_view_element = True
-    _automatically_insert_done_policy_fields = False
-    _automatically_insert_done_button = False
+    _automatically_insert_ready_policy_fields = False
+    _automatically_insert_ready_button = False
 
     _task_create_page = True
     _task_page_xpath = "//page[2]"
     _task_template_position = "before"
 
-    _statusbar_visible_label = "draft,ready,open,confirm,done"
+    _statusbar_visible_label = "draft,confirm,ready,open"
 
     _policy_field_order = [
         "ready_ok",
@@ -46,7 +46,6 @@ class OdooFeatureIssue(models.Model):
         "manual_number_ok",
     ]
     _header_button_order = [
-        "action_ready",
         "action_open",
         "action_confirm",
         "action_approve_approval",
