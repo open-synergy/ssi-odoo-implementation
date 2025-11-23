@@ -20,6 +20,11 @@ msgid "Display Name"
 msgstr ""
 
 #. module: ssi_odoo_implementation_git
+#: model:git_repo_type,name:ssi_odoo_implementation_git.repo_type_odoo_doodba
+msgid "Doodba Odoo Project"
+msgstr ""
+
+#. module: ssi_odoo_implementation_git
 #: model:ir.model.fields,field_description:ssi_odoo_implementation_git.field_odoo_implementation__git_repo_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation_git.field_odoo_module__git_repo_id
 msgid "Git Repository"
@@ -35,6 +40,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:ssi_odoo_implementation_git.field_odoo_implementation____last_update
 #: model:ir.model.fields,field_description:ssi_odoo_implementation_git.field_odoo_module____last_update
 msgid "Last Modified on"
+msgstr ""
+
+#. module: ssi_odoo_implementation_git
+#: model:git_repo_type,name:ssi_odoo_implementation_git.repo_type_odoo_addons
+msgid "Odoo Addons"
 msgstr ""
 
 #. module: ssi_odoo_implementation_git
