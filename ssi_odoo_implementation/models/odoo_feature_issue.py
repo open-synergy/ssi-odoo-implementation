@@ -85,6 +85,11 @@ class OdooFeatureIssue(models.Model):
         readonly=True,
         states={"draft": [("readonly", False)]},
     )
+    precondition = fields.Text(
+        string="Precondition",
+        readonly=True,
+        states={"draft": [("readonly", False)]},
+    )
     steps_to_reproduce = fields.Text(
         string="Steps to Reproduce",
         readonly=True,
@@ -97,6 +102,11 @@ class OdooFeatureIssue(models.Model):
     )
     expected_behavior = fields.Text(
         string="Expected Behavior",
+        readonly=True,
+        states={"draft": [("readonly", False)]},
+    )
+    error_log = fields.Text(
+        string="Error Log",
         readonly=True,
         states={"draft": [("readonly", False)]},
     )
@@ -113,6 +123,24 @@ class OdooFeatureIssue(models.Model):
         comodel_name="odoo_version",
         ondelete="restrict",
         required=True,
+        readonly=True,
+        states={"draft": [("readonly", False)]},
+    )
+    use_case_ids = fields.Many2many(
+        string="Related Use Cases",
+        comodel_name="odoo_use_case",
+        relation="odoo_feature_issue_use_case_rel",
+        column1="feature_issue_id",
+        column2="use_case_id",
+        readonly=True,
+        states={"draft": [("readonly", False)]},
+    )
+    module_ids = fields.Many2many(
+        string="Related Modules",
+        comodel_name="odoo_module",
+        relation="odoo_feature_issue_module_rel",
+        column1="feature_issue_id",
+        column2="module_id",
         readonly=True,
         states={"draft": [("readonly", False)]},
     )
