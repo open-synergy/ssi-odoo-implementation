@@ -18,4 +18,5 @@ from . import (
     odoo_website_theme,
     odoo_additional_functionality,
     odoo_feature_additional_functionality,
+    odoo_change_request,
 )
