@@ -523,6 +523,16 @@ msgid "Created on"
 msgstr ""
 
 #. module: ssi_odoo_implementation
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__current_behavior
+msgid "Current Behavior"
+msgstr ""
+
+#. module: ssi_odoo_implementation
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_feature_issue_view_form
+msgid "Current Behaviour"
+msgstr ""
+
+#. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__date
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_implementation__date
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__date
@@ -615,6 +625,16 @@ msgstr ""
 #: model:ir.actions.act_window,name:ssi_odoo_implementation.odoo_environment_action
 #: model:ir.ui.menu,name:ssi_odoo_implementation.odoo_environment_menu
 msgid "Environments"
+msgstr ""
+
+#. module: ssi_odoo_implementation
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__expected_behavior
+msgid "Expected Behavior"
+msgstr ""
+
+#. module: ssi_odoo_implementation
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_feature_issue_view_form
+msgid "Expected Behaviour"
 msgstr ""
 
 #. module: ssi_odoo_implementation
@@ -1709,6 +1729,12 @@ msgid ""
 "Overdue: Due date is already passed\n"
 "Today: Activity date is today\n"
 "Planned: Future activities."
+msgstr ""
+
+#. module: ssi_odoo_implementation
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__steps_to_reproduce
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_feature_issue_view_form
+msgid "Steps to Reproduce"
 msgstr ""
 
 #. module: ssi_odoo_implementation
