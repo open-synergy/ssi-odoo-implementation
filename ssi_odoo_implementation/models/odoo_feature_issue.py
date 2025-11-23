@@ -85,6 +85,21 @@ class OdooFeatureIssue(models.Model):
         readonly=True,
         states={"draft": [("readonly", False)]},
     )
+    steps_to_reproduce = fields.Text(
+        string="Steps to Reproduce",
+        readonly=True,
+        states={"draft": [("readonly", False)]},
+    )
+    current_behavior = fields.Text(
+        string="Current Behavior",
+        readonly=True,
+        states={"draft": [("readonly", False)]},
+    )
+    expected_behavior = fields.Text(
+        string="Expected Behavior",
+        readonly=True,
+        states={"draft": [("readonly", False)]},
+    )
     feature_id = fields.Many2one(
         string="Feature",
         comodel_name="odoo_feature",
