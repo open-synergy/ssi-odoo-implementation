@@ -116,6 +116,24 @@ class OdooFeatureIssue(models.Model):
         readonly=True,
         states={"draft": [("readonly", False)]},
     )
+    use_case_ids = fields.Many2many(
+        string="Related Use Cases",
+        comodel_name="odoo_use_case",
+        relation="odoo_feature_issue_use_case_rel",
+        column1="feature_issue_id",
+        column2="use_case_id",
+        readonly=True,
+        states={"draft": [("readonly", False)]},
+    )
+    module_ids = fields.Many2many(
+        string="Related Modules",
+        comodel_name="odoo_module",
+        relation="odoo_feature_issue_module_rel",
+        column1="feature_issue_id",
+        column2="module_id",
+        readonly=True,
+        states={"draft": [("readonly", False)]},
+    )
 
     @api.model
     def _default_date(self):

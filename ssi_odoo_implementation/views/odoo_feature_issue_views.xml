@@ -71,6 +71,14 @@
                     <separator string="Expected Behaviour" colspan="4" />
                     <field name="expected_behavior" widget="html" />
                 </page>
+                <page name="use_case" string="Related Use Case">
+                    <field name="use_case_ids">
+                    </field>
+                </page>
+                <page name="module" string="Related Module">
+                    <field name="module_ids">
+                    </field>
+                </page>
             </xpath>
         </data>
     </field>
