@@ -628,6 +628,12 @@ msgid "Environments"
 msgstr ""
 
 #. module: ssi_odoo_implementation
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__error_log
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_feature_issue_view_form
+msgid "Error Log"
+msgstr ""
+
+#. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__expected_behavior
 msgid "Expected Behavior"
 msgstr ""
@@ -1580,6 +1586,12 @@ msgid "Policy Template"
 msgstr ""
 
 #. module: ssi_odoo_implementation
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__precondition
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_feature_issue_view_form
+msgid "Precondition"
+msgstr ""
+
+#. module: ssi_odoo_implementation
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_feature_issue__ready_ok
 msgid ""
 "Ready policy\n"
@@ -1608,6 +1620,26 @@ msgstr ""
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__rejected
 #: model:ir.model.fields.selection,name:ssi_odoo_implementation.selection__odoo_deployment__state__reject
 msgid "Rejected"
+msgstr ""
+
+#. module: ssi_odoo_implementation
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_feature_issue_view_form
+msgid "Related Module"
+msgstr ""
+
+#. module: ssi_odoo_implementation
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__module_ids
+msgid "Related Modules"
+msgstr ""
+
+#. module: ssi_odoo_implementation
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_feature_issue_view_form
+msgid "Related Use Case"
+msgstr ""
+
+#. module: ssi_odoo_implementation
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__use_case_ids
+msgid "Related Use Cases"
 msgstr ""
 
 #. module: ssi_odoo_implementation
