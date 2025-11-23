@@ -85,6 +85,11 @@ class OdooFeatureIssue(models.Model):
         readonly=True,
         states={"draft": [("readonly", False)]},
     )
+    precondition = fields.Text(
+        string="Precondition",
+        readonly=True,
+        states={"draft": [("readonly", False)]},
+    )
     steps_to_reproduce = fields.Text(
         string="Steps to Reproduce",
         readonly=True,
@@ -97,6 +102,11 @@ class OdooFeatureIssue(models.Model):
     )
     expected_behavior = fields.Text(
         string="Expected Behavior",
+        readonly=True,
+        states={"draft": [("readonly", False)]},
+    )
+    error_log = fields.Text(
+        string="Error Log",
         readonly=True,
         states={"draft": [("readonly", False)]},
     )

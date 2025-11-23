@@ -64,12 +64,17 @@
             </xpath>
             <xpath expr="//page[1]" position="before">
                 <page name="description" string="Description">
+                    <separator string="Precondition" colspan="4" />
+                    <field name="precondition" widget="html" />
                     <separator string="Steps to Reproduce" colspan="4" />
                     <field name="steps_to_reproduce" widget="html" />
                     <separator string="Current Behaviour" colspan="4" />
                     <field name="current_behavior" widget="html" />
                     <separator string="Expected Behaviour" colspan="4" />
                     <field name="expected_behavior" widget="html" />
+                </page>
+                <page name="log" string="Error Log">
+                    <field name="error_log" widget="ace" />
                 </page>
                 <page name="use_case" string="Related Use Case">
                     <field name="use_case_ids">
