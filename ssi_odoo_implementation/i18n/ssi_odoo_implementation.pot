@@ -27,6 +27,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__name
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__name
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__name
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_implementation__name
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__name
@@ -60,6 +61,7 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_additional_functionality__message_needaction
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__message_needaction
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__message_needaction
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__message_needaction
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_environment__message_needaction
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature__message_needaction
@@ -90,6 +92,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__active_approval_ids
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__active_approval_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__active_approval_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_implementation__active_approval_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__active_approval_ids
@@ -98,6 +101,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__active_approver_partner_ids
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__active_approver_partner_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__active_approver_partner_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_implementation__active_approver_partner_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__active_approver_partner_ids
@@ -106,6 +110,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__active_approver_user_ids
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__active_approver_user_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__active_approver_user_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_implementation__active_approver_user_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__active_approver_user_ids
@@ -115,6 +120,7 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_additional_functionality__activity_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__activity_ids
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__activity_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__activity_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_environment__activity_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature__activity_ids
@@ -133,6 +139,7 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_additional_functionality__activity_exception_decoration
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__activity_exception_decoration
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__activity_exception_decoration
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__activity_exception_decoration
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_environment__activity_exception_decoration
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature__activity_exception_decoration
@@ -151,6 +158,7 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_additional_functionality__activity_state
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__activity_state
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__activity_state
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__activity_state
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_environment__activity_state
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature__activity_state
@@ -169,6 +177,7 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_additional_functionality__activity_type_icon
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__activity_type_icon
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__activity_type_icon
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__activity_type_icon
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_environment__activity_type_icon
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature__activity_type_icon
@@ -198,6 +207,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:res.groups,name:ssi_odoo_implementation.odoo_change_request_all_group
+#: model:res.groups,name:ssi_odoo_implementation.odoo_configuration_change_record_all_group
 #: model:res.groups,name:ssi_odoo_implementation.odoo_deployment_all_group
 #: model:res.groups,name:ssi_odoo_implementation.odoo_feature_implementation_all_group
 #: model:res.groups,name:ssi_odoo_implementation.odoo_feature_issue_all_group
@@ -213,7 +223,13 @@ msgid "All Modules"
 msgstr ""
 
 #. module: ssi_odoo_implementation
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__allowed_contact_ids
+msgid "Allowed Contact"
+msgstr ""
+
+#. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__allowed_policy_template_ids
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__allowed_policy_template_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__allowed_policy_template_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_implementation__allowed_policy_template_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__allowed_policy_template_ids
@@ -223,6 +239,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_change_request__approval_template_id
+#: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_configuration_change_record__approval_template_id
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_deployment__approval_template_id
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_feature_implementation__approval_template_id
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_feature_issue__approval_template_id
@@ -231,6 +248,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__approval_template_id
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__approval_template_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__approval_template_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_implementation__approval_template_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__approval_template_id
@@ -239,6 +257,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__approval_ids
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__approval_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__approval_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_implementation__approval_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__approval_ids
@@ -247,6 +266,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_change_request__approve_ok
+#: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_configuration_change_record__approve_ok
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_deployment__approve_ok
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_feature_implementation__approve_ok
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_feature_issue__approve_ok
@@ -258,6 +278,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__approved
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__approved
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__approved
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_implementation__approved
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__approved
@@ -267,6 +288,7 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_additional_functionality__message_attachment_count
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__message_attachment_count
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__message_attachment_count
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__message_attachment_count
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_environment__message_attachment_count
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature__message_attachment_count
@@ -283,6 +305,11 @@ msgid "Attachment Count"
 msgstr ""
 
 #. module: ssi_odoo_implementation
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record_detail__audit_log_url
+msgid "Audit Log URL"
+msgstr ""
+
+#. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_implementation__available_module_ids
 #: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_implementation_view_form
 msgid "Available Modules"
@@ -290,6 +317,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__approve_ok
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__approve_ok
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__approve_ok
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_implementation__approve_ok
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__approve_ok
@@ -298,6 +326,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__cancel_ok
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__cancel_ok
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__cancel_ok
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_implementation__cancel_ok
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__cancel_ok
@@ -306,6 +335,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__confirm_ok
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__confirm_ok
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__confirm_ok
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_implementation__confirm_ok
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__confirm_ok
@@ -314,6 +344,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__done_ok
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__done_ok
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__done_ok
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__done_ok
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_implementation__done_ok
@@ -322,6 +353,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__manual_number_ok
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__manual_number_ok
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__manual_number_ok
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_implementation__manual_number_ok
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__manual_number_ok
@@ -331,6 +363,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__reject_ok
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__reject_ok
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__reject_ok
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_implementation__reject_ok
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__reject_ok
@@ -339,6 +372,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__restart_ok
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__restart_ok
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__restart_ok
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_implementation__restart_ok
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__restart_ok
@@ -348,6 +382,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__restart_approval_ok
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__restart_approval_ok
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__restart_approval_ok
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_implementation__restart_approval_ok
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__restart_approval_ok
@@ -371,6 +406,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__cancel_reason_id
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__cancel_reason_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__cancel_reason_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_implementation__cancel_reason_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__cancel_reason_id
@@ -379,6 +415,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_change_request__cancel_ok
+#: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_configuration_change_record__cancel_ok
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_deployment__cancel_ok
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_feature_implementation__cancel_ok
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_feature_issue__cancel_ok
@@ -439,11 +476,13 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__company_id
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__company_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__company_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_implementation__company_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__company_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_implementation__company_id
 #: model:res.groups,name:ssi_odoo_implementation.odoo_change_request_company_group
+#: model:res.groups,name:ssi_odoo_implementation.odoo_configuration_change_record_company_group
 #: model:res.groups,name:ssi_odoo_implementation.odoo_deployment_company_group
 #: model:res.groups,name:ssi_odoo_implementation.odoo_feature_implementation_company_group
 #: model:res.groups,name:ssi_odoo_implementation.odoo_feature_issue_company_group
@@ -453,6 +492,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__company_partner_id
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__company_partner_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__company_partner_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_implementation__company_partner_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__company_partner_id
@@ -462,6 +502,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:res.groups,name:ssi_odoo_implementation.odoo_change_request_company_child_group
+#: model:res.groups,name:ssi_odoo_implementation.odoo_configuration_change_record_company_child_group
 #: model:res.groups,name:ssi_odoo_implementation.odoo_deployment_company_child_group
 #: model:res.groups,name:ssi_odoo_implementation.odoo_feature_implementation_company_child_group
 #: model:res.groups,name:ssi_odoo_implementation.odoo_feature_issue_company_child_group
@@ -471,6 +512,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_change_request__company_id
+#: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_configuration_change_record__company_id
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_deployment__company_id
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_feature_implementation__company_id
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_feature_issue__company_id
@@ -493,7 +535,18 @@ msgid "Configuration"
 msgstr ""
 
 #. module: ssi_odoo_implementation
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record_detail__configuration_change_record_id
+msgid "Configuration Change Record"
+msgstr ""
+
+#. module: ssi_odoo_implementation
+#: model:ir.ui.menu,name:ssi_odoo_implementation.odoo_configuration_change_record_menu
+msgid "Configuration Change Records"
+msgstr ""
+
+#. module: ssi_odoo_implementation
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_change_request__confirm_ok
+#: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_configuration_change_record__confirm_ok
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_deployment__confirm_ok
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_feature_implementation__confirm_ok
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_feature_issue__confirm_ok
@@ -504,6 +557,7 @@ msgid ""
 msgstr ""
 
 #. module: ssi_odoo_implementation
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__contact_partner_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__contact_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_implementation__contact_id
 msgid "Contact"
@@ -527,6 +581,8 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_additional_functionality__create_uid
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__create_uid
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__create_uid
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record_detail__create_uid
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__create_uid
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment_new_feature__create_uid
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_environment__create_uid
@@ -547,6 +603,8 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_additional_functionality__create_date
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__create_date
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__create_date
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record_detail__create_date
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__create_date
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment_new_feature__create_date
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_environment__create_date
@@ -576,6 +634,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__date
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__date
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__date
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_implementation__date
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__date
@@ -611,6 +670,12 @@ msgid "Description"
 msgstr ""
 
 #. module: ssi_odoo_implementation
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__detail_ids
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_configuration_change_record_view_form
+msgid "Details"
+msgstr ""
+
+#. module: ssi_odoo_implementation
 #: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_module_view_form
 msgid "Direct"
 msgstr ""
@@ -618,6 +683,8 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_additional_functionality__display_name
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__display_name
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__display_name
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record_detail__display_name
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__display_name
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment_new_feature__display_name
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_environment__display_name
@@ -647,6 +714,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_change_request__done_ok
+#: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_configuration_change_record__done_ok
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_deployment__done_ok
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_feature_issue__done_ok
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_implementation__done_ok
@@ -760,6 +828,7 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_additional_functionality__message_follower_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__message_follower_ids
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__message_follower_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__message_follower_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_environment__message_follower_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature__message_follower_ids
@@ -778,6 +847,7 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_additional_functionality__message_channel_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__message_channel_ids
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__message_channel_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__message_channel_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_environment__message_channel_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature__message_channel_ids
@@ -796,6 +866,7 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_additional_functionality__message_partner_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__message_partner_ids
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__message_partner_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__message_partner_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_environment__message_partner_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature__message_partner_ids
@@ -814,6 +885,7 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_additional_functionality__activity_type_icon
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_change_request__activity_type_icon
+#: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_configuration_change_record__activity_type_icon
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_deployment__activity_type_icon
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_environment__activity_type_icon
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_feature__activity_type_icon
@@ -847,6 +919,8 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_additional_functionality__id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__id
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__id
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record_detail__id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment_new_feature__id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_environment__id
@@ -867,6 +941,7 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_additional_functionality__activity_exception_icon
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__activity_exception_icon
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__activity_exception_icon
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__activity_exception_icon
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_environment__activity_exception_icon
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature__activity_exception_icon
@@ -885,6 +960,7 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_additional_functionality__activity_exception_icon
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_change_request__activity_exception_icon
+#: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_configuration_change_record__activity_exception_icon
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_deployment__activity_exception_icon
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_environment__activity_exception_icon
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_feature__activity_exception_icon
@@ -905,6 +981,8 @@ msgstr ""
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_additional_functionality__message_unread
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_change_request__message_needaction
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_change_request__message_unread
+#: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_configuration_change_record__message_needaction
+#: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_configuration_change_record__message_unread
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_deployment__message_needaction
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_deployment__message_unread
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_environment__message_needaction
@@ -935,6 +1013,7 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_additional_functionality__message_has_error
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_change_request__message_has_error
+#: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_configuration_change_record__message_has_error
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_deployment__message_has_error
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_environment__message_has_error
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_feature__message_has_error
@@ -948,6 +1027,11 @@ msgstr ""
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_version__message_has_error
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_website_theme__message_has_error
 msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: ssi_odoo_implementation
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_change_request_view_form
+msgid "Impacted Modules"
 msgstr ""
 
 #. module: ssi_odoo_implementation
@@ -1013,6 +1097,7 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_additional_functionality__message_is_follower
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__message_is_follower
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__message_is_follower
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__message_is_follower
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_environment__message_is_follower
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature__message_is_follower
@@ -1031,6 +1116,8 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_additional_functionality____last_update
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request____last_update
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record____last_update
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record_detail____last_update
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment____last_update
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment_new_feature____last_update
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_environment____last_update
@@ -1051,6 +1138,8 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_additional_functionality__write_uid
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__write_uid
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__write_uid
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record_detail__write_uid
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__write_uid
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment_new_feature__write_uid
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_environment__write_uid
@@ -1071,6 +1160,8 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_additional_functionality__write_date
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__write_date
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__write_date
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record_detail__write_date
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__write_date
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment_new_feature__write_date
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_environment__write_date
@@ -1109,6 +1200,7 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_additional_functionality__message_main_attachment_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__message_main_attachment_id
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__message_main_attachment_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__message_main_attachment_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_environment__message_main_attachment_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature__message_main_attachment_id
@@ -1131,6 +1223,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_change_request__manual_number_ok
+#: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_configuration_change_record__manual_number_ok
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_deployment__manual_number_ok
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_feature_implementation__manual_number_ok
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_feature_issue__manual_number_ok
@@ -1187,6 +1280,7 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_additional_functionality__message_has_error
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__message_has_error
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__message_has_error
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__message_has_error
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_environment__message_has_error
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature__message_has_error
@@ -1205,6 +1299,7 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_additional_functionality__message_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__message_ids
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__message_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__message_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_environment__message_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature__message_ids
@@ -1272,6 +1367,7 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_additional_functionality__my_activity_date_deadline
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__my_activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__my_activity_date_deadline
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__my_activity_date_deadline
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_environment__my_activity_date_deadline
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature__my_activity_date_deadline
@@ -1308,6 +1404,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__need_validation
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__need_validation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__need_validation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_implementation__need_validation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__need_validation
@@ -1343,6 +1440,7 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_additional_functionality__activity_date_deadline
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__activity_date_deadline
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__activity_date_deadline
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__activity_date_deadline
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_environment__activity_date_deadline
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature__activity_date_deadline
@@ -1361,6 +1459,7 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_additional_functionality__activity_summary
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__activity_summary
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__activity_summary
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__activity_summary
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_environment__activity_summary
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature__activity_summary
@@ -1379,6 +1478,7 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_additional_functionality__activity_type_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__activity_type_id
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__activity_type_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__activity_type_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_environment__activity_type_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature__activity_type_id
@@ -1396,6 +1496,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__next_approval_ids
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__next_approval_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__next_approval_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_implementation__next_approval_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__next_approval_ids
@@ -1410,6 +1511,8 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_additional_functionality__note
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__note
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__note
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record_detail__note
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__note
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_environment__note
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature__note
@@ -1428,6 +1531,7 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_additional_functionality__message_needaction_counter
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__message_needaction_counter
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__message_needaction_counter
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__message_needaction_counter
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_environment__message_needaction_counter
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature__message_needaction_counter
@@ -1446,6 +1550,7 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_additional_functionality__message_has_error_counter
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__message_has_error_counter
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__message_has_error_counter
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__message_has_error_counter
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_environment__message_has_error_counter
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature__message_has_error_counter
@@ -1464,6 +1569,7 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_additional_functionality__message_needaction_counter
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_change_request__message_needaction_counter
+#: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_configuration_change_record__message_needaction_counter
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_deployment__message_needaction_counter
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_environment__message_needaction_counter
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_feature__message_needaction_counter
@@ -1482,6 +1588,7 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_additional_functionality__message_has_error_counter
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_change_request__message_has_error_counter
+#: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_configuration_change_record__message_has_error_counter
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_deployment__message_has_error_counter
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_environment__message_has_error_counter
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_feature__message_has_error_counter
@@ -1500,6 +1607,7 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_additional_functionality__message_unread_counter
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_change_request__message_unread_counter
+#: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_configuration_change_record__message_unread_counter
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_deployment__message_unread_counter
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_environment__message_unread_counter
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_feature__message_unread_counter
@@ -1570,6 +1678,23 @@ msgid "Odoo Change Requests"
 msgstr ""
 
 #. module: ssi_odoo_implementation
+#: model:ir.actions.act_window,name:ssi_odoo_implementation.odoo_configuration_change_record_action
+#: model:ir.model,name:ssi_odoo_implementation.model_odoo_configuration_change_record
+msgid "Odoo Configuration Change Record"
+msgstr ""
+
+#. module: ssi_odoo_implementation
+#: model:ir.model,name:ssi_odoo_implementation.model_odoo_configuration_change_record_detail
+msgid "Odoo Configuration Change Record Detail"
+msgstr ""
+
+#. module: ssi_odoo_implementation
+#: model:ir.module.category,name:ssi_odoo_implementation.odoo_configuration_change_record_data_ownership_module_category
+#: model:ir.module.category,name:ssi_odoo_implementation.odoo_configuration_change_record_workflow_module_category
+msgid "Odoo Configuration Record Change"
+msgstr ""
+
+#. module: ssi_odoo_implementation
 #: model:ir.model,name:ssi_odoo_implementation.model_odoo_deployment
 #: model:ir.module.category,name:ssi_odoo_implementation.odoo_deployment_data_ownership_module_category
 #: model:ir.module.category,name:ssi_odoo_implementation.odoo_deployment_workflow_module_category
@@ -1636,6 +1761,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model,name:ssi_odoo_implementation.model_odoo_implementation
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__odoo_implementation_id
 #: model:ir.module.category,name:ssi_odoo_implementation.odoo_implementation_data_ownership_module_category
 #: model:ir.module.category,name:ssi_odoo_implementation.odoo_implementation_workflow_module_category
 #: model:ir.ui.menu,name:ssi_odoo_implementation.menu_root_odoo
@@ -1677,7 +1803,13 @@ msgid "Odoo Website Theme"
 msgstr ""
 
 #. module: ssi_odoo_implementation
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__partner_id
+msgid "Partner"
+msgstr ""
+
+#. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__policy_template_id
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__policy_template_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__policy_template_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_implementation__policy_template_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__policy_template_id
@@ -1707,6 +1839,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_change_request__reject_ok
+#: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_configuration_change_record__reject_ok
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_deployment__reject_ok
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_feature_implementation__reject_ok
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_feature_issue__reject_ok
@@ -1718,6 +1851,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__rejected
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__rejected
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__rejected
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_implementation__rejected
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__rejected
@@ -1758,6 +1892,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__user_id
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__user_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__user_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_implementation__user_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__user_id
@@ -1769,6 +1904,7 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_additional_functionality__activity_user_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__activity_user_id
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__activity_user_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__activity_user_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_environment__activity_user_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature__activity_user_id
@@ -1786,6 +1922,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_change_request__restart_approval_ok
+#: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_configuration_change_record__restart_approval_ok
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_deployment__restart_approval_ok
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_feature_implementation__restart_approval_ok
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_feature_issue__restart_approval_ok
@@ -1797,6 +1934,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_change_request__restart_ok
+#: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_configuration_change_record__restart_ok
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_deployment__restart_ok
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_feature_implementation__restart_ok
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_feature_issue__restart_ok
@@ -1809,6 +1947,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__reviewer_id
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__reviewer_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__reviewer_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_implementation__reviewer_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__reviewer_id
@@ -1820,6 +1959,11 @@ msgstr ""
 #: model:ir.model.fields.selection,name:ssi_odoo_implementation.selection__odoo_feature_implementation__state__open
 #: model:ir.model.fields.selection,name:ssi_odoo_implementation.selection__odoo_implementation__state__open
 msgid "Running"
+msgstr ""
+
+#. module: ssi_odoo_implementation
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record_detail__sequence
+msgid "Sequence"
 msgstr ""
 
 #. module: ssi_odoo_implementation
@@ -1856,6 +2000,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__state
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__state
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__state
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_implementation__state
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__state
@@ -1866,6 +2011,7 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_additional_functionality__activity_state
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_change_request__activity_state
+#: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_configuration_change_record__activity_state
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_deployment__activity_state
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_environment__activity_state
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_feature__activity_state
@@ -1893,6 +2039,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__summary
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__summary
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__summary
 msgid "Summary"
 msgstr ""
@@ -1985,6 +2132,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_change_request__name
+#: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_configuration_change_record__name
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_deployment__name
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_feature_implementation__name
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_feature_issue__name
@@ -2009,6 +2157,7 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_additional_functionality__activity_exception_decoration
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_change_request__activity_exception_decoration
+#: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_configuration_change_record__activity_exception_decoration
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_deployment__activity_exception_decoration
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_environment__activity_exception_decoration
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_feature__activity_exception_decoration
@@ -2027,6 +2176,7 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_additional_functionality__message_unread
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__message_unread
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__message_unread
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__message_unread
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_environment__message_unread
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature__message_unread
@@ -2045,6 +2195,7 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_additional_functionality__message_unread_counter
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__message_unread_counter
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__message_unread_counter
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__message_unread_counter
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_environment__message_unread_counter
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature__message_unread_counter
@@ -2091,6 +2242,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:res.groups,name:ssi_odoo_implementation.odoo_change_request_user_group
+#: model:res.groups,name:ssi_odoo_implementation.odoo_configuration_change_record_user_group
 #: model:res.groups,name:ssi_odoo_implementation.odoo_deployment_user_group
 #: model:res.groups,name:ssi_odoo_implementation.odoo_feature_implementation_user_group
 #: model:res.groups,name:ssi_odoo_implementation.odoo_feature_issue_user_group
@@ -2100,6 +2252,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_change_request__user_id
+#: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_configuration_change_record__user_id
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_deployment__user_id
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_feature_implementation__user_id
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_feature_issue__user_id
@@ -2114,6 +2267,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_change_request__reviewer_id
+#: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_configuration_change_record__reviewer_id
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_deployment__reviewer_id
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_feature_implementation__reviewer_id
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_feature_issue__reviewer_id
@@ -2126,6 +2280,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_change_request__active_approver_user_ids
+#: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_configuration_change_record__active_approver_user_ids
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_deployment__active_approver_user_ids
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_feature_implementation__active_approver_user_ids
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_feature_issue__active_approver_user_ids
@@ -2134,6 +2289,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:res.groups,name:ssi_odoo_implementation.odoo_change_request_validator_group
+#: model:res.groups,name:ssi_odoo_implementation.odoo_configuration_change_record_validator_group
 #: model:res.groups,name:ssi_odoo_implementation.odoo_deployment_validator_group
 #: model:res.groups,name:ssi_odoo_implementation.odoo_feature_implementation_validator_group
 #: model:res.groups,name:ssi_odoo_implementation.odoo_feature_issue_validator_group
@@ -2159,6 +2315,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:res.groups,name:ssi_odoo_implementation.odoo_change_request_viewer_group
+#: model:res.groups,name:ssi_odoo_implementation.odoo_configuration_change_record_viewer_group
 #: model:res.groups,name:ssi_odoo_implementation.odoo_deployment_viewer_group
 #: model:res.groups,name:ssi_odoo_implementation.odoo_feature_implementation_viewer_group
 #: model:res.groups,name:ssi_odoo_implementation.odoo_feature_issue_viewer_group
@@ -2179,6 +2336,7 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_additional_functionality__website_message_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__website_message_ids
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__website_message_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__website_message_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_environment__website_message_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature__website_message_ids
@@ -2216,6 +2374,7 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_additional_functionality__website_message_ids
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_change_request__website_message_ids
+#: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_configuration_change_record__website_message_ids
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_deployment__website_message_ids
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_environment__website_message_ids
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_feature__website_message_ids
