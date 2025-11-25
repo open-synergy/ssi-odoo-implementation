@@ -79,6 +79,9 @@
                             class="oe_full_width"
                         />
                 </page>
+                <page name="modules" string="Impacted Modules">
+                    <field name="module_ids" />
+                </page>
             </xpath>
         </data>
     </field>
