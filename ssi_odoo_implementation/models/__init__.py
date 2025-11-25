@@ -19,4 +19,6 @@ from . import (
     odoo_additional_functionality,
     odoo_feature_additional_functionality,
     odoo_change_request,
+    odoo_configuration_change_record,
+    odoo_configuration_change_record_detail,
 )
