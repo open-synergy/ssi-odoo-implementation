@@ -18,6 +18,7 @@
         "ssi_transaction_terminate_mixin",
         "ssi_transaction_cancel_mixin",
         "ssi_transaction_ready_mixin",
+        "ssi_transaction_partner_mixin",
         "ssi_task_mixin",
     ],
     "data": [
