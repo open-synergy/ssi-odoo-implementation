@@ -14,6 +14,8 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: ssi_odoo_implementation_work_log
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_change_request__allowed_analytic_account_ids
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_configuration_change_record__allowed_analytic_account_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_deployment__allowed_analytic_account_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_feature_issue__allowed_analytic_account_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_implementation__allowed_analytic_account_ids
@@ -21,6 +23,8 @@ msgid "Analytic Accounts"
 msgstr ""
 
 #. module: ssi_odoo_implementation_work_log
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_change_request__display_name
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_configuration_change_record__display_name
 #: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_deployment__display_name
 #: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_feature_issue__display_name
 #: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_implementation__display_name
@@ -28,6 +32,8 @@ msgid "Display Name"
 msgstr ""
 
 #. module: ssi_odoo_implementation_work_log
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_change_request__excess_work
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_configuration_change_record__excess_work
 #: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_deployment__excess_work
 #: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_feature_issue__excess_work
 #: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_implementation__excess_work
@@ -35,6 +41,8 @@ msgid "Excess Work"
 msgstr ""
 
 #. module: ssi_odoo_implementation_work_log
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_change_request__id
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_configuration_change_record__id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_deployment__id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_feature_issue__id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_implementation__id
@@ -42,10 +50,22 @@ msgid "ID"
 msgstr ""
 
 #. module: ssi_odoo_implementation_work_log
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_change_request____last_update
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_configuration_change_record____last_update
 #: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_deployment____last_update
 #: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_feature_issue____last_update
 #: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_implementation____last_update
 msgid "Last Modified on"
+msgstr ""
+
+#. module: ssi_odoo_implementation_work_log
+#: model:ir.model,name:ssi_odoo_implementation_work_log.model_odoo_change_request
+msgid "Odoo Change Request"
+msgstr ""
+
+#. module: ssi_odoo_implementation_work_log
+#: model:ir.model,name:ssi_odoo_implementation_work_log.model_odoo_configuration_change_record
+msgid "Odoo Configuration Change Record"
 msgstr ""
 
 #. module: ssi_odoo_implementation_work_log
@@ -64,6 +84,8 @@ msgid "Odoo Implementation"
 msgstr ""
 
 #. module: ssi_odoo_implementation_work_log
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_change_request__remaining_work
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_configuration_change_record__remaining_work
 #: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_deployment__remaining_work
 #: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_feature_issue__remaining_work
 #: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_implementation__remaining_work
@@ -71,6 +93,8 @@ msgid "Remaining Work"
 msgstr ""
 
 #. module: ssi_odoo_implementation_work_log
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_change_request__total_work
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_configuration_change_record__total_work
 #: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_deployment__total_work
 #: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_feature_issue__total_work
 #: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_implementation__total_work
@@ -78,6 +102,8 @@ msgid "Total Work"
 msgstr ""
 
 #. module: ssi_odoo_implementation_work_log
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_change_request__work_estimation
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_configuration_change_record__work_estimation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_deployment__work_estimation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_feature_issue__work_estimation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_implementation__work_estimation
@@ -85,6 +111,8 @@ msgid "Work Estimation"
 msgstr ""
 
 #. module: ssi_odoo_implementation_work_log
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_change_request__work_log_analytic_account_id
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_configuration_change_record__work_log_analytic_account_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_deployment__work_log_analytic_account_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_feature_issue__work_log_analytic_account_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_implementation__work_log_analytic_account_id
@@ -92,6 +120,8 @@ msgid "Work Log Analytic Account"
 msgstr ""
 
 #. module: ssi_odoo_implementation_work_log
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_change_request__work_log_ids
+#: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_configuration_change_record__work_log_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_deployment__work_log_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_feature_issue__work_log_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation_work_log.field_odoo_implementation__work_log_ids
