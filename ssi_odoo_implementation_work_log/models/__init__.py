@@ -6,4 +6,6 @@ from . import (
     odoo_implementation,
     odoo_deployment,
     odoo_feature_issue,
+    odoo_change_request,
+    odoo_configuration_change_record,
 )
