@@ -68,7 +68,6 @@
                     <page string="Details">
                         <field name="detail_ids">
                             <tree>
-                                <field name="audit_log_url" widget="url" />
                                 <field name="model_name" />
                                 <field name="mode" />
                                 <field name="note" />
