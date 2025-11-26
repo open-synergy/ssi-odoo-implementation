@@ -21,6 +21,7 @@ class OdooConfigurationChangeRecordDetail(models.Model):
     mode = fields.Selection(
         selection=[
             ("audit_log_url", "Audit Log URL"),
+            ("video_log_url", "Video Log URL"),
             ("manual", "Manual"),
         ],
         string="Mode",
@@ -28,6 +29,7 @@ class OdooConfigurationChangeRecordDetail(models.Model):
         default="manual",
     )
     audit_log_url = fields.Char(string="Audit Log URL", required=False)
+    video_log_url = fields.Char(string="Video Log URL", required=False)
     before_attachment_ids = fields.Many2many(
         comodel_name="ir.attachment",
         string="Before Attachments",
