@@ -17,5 +17,29 @@ class OdooConfigurationChangeRecordDetail(models.Model):
         ondelete="cascade",
     )
     sequence = fields.Integer(string="Sequence", required=True, default=10)
-    audit_log_url = fields.Char(string="Audit Log URL", required=True)
+    model_name = fields.Char(string="Model Name", required=True)
+    mode = fields.Selection(
+        selection=[
+            ("audit_log_url", "Audit Log URL"),
+            ("manual", "Manual"),
+        ],
+        string="Mode",
+        required=True,
+        default="manual",
+    )
+    audit_log_url = fields.Char(string="Audit Log URL", required=False)
+    before_attachment_ids = fields.Many2many(
+        comodel_name="ir.attachment",
+        string="Before Attachments",
+        relation="odoo_configuration_change_record_detail_before_attachment_rel",
+        column1="detail_id",
+        column2="attachment_id",
+    )
+    after_attachment_ids = fields.Many2many(
+        comodel_name="ir.attachment",
+        string="After Attachments",
+        relation="odoo_configuration_change_record_detail_after_attachment_rel",
+        column1="detail_id",
+        column2="attachment_id",
+    )
     note = fields.Text(string="Note")
