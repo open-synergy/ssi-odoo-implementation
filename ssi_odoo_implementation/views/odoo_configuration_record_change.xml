@@ -83,6 +83,11 @@
                                             attrs="{'invisible': [('mode', '!=', 'audit_log_url')]}"
                                         />
                                         <field
+                                            name="video_log_url"
+                                            widget="url"
+                                            attrs="{'invisible': [('mode', '!=', 'video_log_url')]}"
+                                        />
+                                        <field
                                             name="before_attachment_ids"
                                             widget="many2many_binary"
                                             attrs="{'invisible': [('mode', '!=', 'manual')]}"
