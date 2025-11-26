@@ -206,6 +206,11 @@ msgid "Additional Functionality"
 msgstr ""
 
 #. module: ssi_odoo_implementation
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record_detail__after_attachment_ids
+msgid "After Attachments"
+msgstr ""
+
+#. module: ssi_odoo_implementation
 #: model:res.groups,name:ssi_odoo_implementation.odoo_change_request_all_group
 #: model:res.groups,name:ssi_odoo_implementation.odoo_configuration_change_record_all_group
 #: model:res.groups,name:ssi_odoo_implementation.odoo_deployment_all_group
@@ -306,6 +311,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record_detail__audit_log_url
+#: model:ir.model.fields.selection,name:ssi_odoo_implementation.selection__odoo_configuration_change_record_detail__mode__audit_log_url
 msgid "Audit Log URL"
 msgstr ""
 
@@ -313,6 +319,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_implementation__available_module_ids
 #: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_implementation_view_form
 msgid "Available Modules"
+msgstr ""
+
+#. module: ssi_odoo_implementation
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record_detail__before_attachment_ids
+msgid "Before Attachments"
 msgstr ""
 
 #. module: ssi_odoo_implementation
@@ -1222,6 +1233,11 @@ msgid "Maintenance Date"
 msgstr ""
 
 #. module: ssi_odoo_implementation
+#: model:ir.model.fields.selection,name:ssi_odoo_implementation.selection__odoo_configuration_change_record_detail__mode__manual
+msgid "Manual"
+msgstr ""
+
+#. module: ssi_odoo_implementation
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_change_request__manual_number_ok
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_configuration_change_record__manual_number_ok
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_deployment__manual_number_ok
@@ -1346,6 +1362,16 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__missing_website_theme_module_ids
 msgid "Missing Website Themes Modules"
+msgstr ""
+
+#. module: ssi_odoo_implementation
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record_detail__mode
+msgid "Mode"
+msgstr ""
+
+#. module: ssi_odoo_implementation
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record_detail__model_name
+msgid "Model Name"
 msgstr ""
 
 #. module: ssi_odoo_implementation
