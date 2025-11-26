@@ -69,12 +69,30 @@
                         <field name="detail_ids">
                             <tree>
                                 <field name="audit_log_url" widget="url" />
+                                <field name="model_name" />
+                                <field name="mode" />
                                 <field name="note" />
                             </tree>
                             <form>
                                 <sheet>
                                     <group>
-                                        <field name="audit_log_url" widget="url" />
+                                        <field name="model_name" />
+                                        <field name="mode" />
+                                        <field
+                                            name="audit_log_url"
+                                            widget="url"
+                                            attrs="{'invisible': [('mode', '!=', 'audit_log_url')]}"
+                                        />
+                                        <field
+                                            name="before_attachment_ids"
+                                            widget="many2many_binary"
+                                            attrs="{'invisible': [('mode', '!=', 'manual')]}"
+                                        />
+                                        <field
+                                            name="after_attachment_ids"
+                                            widget="many2many_binary"
+                                            attrs="{'invisible': [('mode', '!=', 'manual')]}"
+                                        />
                                         <field name="note" />
                                     </group>
                                 </sheet>
