@@ -2340,6 +2340,12 @@ msgid "Versions"
 msgstr ""
 
 #. module: ssi_odoo_implementation
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record_detail__video_log_url
+#: model:ir.model.fields.selection,name:ssi_odoo_implementation.selection__odoo_configuration_change_record_detail__mode__video_log_url
+msgid "Video Log URL"
+msgstr ""
+
+#. module: ssi_odoo_implementation
 #: model:res.groups,name:ssi_odoo_implementation.odoo_change_request_viewer_group
 #: model:res.groups,name:ssi_odoo_implementation.odoo_configuration_change_record_viewer_group
 #: model:res.groups,name:ssi_odoo_implementation.odoo_deployment_viewer_group
