@@ -137,6 +137,21 @@
                             />
                     </group>
                 </page>
+                <page name="business_rule" string="Business Rules">
+                    <group
+                            name="business_rule"
+                            string="Business Rules"
+                            colspan="4"
+                            col="2"
+                        >
+                        <field
+                                name="business_rule"
+                                colspan="2"
+                                nolabel="1"
+                                widget="html"
+                            />
+                    </group>
+                </page>
                 <page name="postcondition" string="Postcondition">
                     <group
                             name="postcondition"

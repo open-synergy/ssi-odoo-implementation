@@ -85,10 +85,13 @@ class OdooUseCaseSpecification(models.Model):
         readonly=True,
         states={"draft": [("readonly", False)]},
     )
+    partner_id = fields.Many2one(
+        required=False,
+    )
     odoo_implementation_id = fields.Many2one(
         comodel_name="odoo_implementation",
         string="Odoo Implementation",
-        required=True,
+        required=False,
         readonly=True,
         states={"draft": [("readonly", False)]},
     )
@@ -106,7 +109,7 @@ class OdooUseCaseSpecification(models.Model):
     )
     precondition = fields.Text(
         string="Precondition",
-        required=True,
+        required=False,
         readonly=True,
         states={"draft": [("readonly", False)]},
     )
@@ -124,19 +127,25 @@ class OdooUseCaseSpecification(models.Model):
     )
     alternative_flow = fields.Text(
         string="Alternative Flow",
-        required=True,
+        required=False,
         readonly=True,
         states={"draft": [("readonly", False)]},
     )
     exception_flow = fields.Text(
         string="Exception Flow",
-        required=True,
+        required=False,
+        readonly=True,
+        states={"draft": [("readonly", False)]},
+    )
+    business_rule = fields.Text(
+        string="Business Rules",
+        required=False,
         readonly=True,
         states={"draft": [("readonly", False)]},
     )
     postcondition = fields.Text(
         string="Postcondition",
-        required=True,
+        required=False,
         readonly=True,
         states={"draft": [("readonly", False)]},
     )
