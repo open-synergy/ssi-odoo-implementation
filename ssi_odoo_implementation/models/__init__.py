@@ -21,4 +21,5 @@ from . import (
     odoo_change_request,
     odoo_configuration_change_record,
     odoo_configuration_change_record_detail,
+    odoo_use_case_specification,
 )
