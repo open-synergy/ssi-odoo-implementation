@@ -357,6 +357,12 @@ msgid "Before Attachments"
 msgstr ""
 
 #. module: ssi_odoo_implementation
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification__business_rule
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_form
+msgid "Business Rules"
+msgstr ""
+
+#. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__approve_ok
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__approve_ok
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__approve_ok
