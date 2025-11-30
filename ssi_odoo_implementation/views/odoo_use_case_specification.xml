@@ -110,32 +110,50 @@
                     <group name="main_flow" string="Main Flow" colspan="4" col="2">
                         <field name="main_flow" colspan="2" nolabel="1" widget="html" />
                     </group>
-                    <group
-                            name="alternative_flow"
-                            string="Alternative Flow"
-                            colspan="4"
-                            col="2"
-                        >
-                        <field
-                                name="alternative_flow"
-                                colspan="2"
-                                nolabel="1"
-                                widget="html"
-                            />
-                    </group>
-                    <group
-                            name="exception_flow"
-                            string="Exception Flow"
-                            colspan="4"
-                            col="2"
-                        >
-                        <field
-                                name="exception_flow"
-                                colspan="2"
-                                nolabel="1"
-                                widget="html"
-                            />
-                    </group>
+                    <separator string="Sub Flows" colspan="4" />
+                    <field name="sub_flow_ids">
+                        <tree>
+                            <field name="sequence" widget="handle" />
+                            <field name="name" />
+                            <field name="description" widget="html" />
+                        </tree>
+                        <form>
+                            <sheet>
+                                <group>
+                                    <field name="sequence" />
+                                    <field name="name" />
+                                    <field
+                                            name="description"
+                                            widget="html"
+                                            nolabel="1"
+                                            colspan="2"
+                                        />
+                                </group>
+                            </sheet>
+                        </form>
+                    </field>
+                    <separator string="Exception Flows" colspan="4" />
+                    <field name="exception_flow_ids">
+                        <tree>
+                            <field name="sequence" widget="handle" />
+                            <field name="name" />
+                            <field name="description" widget="html" />
+                        </tree>
+                        <form>
+                            <sheet>
+                                <group>
+                                    <field name="sequence" />
+                                    <field name="name" />
+                                    <field
+                                            name="description"
+                                            widget="html"
+                                            nolabel="1"
+                                            colspan="2"
+                                        />
+                                </group>
+                            </sheet>
+                        </form>
+                    </field>
                 </page>
                 <page name="business_rule" string="Business Rules">
                     <group
