@@ -83,9 +83,9 @@
                     />
             </xpath>
             <xpath expr="//page[1]" position="before">
-                <page name="objective_actor" string="Objective &amp; Actor">
-                    <group name="objective" string="Objective" colspan="4" col="2">
-                        <field name="objective" colspan="2" nolabel="1" widget="html" />
+                <page name="trigger_actor" string="Trigger &amp; Actor">
+                    <group name="trigger" string="Trigger" colspan="4" col="2">
+                        <field name="trigger" colspan="2" nolabel="1" widget="html" />
                     </group>
                     <group name="actor" string="Actor" colspan="4" col="2">
                         <field name="actor" colspan="2" nolabel="1" widget="html" />
