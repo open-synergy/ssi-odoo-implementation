@@ -22,4 +22,6 @@ from . import (
     odoo_configuration_change_record,
     odoo_configuration_change_record_detail,
     odoo_use_case_specification,
+    odoo_use_case_specification_sub_flow,
+    odoo_use_case_specification_exception_flow,
 )

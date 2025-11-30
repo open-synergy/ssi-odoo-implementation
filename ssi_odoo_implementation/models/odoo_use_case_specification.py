@@ -113,15 +113,17 @@ class OdooUseCaseSpecification(models.Model):
         readonly=True,
         states={"draft": [("readonly", False)]},
     )
-    alternative_flow = fields.Text(
-        string="Alternative Flow",
-        required=False,
+    sub_flow_ids = fields.One2many(
+        comodel_name="odoo_use_case_specification.sub_flow",
+        inverse_name="use_case_specification_id",
+        string="Sub Flows",
         readonly=True,
         states={"draft": [("readonly", False)]},
     )
-    exception_flow = fields.Text(
-        string="Exception Flow",
-        required=False,
+    exception_flow_ids = fields.One2many(
+        comodel_name="odoo_use_case_specification.exception_flow",
+        inverse_name="use_case_specification_id",
+        string="Exception Flows",
         readonly=True,
         states={"draft": [("readonly", False)]},
     )
