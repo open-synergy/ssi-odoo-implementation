@@ -261,12 +261,6 @@ msgid "Allowed Policy Templates"
 msgstr ""
 
 #. module: ssi_odoo_implementation
-#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification__alternative_flow
-#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_form
-msgid "Alternative Flow"
-msgstr ""
-
-#. module: ssi_odoo_implementation
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_change_request__approval_template_id
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_configuration_change_record__approval_template_id
 #: model:ir.model.fields,help:ssi_odoo_implementation.field_odoo_deployment__approval_template_id
@@ -660,6 +654,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_module__create_uid
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case__create_uid
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification__create_uid
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_exception_flow__create_uid
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_sub_flow__create_uid
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_version__create_uid
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_website_theme__create_uid
 msgid "Created by"
@@ -683,6 +679,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_module__create_date
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case__create_date
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification__create_date
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_exception_flow__create_date
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_sub_flow__create_date
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_version__create_date
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_website_theme__create_date
 msgid "Created on"
@@ -732,6 +730,8 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__description
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_exception_flow__description
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_sub_flow__description
 #: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_feature_issue_view_form
 msgid "Description"
 msgstr ""
@@ -765,6 +765,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_module__display_name
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case__display_name
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification__display_name
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_exception_flow__display_name
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_sub_flow__display_name
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_version__display_name
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_website_theme__display_name
 msgid "Display Name"
@@ -816,9 +818,14 @@ msgid "Error Log"
 msgstr ""
 
 #. module: ssi_odoo_implementation
-#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification__exception_flow
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_exception_flow__name
+msgid "Exception Flow Name"
+msgstr ""
+
+#. module: ssi_odoo_implementation
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification__exception_flow_ids
 #: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_form
-msgid "Exception Flow"
+msgid "Exception Flows"
 msgstr ""
 
 #. module: ssi_odoo_implementation
@@ -1020,6 +1027,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_module__id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case__id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification__id
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_exception_flow__id
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_sub_flow__id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_version__id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_website_theme__id
 msgid "ID"
@@ -1224,6 +1233,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_module____last_update
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case____last_update
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification____last_update
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_exception_flow____last_update
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_sub_flow____last_update
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_version____last_update
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_website_theme____last_update
 msgid "Last Modified on"
@@ -1247,6 +1258,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_module__write_uid
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case__write_uid
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification__write_uid
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_exception_flow__write_uid
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_sub_flow__write_uid
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_version__write_uid
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_website_theme__write_uid
 msgid "Last Updated by"
@@ -1270,6 +1283,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_module__write_date
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case__write_date
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification__write_date
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_exception_flow__write_date
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_sub_flow__write_date
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_version__write_date
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_website_theme__write_date
 msgid "Last Updated on"
@@ -1933,6 +1948,16 @@ msgid "Odoo Use Case Specification"
 msgstr ""
 
 #. module: ssi_odoo_implementation
+#: model:ir.model,name:ssi_odoo_implementation.model_odoo_use_case_specification_exception_flow
+msgid "Odoo Use Case Specification Exception Flow"
+msgstr ""
+
+#. module: ssi_odoo_implementation
+#: model:ir.model,name:ssi_odoo_implementation.model_odoo_use_case_specification_sub_flow
+msgid "Odoo Use Case Specification Sub Flow"
+msgstr ""
+
+#. module: ssi_odoo_implementation
 #: model:ir.actions.act_window,name:ssi_odoo_implementation.odoo_use_case_specification_action
 msgid "Odoo Use Case Specifications"
 msgstr ""
@@ -2128,6 +2153,8 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record_detail__sequence
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_exception_flow__sequence
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_sub_flow__sequence
 msgid "Sequence"
 msgstr ""
 
@@ -2202,6 +2229,17 @@ msgstr ""
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__steps_to_reproduce
 #: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_feature_issue_view_form
 msgid "Steps to Reproduce"
+msgstr ""
+
+#. module: ssi_odoo_implementation
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_sub_flow__name
+msgid "Sub Flow Name"
+msgstr ""
+
+#. module: ssi_odoo_implementation
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification__sub_flow_ids
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_form
+msgid "Sub Flows"
 msgstr ""
 
 #. module: ssi_odoo_implementation
@@ -2415,6 +2453,12 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_search
 #: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_view_form
 msgid "Use Case"
+msgstr ""
+
+#. module: ssi_odoo_implementation
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_exception_flow__use_case_specification_id
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_sub_flow__use_case_specification_id
+msgid "Use Case Specification"
 msgstr ""
 
 #. module: ssi_odoo_implementation
