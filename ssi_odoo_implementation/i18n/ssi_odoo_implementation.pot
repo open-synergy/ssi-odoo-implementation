@@ -1758,15 +1758,8 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__objective
-#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification__objective
 #: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_change_request_view_form
-#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_form
 msgid "Objective"
-msgstr ""
-
-#. module: ssi_odoo_implementation
-#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_form
-msgid "Objective & Actor"
 msgstr ""
 
 #. module: ssi_odoo_implementation
@@ -2215,7 +2208,6 @@ msgstr ""
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__summary
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__summary
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__summary
-#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification__summary
 msgid "Summary"
 msgstr ""
 
@@ -2326,7 +2318,13 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification__trigger
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_form
 msgid "Trigger"
+msgstr ""
+
+#. module: ssi_odoo_implementation
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_form
+msgid "Trigger & Actor"
 msgstr ""
 
 #. module: ssi_odoo_implementation
