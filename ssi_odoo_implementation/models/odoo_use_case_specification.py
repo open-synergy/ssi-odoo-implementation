@@ -65,12 +65,6 @@ class OdooUseCaseSpecification(models.Model):
         states={"draft": [("readonly", False)]},
         default=lambda self: self._default_date(),
     )
-    summary = fields.Char(
-        string="Summary",
-        required=True,
-        readonly=True,
-        states={"draft": [("readonly", False)]},
-    )
     feature_id = fields.Many2one(
         comodel_name="odoo_feature",
         string="Feature",
@@ -92,12 +86,6 @@ class OdooUseCaseSpecification(models.Model):
         comodel_name="odoo_implementation",
         string="Odoo Implementation",
         required=False,
-        readonly=True,
-        states={"draft": [("readonly", False)]},
-    )
-    objective = fields.Text(
-        string="Objective",
-        required=True,
         readonly=True,
         states={"draft": [("readonly", False)]},
     )
