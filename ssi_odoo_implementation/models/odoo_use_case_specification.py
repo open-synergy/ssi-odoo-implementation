@@ -119,6 +119,7 @@ class OdooUseCaseSpecification(models.Model):
         string="Sub Flows",
         readonly=True,
         states={"draft": [("readonly", False)]},
+        copy=True,
     )
     exception_flow_ids = fields.One2many(
         comodel_name="odoo_use_case_specification.exception_flow",
@@ -126,6 +127,7 @@ class OdooUseCaseSpecification(models.Model):
         string="Exception Flows",
         readonly=True,
         states={"draft": [("readonly", False)]},
+        copy=True,
     )
     business_rule = fields.Text(
         string="Business Rules",
