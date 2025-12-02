@@ -60,6 +60,56 @@ msgid "# Odoo Implementation"
 msgstr ""
 
 #. module: ssi_odoo_implementation
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_form
+msgid "<code>#6E7BA5</code>"
+msgstr ""
+
+#. module: ssi_odoo_implementation
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_form
+msgid "<code>#7A8F6A</code>"
+msgstr ""
+
+#. module: ssi_odoo_implementation
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_form
+msgid "<code>#7FB8B8</code>"
+msgstr ""
+
+#. module: ssi_odoo_implementation
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_form
+msgid "<code>#8FAFD4</code>"
+msgstr ""
+
+#. module: ssi_odoo_implementation
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_form
+msgid "<code>#9CBF9A</code>"
+msgstr ""
+
+#. module: ssi_odoo_implementation
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_form
+msgid "<code>#B7A4C9</code>"
+msgstr ""
+
+#. module: ssi_odoo_implementation
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_form
+msgid "<code>#C27A76</code>"
+msgstr ""
+
+#. module: ssi_odoo_implementation
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_form
+msgid "<code>#D38FA0</code>"
+msgstr ""
+
+#. module: ssi_odoo_implementation
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_form
+msgid "<code>#D6C672</code>"
+msgstr ""
+
+#. module: ssi_odoo_implementation
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_form
+msgid "<code>#D9A076</code>"
+msgstr ""
+
+#. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_additional_functionality__message_needaction
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__message_needaction
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__message_needaction
@@ -354,6 +404,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification__business_rule
 #: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_form
 msgid "Business Rules"
+msgstr ""
+
+#. module: ssi_odoo_implementation
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_form
+msgid "Button"
 msgstr ""
 
 #. module: ssi_odoo_implementation
@@ -708,6 +763,11 @@ msgid "Date"
 msgstr ""
 
 #. module: ssi_odoo_implementation
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_form
+msgid "Deep Pastel Moss"
+msgstr ""
+
+#. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature__default_module_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_additional_functionality__default_module_ids
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_implementation__default_module_ids
@@ -798,6 +858,11 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields.selection,name:ssi_odoo_implementation.selection__odoo_deployment__state__draft
 msgid "Draft"
+msgstr ""
+
+#. module: ssi_odoo_implementation
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_form
+msgid "End Use Case"
 msgstr ""
 
 #. module: ssi_odoo_implementation
@@ -905,6 +970,16 @@ msgid "Features"
 msgstr ""
 
 #. module: ssi_odoo_implementation
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_form
+msgid "Field"
+msgstr ""
+
+#. module: ssi_odoo_implementation
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_form
+msgid "Field Value"
+msgstr ""
+
+#. module: ssi_odoo_implementation
 #: model:ir.model.fields.selection,name:ssi_odoo_implementation.selection__odoo_implementation__state__done
 msgid "Finish"
 msgstr ""
@@ -1005,8 +1080,18 @@ msgid "Get Installed Modules"
 msgstr ""
 
 #. module: ssi_odoo_implementation
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_form
+msgid "Group"
+msgstr ""
+
+#. module: ssi_odoo_implementation
 #: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_feature_view_search
 msgid "Group By"
+msgstr ""
+
+#. module: ssi_odoo_implementation
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_form
+msgid "Hex"
 msgstr ""
 
 #. module: ssi_odoo_implementation
@@ -1216,6 +1301,11 @@ msgid "Is Follower"
 msgstr ""
 
 #. module: ssi_odoo_implementation
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_form
+msgid "Item"
+msgstr ""
+
+#. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_additional_functionality____last_update
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request____last_update
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record____last_update
@@ -1399,6 +1489,11 @@ msgid ""
 "* Click 'Generate Code' button to automatically assign code.\n"
 "  Sequence template mush be set to perform this action\n"
 "  Only master data with '/' code will be assign automatic code"
+msgstr ""
+
+#. module: ssi_odoo_implementation
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_form
+msgid "Menu"
 msgstr ""
 
 #. module: ssi_odoo_implementation
@@ -1975,6 +2070,11 @@ msgid "Odoo Website Theme"
 msgstr ""
 
 #. module: ssi_odoo_implementation
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_form
+msgid "Page"
+msgstr ""
+
+#. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__partner_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification__partner_id
 #: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_search
@@ -2004,6 +2104,11 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_feature_issue_view_form
 #: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_form
 msgid "Precondition"
+msgstr ""
+
+#. module: ssi_odoo_implementation
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_form
+msgid "Preview"
 msgstr ""
 
 #. module: ssi_odoo_implementation
@@ -2232,6 +2337,11 @@ msgid "Steps to Reproduce"
 msgstr ""
 
 #. module: ssi_odoo_implementation
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_form
+msgid "Sub Flow"
+msgstr ""
+
+#. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_sub_flow__name
 msgid "Sub Flow Name"
 msgstr ""
@@ -2450,6 +2560,7 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case__use_case
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification__use_case_id
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_form
 #: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_search
 #: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_view_form
 msgid "Use Case"
