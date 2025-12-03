@@ -85,10 +85,15 @@
             <xpath expr="//page[1]" position="before">
                 <page name="trigger_actor" string="Trigger &amp; Actor">
                     <group name="trigger" string="Trigger" colspan="4" col="2">
-                        <field name="trigger" colspan="2" nolabel="1" widget="html" />
+                        <field
+                                name="trigger"
+                                colspan="2"
+                                nolabel="1"
+                                widget="ckeditor"
+                            />
                     </group>
                     <group name="actor" string="Actor" colspan="4" col="2">
-                        <field name="actor" colspan="2" nolabel="1" widget="html" />
+                        <field name="actor" colspan="2" nolabel="1" widget="ckeditor" />
                     </group>
                 </page>
                 <page name="precondition" string="Precondition">
@@ -102,20 +107,25 @@
                                 name="precondition"
                                 colspan="2"
                                 nolabel="1"
-                                widget="html"
+                                widget="ckeditor"
                             />
                     </group>
                 </page>
                 <page name="flow" string="Flow">
                     <group name="main_flow" string="Main Flow" colspan="4" col="2">
-                        <field name="main_flow" colspan="2" nolabel="1" widget="html" />
+                        <field
+                                name="main_flow"
+                                colspan="2"
+                                nolabel="1"
+                                widget="ckeditor"
+                            />
                     </group>
                     <separator string="Sub Flows" colspan="4" />
                     <field name="sub_flow_ids">
                         <tree>
                             <field name="sequence" widget="handle" />
                             <field name="name" />
-                            <field name="description" widget="html" />
+                            <field name="description" widget="ckeditor" />
                         </tree>
                         <form>
                             <sheet>
@@ -124,7 +134,7 @@
                                     <field name="name" />
                                     <field
                                             name="description"
-                                            widget="html"
+                                            widget="ckeditor"
                                             nolabel="1"
                                             colspan="2"
                                         />
@@ -137,7 +147,7 @@
                         <tree>
                             <field name="sequence" widget="handle" />
                             <field name="name" />
-                            <field name="description" widget="html" />
+                            <field name="description" widget="ckeditor" />
                         </tree>
                         <form>
                             <sheet>
@@ -146,7 +156,7 @@
                                     <field name="name" />
                                     <field
                                             name="description"
-                                            widget="html"
+                                            widget="ckeditor"
                                             nolabel="1"
                                             colspan="2"
                                         />
@@ -166,7 +176,7 @@
                                 name="business_rule"
                                 colspan="2"
                                 nolabel="1"
-                                widget="html"
+                                widget="ckeditor"
                             />
                     </group>
                 </page>
@@ -181,7 +191,7 @@
                                 name="postcondition"
                                 colspan="2"
                                 nolabel="1"
-                                widget="html"
+                                widget="ckeditor"
                             />
                     </group>
                 </page>

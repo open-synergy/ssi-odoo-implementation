@@ -20,6 +20,7 @@
         "ssi_transaction_ready_mixin",
         "ssi_transaction_partner_mixin",
         "ssi_task_mixin",
+        "web_widget_ckeditor",
     ],
     "data": [
         "security/ir_module_category_data.xml",

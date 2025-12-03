@@ -67,14 +67,14 @@
                     <field
                             name="objective"
                             nolabel="1"
-                            widget="html"
+                            widget="ckeditor"
                             class="oe_full_width"
                         />
                 </page>
                 <page name="solution" string="Solution">
                     <field
                             name="solution_description"
-                            widget="html"
+                            widget="ckeditor"
                             nolabel="1"
                             class="oe_full_width"
                         />

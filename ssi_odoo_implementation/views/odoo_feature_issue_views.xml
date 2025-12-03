@@ -65,13 +65,13 @@
             <xpath expr="//page[1]" position="before">
                 <page name="description" string="Description">
                     <separator string="Precondition" colspan="4" />
-                    <field name="precondition" widget="html" />
+                    <field name="precondition" widget="ckeditor" />
                     <separator string="Steps to Reproduce" colspan="4" />
-                    <field name="steps_to_reproduce" widget="html" />
+                    <field name="steps_to_reproduce" widget="ckeditor" />
                     <separator string="Current Behaviour" colspan="4" />
-                    <field name="current_behavior" widget="html" />
+                    <field name="current_behavior" widget="ckeditor" />
                     <separator string="Expected Behaviour" colspan="4" />
-                    <field name="expected_behavior" widget="html" />
+                    <field name="expected_behavior" widget="ckeditor" />
                 </page>
                 <page name="log" string="Error Log">
                     <field name="error_log" widget="ace" />
