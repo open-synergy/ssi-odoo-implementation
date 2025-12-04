@@ -124,8 +124,15 @@
                     <field name="sub_flow_ids">
                         <tree>
                             <field name="sequence" widget="handle" />
-                            <field name="name" />
-                            <field name="description" widget="ckeditor" />
+                            <field
+                                    name="name"
+                                    style="white-space: normal; word-wrap: break-word; overflow-wrap: break-word;"
+                                />
+                            <field
+                                    name="description"
+                                    widget="ckeditor"
+                                    style="white-space: normal; word-wrap: break-word; overflow-wrap: break-word;"
+                                />
                         </tree>
                         <form>
                             <sheet>
@@ -146,8 +153,15 @@
                     <field name="exception_flow_ids">
                         <tree>
                             <field name="sequence" widget="handle" />
-                            <field name="name" />
-                            <field name="description" widget="ckeditor" />
+                            <field
+                                    name="name"
+                                    style="white-space: normal; word-wrap: break-word; overflow-wrap: break-word;"
+                                />
+                            <field
+                                    name="description"
+                                    widget="ckeditor"
+                                    style="white-space: normal; word-wrap: break-word; overflow-wrap: break-word;"
+                                />
                         </tree>
                         <form>
                             <sheet>
@@ -194,34 +208,35 @@
                                 widget="ckeditor"
                             />
                     </group>
-                    <group
-                            name="conditional_postcondition"
-                            string="Conditional"
-                            colspan="4"
-                            col="2"
-                        >
-                        <field name="conditional_postcondition_ids" nolabel="1">
-                                <tree>
-                                    <field name="sequence" widget="handle" />
+                    <separator string="Conditional Postconditions" colspan="4" />
+                    <field name="conditional_postcondition_ids" nolabel="1">
+                        <tree>
+                            <field name="sequence" widget="handle" />
+                            <field
+                                    name="name"
+                                    style="white-space: normal; word-wrap: break-word; overflow-wrap: break-word;"
+                                />
+                            <field
+                                    name="postcondition"
+                                    widget="ckeditor"
+                                    style="white-space: normal; word-wrap: break-word; overflow-wrap: break-word;"
+                                />
+                        </tree>
+                        <form>
+                            <sheet>
+                                <group>
+                                    <field name="sequence" />
                                     <field name="name" />
-                                    <field name="postcondition" widget="ckeditor" />
-                                </tree>
-                                <form>
-                                    <sheet>
-                                        <group>
-                                            <field name="sequence" />
-                                            <field name="name" />
-                                            <field
-                                                name="postcondition"
-                                                widget="ckeditor"
-                                                nolabel="1"
-                                                colspan="2"
-                                            />
-                                        </group>
-                                    </sheet>
-                                </form>
-                        </field>
-                    </group>
+                                    <field
+                                            name="postcondition"
+                                            widget="ckeditor"
+                                            nolabel="1"
+                                            colspan="2"
+                                        />
+                                </group>
+                            </sheet>
+                        </form>
+                    </field>
                 </page>
             </xpath>
             <xpath expr="//group[@name='footer_left']" position="inside">
