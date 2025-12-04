@@ -141,6 +141,14 @@ class OdooUseCaseSpecification(models.Model):
         readonly=True,
         states={"draft": [("readonly", False)]},
     )
+    conditional_postcondition_ids = fields.One2many(
+        comodel_name="odoo_use_case_specification.conditional_postcondition",
+        inverse_name="use_case_specification_id",
+        string="Conditional Postconditions",
+        readonly=True,
+        states={"draft": [("readonly", False)]},
+        copy=True,
+    )
 
     @api.model
     def _default_date(self):
