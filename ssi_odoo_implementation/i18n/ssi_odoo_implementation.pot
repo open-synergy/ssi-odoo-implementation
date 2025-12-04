@@ -646,12 +646,8 @@ msgid "Condition"
 msgstr ""
 
 #. module: ssi_odoo_implementation
-#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_form
-msgid "Conditional"
-msgstr ""
-
-#. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification__conditional_postcondition_ids
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_form
 msgid "Conditional Postconditions"
 msgstr ""
 
