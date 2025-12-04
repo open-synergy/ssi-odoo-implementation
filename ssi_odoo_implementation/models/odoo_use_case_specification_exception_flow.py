@@ -17,5 +17,9 @@ class OdooUseCaseSpecificationExceptionFlow(models.Model):
         ondelete="cascade",
     )
     sequence = fields.Integer(string="Sequence", required=True, default=10)
-    name = fields.Char(string="Exception Flow Name", required=True)
+    name = fields.Char(string="Name", required=True)
+    trigger = fields.Text(string="Trigger")
+    condition = fields.Text(string="Condition")
+    system_response = fields.Text(string="System Response")
+    correction_procedure = fields.Text(string="Correction Procedure")
     description = fields.Text(string="Description")
