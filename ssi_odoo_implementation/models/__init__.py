@@ -24,4 +24,5 @@ from . import (
     odoo_use_case_specification,
     odoo_use_case_specification_sub_flow,
     odoo_use_case_specification_exception_flow,
+    odoo_use_case_specification_conditional_postcondition,
 )

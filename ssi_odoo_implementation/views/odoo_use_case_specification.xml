@@ -194,6 +194,34 @@
                                 widget="ckeditor"
                             />
                     </group>
+                    <group
+                            name="conditional_postcondition"
+                            string="Conditional"
+                            colspan="4"
+                            col="2"
+                        >
+                        <field name="conditional_postcondition_ids" nolabel="1">
+                                <tree>
+                                    <field name="sequence" widget="handle" />
+                                    <field name="name" />
+                                    <field name="postcondition" widget="ckeditor" />
+                                </tree>
+                                <form>
+                                    <sheet>
+                                        <group>
+                                            <field name="sequence" />
+                                            <field name="name" />
+                                            <field
+                                                name="postcondition"
+                                                widget="ckeditor"
+                                                nolabel="1"
+                                                colspan="2"
+                                            />
+                                        </group>
+                                    </sheet>
+                                </form>
+                        </field>
+                    </group>
                 </page>
             </xpath>
             <xpath expr="//group[@name='footer_left']" position="inside">
