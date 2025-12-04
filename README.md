@@ -18,7 +18,7 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
-[ssi_odoo_implementation](ssi_odoo_implementation/) | 14.0.5.12.0 |  | Odoo Implementation
+[ssi_odoo_implementation](ssi_odoo_implementation/) | 14.0.5.13.0 |  | Odoo Implementation
 [ssi_odoo_implementation_data_requirement](ssi_odoo_implementation_data_requirement/) | 14.0.1.0.0 |  | Odoo Implementation - Data Requirement Integration
 [ssi_odoo_implementation_git](ssi_odoo_implementation_git/) | 14.0.2.1.0 |  | Odoo Implementation - Git Integration
 [ssi_odoo_implementation_infrastructure](ssi_odoo_implementation_infrastructure/) | 14.0.2.1.0 |  | Odoo Implementation - Infrastructure Integration
