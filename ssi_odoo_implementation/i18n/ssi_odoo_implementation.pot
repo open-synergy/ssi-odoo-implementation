@@ -642,6 +642,8 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_conditional_postcondition__name
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_exception_flow__condition
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_form
 msgid "Condition"
 msgstr ""
 
@@ -700,6 +702,12 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_implementation__to_be_installed_core_module_ids
 msgid "Core Modules To Be Installed"
+msgstr ""
+
+#. module: ssi_odoo_implementation
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_exception_flow__correction_procedure
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_form
+msgid "Correction Procedure"
 msgstr ""
 
 #. module: ssi_odoo_implementation
@@ -806,6 +814,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_exception_flow__description
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_sub_flow__description
 #: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_feature_issue_view_form
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_form
 msgid "Description"
 msgstr ""
 
@@ -894,11 +903,6 @@ msgstr ""
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__error_log
 #: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_feature_issue_view_form
 msgid "Error Log"
-msgstr ""
-
-#. module: ssi_odoo_implementation
-#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_exception_flow__name
-msgid "Exception Flow Name"
 msgstr ""
 
 #. module: ssi_odoo_implementation
@@ -1641,6 +1645,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_category__name
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_module__name
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case__name
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_exception_flow__name
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_version__name
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_website_theme__name
 msgid "Name"
@@ -2385,6 +2390,12 @@ msgid "Summary"
 msgstr ""
 
 #. module: ssi_odoo_implementation
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_exception_flow__system_response
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_form
+msgid "System Response"
+msgstr ""
+
+#. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__task_done
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__task_done
 msgid "Task Done"
@@ -2491,6 +2502,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification__trigger
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_exception_flow__trigger
 #: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_form
 msgid "Trigger"
 msgstr ""
