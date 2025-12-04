@@ -158,23 +158,80 @@
                                     style="white-space: normal; word-wrap: break-word; overflow-wrap: break-word;"
                                 />
                             <field
-                                    name="description"
+                                    name="trigger"
+                                    widget="ckeditor"
+                                    style="white-space: normal; word-wrap: break-word; overflow-wrap: break-word;"
+                                />
+                            <field
+                                    name="condition"
+                                    widget="ckeditor"
+                                    style="white-space: normal; word-wrap: break-word; overflow-wrap: break-word;"
+                                />
+                            <field
+                                    name="system_response"
+                                    widget="ckeditor"
+                                    style="white-space: normal; word-wrap: break-word; overflow-wrap: break-word;"
+                                />
+                            <field
+                                    name="correction_procedure"
                                     widget="ckeditor"
                                     style="white-space: normal; word-wrap: break-word; overflow-wrap: break-word;"
                                 />
                         </tree>
                         <form>
                             <sheet>
-                                <group>
+                                <group colspan="4" col="2">
                                     <field name="sequence" />
                                     <field name="name" />
-                                    <field
-                                            name="description"
-                                            widget="ckeditor"
-                                            nolabel="1"
-                                            colspan="2"
-                                        />
                                 </group>
+                                <notebook>
+                                    <page name="description" string="Description">
+                                        <field
+                                                name="description"
+                                                widget="ckeditor"
+                                                nolabel="1"
+                                                colspan="2"
+                                            />
+                                    </page>
+                                    <page name="trigger" string="Trigger">
+                                        <field
+                                                name="trigger"
+                                                widget="ckeditor"
+                                                nolabel="1"
+                                                colspan="2"
+                                            />
+                                    </page>
+                                    <page name="condition" string="Condition">
+                                        <field
+                                                name="condition"
+                                                widget="ckeditor"
+                                                nolabel="1"
+                                                colspan="2"
+                                            />
+                                    </page>
+                                    <page
+                                            name="system_response"
+                                            string="System Response"
+                                        >
+                                        <field
+                                                name="system_response"
+                                                widget="ckeditor"
+                                                nolabel="1"
+                                                colspan="2"
+                                            />
+                                    </page>
+                                    <page
+                                            name="correction_procedure"
+                                            string="Correction Procedure"
+                                        >
+                                        <field
+                                                name="correction_procedure"
+                                                widget="ckeditor"
+                                                nolabel="1"
+                                                colspan="2"
+                                            />
+                                    </page>
+                                </notebook>
                             </sheet>
                         </form>
                     </field>
