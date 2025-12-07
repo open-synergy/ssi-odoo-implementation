@@ -121,6 +121,14 @@ class OdooUseCaseSpecification(models.Model):
         states={"draft": [("readonly", False)]},
         copy=True,
     )
+    alternate_flow_ids = fields.One2many(
+        comodel_name="odoo_use_case_specification.alternate_flow",
+        inverse_name="use_case_specification_id",
+        string="Alternate Flows",
+        readonly=True,
+        states={"draft": [("readonly", False)]},
+        copy=True,
+    )
     exception_flow_ids = fields.One2many(
         comodel_name="odoo_use_case_specification.exception_flow",
         inverse_name="use_case_specification_id",
