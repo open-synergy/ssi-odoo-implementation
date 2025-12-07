@@ -5,9 +5,9 @@
 from odoo import fields, models
 
 
-class OdooUseCaseSpecificationSubFlow(models.Model):
-    _name = "odoo_use_case_specification.sub_flow"
-    _description = "Odoo Use Case Specification Sub Flow"
+class OdooUseCaseSpecificationAlternateFlow(models.Model):
+    _name = "odoo_use_case_specification.alternate_flow"
+    _description = "Odoo Use Case Specification Alternate Flow"
     _order = "use_case_specification_id, sequence, id"
 
     use_case_specification_id = fields.Many2one(
@@ -17,7 +17,6 @@ class OdooUseCaseSpecificationSubFlow(models.Model):
         ondelete="cascade",
     )
     sequence = fields.Integer(string="Sequence", required=True, default=10)
-    name = fields.Char(string="Sub Flow Name", required=True)
+    name = fields.Char(string="Alternate Flow Name", required=True)
     fork_point = fields.Char(string="Fork Point")
-    join_point = fields.Char(string="Join Point")
     description = fields.Text(string="Steps")

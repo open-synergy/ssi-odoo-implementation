@@ -128,6 +128,44 @@
                                     name="name"
                                     style="white-space: normal; word-wrap: break-word; overflow-wrap: break-word;"
                                 />
+                            <field name="fork_point" />
+                            <field
+                                    name="description"
+                                    widget="ckeditor"
+                                    style="white-space: normal; word-wrap: break-word; overflow-wrap: break-word;"
+                                />
+                            <field name="join_point" />
+                        </tree>
+                        <form>
+                            <sheet>
+                                <group colspan="4" col="2">
+                                    <field name="sequence" />
+                                    <field name="name" />
+                                    <field name="fork_point" />
+                                    <field name="join_point" />
+                                </group>
+                                <notebook>
+                                    <page name="steps" string="Steps">
+                                        <field
+                                                name="description"
+                                                widget="ckeditor"
+                                                nolabel="1"
+                                                colspan="2"
+                                            />
+                                    </page>
+                                </notebook>
+                            </sheet>
+                        </form>
+                    </field>
+                    <separator string="Alternate Flows" colspan="4" />
+                    <field name="alternate_flow_ids">
+                        <tree>
+                            <field name="sequence" widget="handle" />
+                            <field
+                                    name="name"
+                                    style="white-space: normal; word-wrap: break-word; overflow-wrap: break-word;"
+                                />
+                            <field name="fork_point" />
                             <field
                                     name="description"
                                     widget="ckeditor"
@@ -136,16 +174,21 @@
                         </tree>
                         <form>
                             <sheet>
-                                <group>
+                                <group colspan="4" col="2">
                                     <field name="sequence" />
                                     <field name="name" />
-                                    <field
-                                            name="description"
-                                            widget="ckeditor"
-                                            nolabel="1"
-                                            colspan="2"
-                                        />
+                                    <field name="fork_point" />
                                 </group>
+                                <notebook>
+                                    <page name="steps" string="Steps">
+                                        <field
+                                                name="description"
+                                                widget="ckeditor"
+                                                nolabel="1"
+                                                colspan="2"
+                                            />
+                                    </page>
+                                </notebook>
                             </sheet>
                         </form>
                     </field>
