@@ -165,7 +165,15 @@
                                     name="name"
                                     style="white-space: normal; word-wrap: break-word; overflow-wrap: break-word;"
                                 />
-                            <field name="fork_point" />
+                            <field
+                                    name="fork_point"
+                                    style="white-space: normal; word-wrap: break-word; overflow-wrap: break-word;"
+                                />
+                            <field
+                                    name="condition"
+                                    widget="ckeditor"
+                                    style="white-space: normal; word-wrap: break-word; overflow-wrap: break-word;"
+                                />
                             <field
                                     name="description"
                                     widget="ckeditor"
@@ -177,7 +185,8 @@
                                 <group colspan="4" col="2">
                                     <field name="sequence" />
                                     <field name="name" />
-                                    <field name="fork_point" />
+                                    <field name="fork_point" widget="ckeditor" />
+                                    <field name="condition" />
                                 </group>
                                 <notebook>
                                     <page name="steps" string="Steps">

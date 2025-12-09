@@ -18,5 +18,6 @@ class OdooUseCaseSpecificationAlternateFlow(models.Model):
     )
     sequence = fields.Integer(string="Sequence", required=True, default=10)
     name = fields.Char(string="Alternate Flow Name", required=True)
+    condition = fields.Text(string="Condition", required=True)
     fork_point = fields.Char(string="Fork Point")
     description = fields.Text(string="Steps")
