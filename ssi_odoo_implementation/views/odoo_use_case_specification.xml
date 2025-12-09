@@ -167,11 +167,11 @@
                                 />
                             <field
                                     name="fork_point"
+                                    widget="ckeditor"
                                     style="white-space: normal; word-wrap: break-word; overflow-wrap: break-word;"
                                 />
                             <field
                                     name="condition"
-                                    widget="ckeditor"
                                     style="white-space: normal; word-wrap: break-word; overflow-wrap: break-word;"
                                 />
                             <field
