@@ -17,5 +17,6 @@ class OdooUseCaseConditionalPostcondition(models.Model):
         ondelete="cascade",
     )
     sequence = fields.Integer(string="Sequence", required=True, default=10)
-    name = fields.Char(string="Condition", required=True)
+    flow = fields.Char(string="Flow", required=True)
+    name = fields.Char(string="Condition", required=False)
     postcondition = fields.Text(string="Postcondition")
