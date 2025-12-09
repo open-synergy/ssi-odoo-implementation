@@ -167,11 +167,11 @@
                                 />
                             <field
                                     name="fork_point"
+                                    widget="ckeditor"
                                     style="white-space: normal; word-wrap: break-word; overflow-wrap: break-word;"
                                 />
                             <field
                                     name="condition"
-                                    widget="ckeditor"
                                     style="white-space: normal; word-wrap: break-word; overflow-wrap: break-word;"
                                 />
                             <field
@@ -321,6 +321,7 @@
                     <field name="conditional_postcondition_ids" nolabel="1">
                         <tree>
                             <field name="sequence" widget="handle" />
+                            <field name="flow" />
                             <field
                                     name="name"
                                     style="white-space: normal; word-wrap: break-word; overflow-wrap: break-word;"
@@ -335,6 +336,7 @@
                             <sheet>
                                 <group>
                                     <field name="sequence" />
+                                    <field name="flow" />
                                     <field name="name" />
                                     <field
                                             name="postcondition"
