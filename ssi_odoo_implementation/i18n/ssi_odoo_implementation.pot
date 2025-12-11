@@ -412,6 +412,12 @@ msgid "Before Attachments"
 msgstr ""
 
 #. module: ssi_odoo_implementation
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_computed_value__business_rule
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_form
+msgid "Business Rule"
+msgstr ""
+
+#. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification__business_rule
 #: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_form
 msgid "Business Rules"
@@ -652,6 +658,12 @@ msgid "Component to Install"
 msgstr ""
 
 #. module: ssi_odoo_implementation
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification__computed_value_ids
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_form
+msgid "Computed Values"
+msgstr ""
+
+#. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_alternate_flow__condition
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_conditional_postcondition__name
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_exception_flow__condition
@@ -741,6 +753,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case__create_uid
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification__create_uid
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_alternate_flow__create_uid
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_computed_value__create_uid
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_conditional_postcondition__create_uid
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_exception_flow__create_uid
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_sub_flow__create_uid
@@ -768,6 +781,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case__create_date
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification__create_date
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_alternate_flow__create_date
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_computed_value__create_date
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_conditional_postcondition__create_date
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_exception_flow__create_date
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_sub_flow__create_date
@@ -861,6 +875,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case__display_name
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification__display_name
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_alternate_flow__display_name
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_computed_value__display_name
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_conditional_postcondition__display_name
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_exception_flow__display_name
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_sub_flow__display_name
@@ -1004,6 +1019,11 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_form
 msgid "Field"
+msgstr ""
+
+#. module: ssi_odoo_implementation
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_computed_value__field_name
+msgid "Field Name"
 msgstr ""
 
 #. module: ssi_odoo_implementation
@@ -1152,6 +1172,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case__id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification__id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_alternate_flow__id
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_computed_value__id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_conditional_postcondition__id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_exception_flow__id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_sub_flow__id
@@ -1370,6 +1391,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case____last_update
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification____last_update
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_alternate_flow____last_update
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_computed_value____last_update
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_conditional_postcondition____last_update
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_exception_flow____last_update
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_sub_flow____last_update
@@ -1397,6 +1419,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case__write_uid
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification__write_uid
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_alternate_flow__write_uid
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_computed_value__write_uid
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_conditional_postcondition__write_uid
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_exception_flow__write_uid
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_sub_flow__write_uid
@@ -1424,6 +1447,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case__write_date
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification__write_date
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_alternate_flow__write_date
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_computed_value__write_date
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_conditional_postcondition__write_date
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_exception_flow__write_date
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_sub_flow__write_date
@@ -2106,6 +2130,11 @@ msgid "Odoo Use Case Specification Alternate Flow"
 msgstr ""
 
 #. module: ssi_odoo_implementation
+#: model:ir.model,name:ssi_odoo_implementation.model_odoo_use_case_specification_computed_value
+msgid "Odoo Use Case Specification Computed Value"
+msgstr ""
+
+#. module: ssi_odoo_implementation
 #: model:ir.model,name:ssi_odoo_implementation.model_odoo_use_case_specification_exception_flow
 msgid "Odoo Use Case Specification Exception Flow"
 msgstr ""
@@ -2323,6 +2352,7 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record_detail__sequence
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_alternate_flow__sequence
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_computed_value__sequence
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_conditional_postcondition__sequence
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_exception_flow__sequence
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_sub_flow__sequence
@@ -2545,6 +2575,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification__trigger
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_computed_value__trigger
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_exception_flow__trigger
 #: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_form
 msgid "Trigger"
@@ -2648,6 +2679,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_alternate_flow__use_case_specification_id
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_computed_value__use_case_specification_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_conditional_postcondition__use_case_specification_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_exception_flow__use_case_specification_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification_sub_flow__use_case_specification_id
