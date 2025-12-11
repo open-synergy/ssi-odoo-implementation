@@ -27,4 +27,5 @@ from . import (
     odoo_use_case_specification_exception_flow,
     odoo_use_case_specification_conditional_postcondition,
     odoo_use_case_specification_computed_value,
+    odoo_use_case_specification_onchange,
 )
