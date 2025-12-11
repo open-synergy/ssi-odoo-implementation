@@ -302,8 +302,124 @@
                                 widget="ckeditor"
                             />
                     </group>
+                    <separator string="Default Values" colspan="4" />
+                    <field name="default_value_ids">
+                        <tree>
+                            <field name="sequence" widget="handle" />
+                            <field name="field_name" />
+                            <field
+                                    name="business_rule"
+                                    style="white-space: normal; word-wrap: break-word; overflow-wrap: break-word;"
+                                    widget="ckeditor"
+                                />
+                        </tree>
+                        <form>
+                            <sheet>
+                                <group>
+                                    <field name="sequence" />
+                                    <field name="field_name" />
+                                </group>
+                                <notebook>
+                                    <page name="business_rule" string="Business Rule">
+                                        <field
+                                                name="business_rule"
+                                                widget="ckeditor"
+                                                nolabel="1"
+                                                colspan="2"
+                                            />
+                                    </page>
+                                </notebook>
+                            </sheet>
+                        </form>
+                    </field>
                     <separator string="Computed Values" colspan="4" />
                     <field name="computed_value_ids">
+                        <tree>
+                            <field name="sequence" widget="handle" />
+                            <field name="field_name" />
+                            <field
+                                    name="trigger"
+                                    style="white-space: normal; word-wrap: break-word; overflow-wrap: break-word;"
+                                    widget="ckeditor"
+                                />
+                            <field
+                                    name="business_rule"
+                                    style="white-space: normal; word-wrap: break-word; overflow-wrap: break-word;"
+                                    widget="ckeditor"
+                                />
+                        </tree>
+                        <form>
+                            <sheet>
+                                <group>
+                                    <field name="sequence" />
+                                    <field name="field_name" />
+                                </group>
+                                <notebook>
+                                    <page name="trigger" string="Trigger">
+                                        <field
+                                                name="trigger"
+                                                widget="ckeditor"
+                                                nolabel="1"
+                                                colspan="2"
+                                            />
+                                    </page>
+                                    <page name="business_rule" string="Business Rule">
+                                        <field
+                                                name="business_rule"
+                                                widget="ckeditor"
+                                                nolabel="1"
+                                                colspan="2"
+                                            />
+                                    </page>
+                                </notebook>
+                            </sheet>
+                        </form>
+                    </field>
+                    <separator string="Onchanges" colspan="4" />
+                    <field name="onchange_ids">
+                        <tree>
+                            <field name="sequence" widget="handle" />
+                            <field name="field_name" />
+                            <field
+                                    name="trigger"
+                                    style="white-space: normal; word-wrap: break-word; overflow-wrap: break-word;"
+                                    widget="ckeditor"
+                                />
+                            <field
+                                    name="business_rule"
+                                    style="white-space: normal; word-wrap: break-word; overflow-wrap: break-word;"
+                                    widget="ckeditor"
+                                />
+                        </tree>
+                        <form>
+                            <sheet>
+                                <group>
+                                    <field name="sequence" />
+                                    <field name="field_name" />
+                                </group>
+                                <notebook>
+                                    <page name="trigger" string="Trigger">
+                                        <field
+                                                name="trigger"
+                                                widget="ckeditor"
+                                                nolabel="1"
+                                                colspan="2"
+                                            />
+                                    </page>
+                                    <page name="business_rule" string="Business Rule">
+                                        <field
+                                                name="business_rule"
+                                                widget="ckeditor"
+                                                nolabel="1"
+                                                colspan="2"
+                                            />
+                                    </page>
+                                </notebook>
+                            </sheet>
+                        </form>
+                    </field>
+                    <separator string="Domain" colspan="4" />
+                    <field name="domain_ids">
                         <tree>
                             <field name="sequence" widget="handle" />
                             <field name="field_name" />

@@ -151,6 +151,30 @@ class OdooUseCaseSpecification(models.Model):
         states={"draft": [("readonly", False)]},
         copy=True,
     )
+    onchange_ids = fields.One2many(
+        comodel_name="odoo_use_case_specification.onchange",
+        inverse_name="use_case_specification_id",
+        string="Onchanges",
+        readonly=True,
+        states={"draft": [("readonly", False)]},
+        copy=True,
+    )
+    default_value_ids = fields.One2many(
+        comodel_name="odoo_use_case_specification.default_value",
+        inverse_name="use_case_specification_id",
+        string="Default Values",
+        readonly=True,
+        states={"draft": [("readonly", False)]},
+        copy=True,
+    )
+    domain_ids = fields.One2many(
+        comodel_name="odoo_use_case_specification.domain",
+        inverse_name="use_case_specification_id",
+        string="Domains",
+        readonly=True,
+        states={"draft": [("readonly", False)]},
+        copy=True,
+    )
     postcondition = fields.Text(
         string="Postcondition",
         required=False,
