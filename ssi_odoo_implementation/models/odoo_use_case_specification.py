@@ -143,6 +143,14 @@ class OdooUseCaseSpecification(models.Model):
         readonly=True,
         states={"draft": [("readonly", False)]},
     )
+    computed_value_ids = fields.One2many(
+        comodel_name="odoo_use_case_specification.computed_value",
+        inverse_name="use_case_specification_id",
+        string="Computed Values",
+        readonly=True,
+        states={"draft": [("readonly", False)]},
+        copy=True,
+    )
     postcondition = fields.Text(
         string="Postcondition",
         required=False,
