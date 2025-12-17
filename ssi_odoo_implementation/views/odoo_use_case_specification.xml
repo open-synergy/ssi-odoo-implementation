@@ -461,6 +461,34 @@
                             </sheet>
                         </form>
                     </field>
+                    <separator string="Button Actions" colspan="4" />
+                    <field name="button_ids">
+                        <tree>
+                            <field name="sequence" widget="handle" />
+                            <field name="button_name" />
+                            <field
+                                    name="system_response"
+                                    style="white-space: normal; word-wrap: break-word; overflow-wrap: break-word;"
+                                    widget="ckeditor"
+                                />
+                        </tree>
+                        <form>
+                            <group>
+                                <field name="sequence" />
+                                <field name="button_name" />
+                            </group>
+                            <notebook>
+                                <page name="system_response" string="System Response">
+                                    <field
+                                            name="system_response"
+                                            widget="ckeditor"
+                                            nolabel="1"
+                                            colspan="2"
+                                        />
+                                </page>
+                            </notebook>
+                        </form>
+                    </field>
                 </page>
                 <page name="postcondition" string="Postcondition">
                     <group
