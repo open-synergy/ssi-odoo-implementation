@@ -30,4 +30,5 @@ from . import (
     odoo_use_case_specification_onchange,
     odoo_use_case_specification_default_value,
     odoo_use_case_specification_domain,
+    odoo_use_case_specification_button,
 )
