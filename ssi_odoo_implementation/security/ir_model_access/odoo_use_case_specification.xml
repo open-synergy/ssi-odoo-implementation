@@ -221,4 +221,64 @@
     <field name="perm_write" eval="1" />
     <field name="perm_unlink" eval="1" />
 </record>
+
+<record id="odoo_use_case_specification_trigger_all_access" model="ir.model.access">
+    <field name="name">odoo_use_case_specification.trigger - all</field>
+    <field name="model_id" ref="model_odoo_use_case_specification_trigger" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="0" />
+    <field name="perm_write" eval="0" />
+    <field name="perm_unlink" eval="0" />
+</record>
+<record id="odoo_use_case_specification_trigger_user_access" model="ir.model.access">
+    <field name="name">odoo_use_case_specification.trigger - user</field>
+    <field name="model_id" ref="model_odoo_use_case_specification_trigger" />
+    <field name="group_id" ref="odoo_use_case_specification_user_group" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_unlink" eval="1" />
+</record>
+
+<record id="odoo_use_case_specification_actor_all_access" model="ir.model.access">
+    <field name="name">odoo_use_case_specification.actor - all</field>
+    <field name="model_id" ref="model_odoo_use_case_specification_actor" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="0" />
+    <field name="perm_write" eval="0" />
+    <field name="perm_unlink" eval="0" />
+</record>
+<record id="odoo_use_case_specification_actor_user_access" model="ir.model.access">
+    <field name="name">odoo_use_case_specification.actor - user</field>
+    <field name="model_id" ref="model_odoo_use_case_specification_actor" />
+    <field name="group_id" ref="odoo_use_case_specification_user_group" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_unlink" eval="1" />
+</record>
+
+<record
+        id="odoo_use_case_specification_precondition_all_access"
+        model="ir.model.access"
+    >
+    <field name="name">odoo_use_case_specification.precondition - all</field>
+    <field name="model_id" ref="model_odoo_use_case_specification_precondition" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="0" />
+    <field name="perm_write" eval="0" />
+    <field name="perm_unlink" eval="0" />
+</record>
+<record
+        id="odoo_use_case_specification_precondition_user_access"
+        model="ir.model.access"
+    >
+    <field name="name">odoo_use_case_specification.precondition - user</field>
+    <field name="model_id" ref="model_odoo_use_case_specification_precondition" />
+    <field name="group_id" ref="odoo_use_case_specification_user_group" />
+    <field name="perm_read" eval="1" />
+    <field name="perm_create" eval="1" />
+    <field name="perm_write" eval="1" />
+    <field name="perm_unlink" eval="1" />
+</record>
 </odoo>
