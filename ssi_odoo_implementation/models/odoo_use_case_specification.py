@@ -91,9 +91,17 @@ class OdooUseCaseSpecification(models.Model):
     )
     actor = fields.Text(
         string="Actor",
-        required=True,
+        required=False,
         readonly=True,
         states={"draft": [("readonly", False)]},
+    )
+    actor_ids = fields.One2many(
+        comodel_name="odoo_use_case_specification.actor",
+        inverse_name="use_case_specification_id",
+        string="Actors",
+        readonly=True,
+        states={"draft": [("readonly", False)]},
+        copy=True,
     )
     precondition = fields.Text(
         string="Precondition",
@@ -101,15 +109,31 @@ class OdooUseCaseSpecification(models.Model):
         readonly=True,
         states={"draft": [("readonly", False)]},
     )
+    precondition_ids = fields.One2many(
+        comodel_name="odoo_use_case_specification.precondition",
+        inverse_name="use_case_specification_id",
+        string="Preconditions",
+        readonly=True,
+        states={"draft": [("readonly", False)]},
+        copy=True,
+    )
     trigger = fields.Text(
         string="Trigger",
-        required=True,
+        required=False,
         readonly=True,
         states={"draft": [("readonly", False)]},
     )
+    trigger_ids = fields.One2many(
+        comodel_name="odoo_use_case_specification.trigger",
+        inverse_name="use_case_specification_id",
+        string="Triggers",
+        readonly=True,
+        states={"draft": [("readonly", False)]},
+        copy=True,
+    )
     main_flow = fields.Text(
         string="Main Flow",
-        required=True,
+        required=False,
         readonly=True,
         states={"draft": [("readonly", False)]},
     )

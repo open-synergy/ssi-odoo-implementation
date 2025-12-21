@@ -92,9 +92,66 @@
                                 widget="ckeditor"
                             />
                     </group>
+                    <field name="trigger_ids">
+                        <tree>
+                            <field name="sequence" widget="handle" />
+                            <field name="code" />
+                            <field
+                                    name="trigger"
+                                    style="white-space: normal; word-wrap: break-word; overflow-wrap: break-word;"
+                                    widget="ckeditor"
+                                />
+                        </tree>
+                        <form>
+                            <sheet>
+                                <group colspan="4" col="2">
+                                    <field name="sequence" />
+                                    <field name="code" />
+                                </group>
+                                <notebook>
+                                    <page name="trigger" string="Trigger">
+                                        <field
+                                                name="trigger"
+                                                widget="ckeditor"
+                                                nolabel="1"
+                                                colspan="2"
+                                            />
+                                    </page>
+                                </notebook>
+                            </sheet>
+                        </form>
+                    </field>
                     <group name="actor" string="Actor" colspan="4" col="2">
                         <field name="actor" colspan="2" nolabel="1" widget="ckeditor" />
                     </group>
+                    <field name="actor_ids">
+                        <tree>
+                            <field name="sequence" widget="handle" />
+                            <field name="code" />
+                            <field
+                                    name="actor"
+                                    style="white-space: normal; word-wrap: break-word; overflow-wrap: break-word;"
+                                />
+                        </tree>
+                        <form>
+                            <sheet>
+                                <group colspan="4" col="2">
+                                    <field name="sequence" />
+                                    <field name="code" />
+                                </group>
+                                <notebook>
+                                    <page name="actor" string="Actor">
+                                        <field
+                                                name="actor"
+                                                nolabel="1"
+                                                colspan="2"
+                                                widget="ckeditor"
+                                            />
+                                    </page>
+                                </notebook>
+                            </sheet>
+                        </form>
+                    </field>
                 </page>
                 <page name="precondition" string="Precondition">
                     <group
@@ -110,6 +167,34 @@
                                 widget="ckeditor"
                             />
                     </group>
+                    <field name="precondition_ids">
+                        <tree>
+                            <field name="sequence" widget="handle" />
+                            <field name="code" />
+                            <field
+                                    name="precondition"
+                                    style="white-space: normal; word-wrap: break-word; overflow-wrap: break-word;"
+                                />
+                        </tree>
+                        <form>
+                            <sheet>
+                                <group colspan="4" col="2">
+                                    <field name="sequence" />
+                                    <field name="code" />
+                                </group>
+                                <notebook>
+                                    <page name="precondition" string="Precondition">
+                                        <field
+                                                name="precondition"
+                                                widget="ckeditor"
+                                                nolabel="1"
+                                                colspan="2"
+                                            />
+                                    </page>
+                                </notebook>
+                            </sheet>
+                        </form>
+                    </field>
                 </page>
                 <page name="flow" string="Flow">
                     <group name="main_flow" string="Main Flow" colspan="4" col="2">
@@ -126,6 +211,11 @@
                             <field name="sequence" widget="handle" />
                             <field
                                     name="name"
+                                    style="white-space: normal; word-wrap: break-word; overflow-wrap: break-word;"
+                                />
+                            <field
+                                    name="condition"
+                                    widget="ckeditor"
                                     style="white-space: normal; word-wrap: break-word; overflow-wrap: break-word;"
                                 />
                             <field name="fork_point" />
@@ -145,6 +235,14 @@
                                     <field name="join_point" />
                                 </group>
                                 <notebook>
+                                    <page name="condition" string="Condition">
+                                        <field
+                                                name="condition"
+                                                widget="ckeditor"
+                                                nolabel="1"
+                                                colspan="2"
+                                            />
+                                    </page>
                                     <page name="steps" string="Steps">
                                         <field
                                                 name="description"
@@ -508,6 +606,7 @@
                     <field name="conditional_postcondition_ids" nolabel="1">
                         <tree>
                             <field name="sequence" widget="handle" />
+                            <field name="code" />
                             <field name="flow" />
                             <field
                                     name="name"
@@ -523,6 +622,7 @@
                             <sheet>
                                 <group>
                                     <field name="sequence" />
+                                    <field name="code" />
                                     <field name="flow" />
                                     <field name="name" />
                                     <field
@@ -536,112 +636,38 @@
                         </form>
                     </field>
                 </page>
-            </xpath>
-            <xpath expr="//group[@name='footer_left']" position="inside">
-                <div class="oe_mb16">
-                    <table class="table table-sm table-bordered">
-                        <thead>
-                            <tr>
-                                <th>Item</th>
-                                <th>Hex</th>
-                                <th>Preview</th>
-                            </tr>
-                        </thead>
-                        <tbody>
+                <page name="emoticon" string="Emoticon">
+                    <group>
+                        <separator string="Use Case" colspan="2" />
+                        <div colspan="2">
+                            <p>📘 Use Case</p>
+                            <p>🔀 Alternate Flow</p>
+                            <p>🧩 Sub Flow</p>
+                            <p>⚠️ Exception Flow</p>
+                            <p>✅ Postcondition</p>
+                        </div>
 
-                            <!-- 1 -->
-                            <tr>
-                                <td>Group</td>
-                                <td><code>#D38FA0</code></td>
-                                <td><span
-                                            style="display:inline-block;width:40px;height:18px;border:1px solid #ccc;background-color:#D38FA0;"
-                                        /></td>
-                            </tr>
+                        <separator string="Business Rule" colspan="2" />
+                        <div colspan="2">
+                            <p>🧮 Computed Field</p>
+                            <p>🔁 Onchange</p>
+                            <p>🎯 Default Value</p>
+                            <p>▶️ Button Action</p>
+                            <p>🔍 Domain</p>
+                        </div>
 
-                            <!-- 2 -->
-                            <tr>
-                                <td>Menu</td>
-                                <td><code>#D9A076</code></td>
-                                <td><span
-                                            style="display:inline-block;width:40px;height:18px;border:1px solid #ccc;background-color:#D9A076;"
-                                        /></td>
-                            </tr>
+                        <separator string="Status / Marker" colspan="2" />
+                        <div colspan="2">
+                            <p>ℹ️ Info</p>
+                            <p>❗ Important</p>
+                            <p>✅ OK</p>
+                            <p>🟡 Warning</p>
+                            <p>❌ Not Allowed</p>
+                        </div>
+                    </group>
+                </page>
 
-                            <!-- 3 -->
-                            <tr>
-                                <td>Button</td>
-                                <td><code>#D6C672</code></td>
-                                <td><span
-                                            style="display:inline-block;width:40px;height:18px;border:1px solid #ccc;background-color:#D6C672;"
-                                        /></td>
-                            </tr>
 
-                            <!-- 4 -->
-                            <tr>
-                                <td>Field</td>
-                                <td><code>#9CBF9A</code></td>
-                                <td><span
-                                            style="display:inline-block;width:40px;height:18px;border:1px solid #ccc;background-color:#9CBF9A;"
-                                        /></td>
-                            </tr>
-
-                            <!-- 5 -->
-                            <tr>
-                                <td>Sub Flow</td>
-                                <td><code>#7FB8B8</code></td>
-                                <td><span
-                                            style="display:inline-block;width:40px;height:18px;border:1px solid #ccc;background-color:#7FB8B8;"
-                                        /></td>
-                            </tr>
-
-                            <!-- 6 -->
-                            <tr>
-                                <td>Page</td>
-                                <td><code>#B7A4C9</code></td>
-                                <td><span
-                                            style="display:inline-block;width:40px;height:18px;border:1px solid #ccc;background-color:#B7A4C9;"
-                                        /></td>
-                            </tr>
-
-                            <!-- 7 -->
-                            <tr>
-                                <td>Use Case</td>
-                                <td><code>#8FAFD4</code></td>
-                                <td><span
-                                            style="display:inline-block;width:40px;height:18px;border:1px solid #ccc;background-color:#8FAFD4;"
-                                        /></td>
-                            </tr>
-
-                            <!-- 8 -->
-                            <tr>
-                                <td>Field Value</td>
-                                <td><code>#C27A76</code></td>
-                                <td><span
-                                            style="display:inline-block;width:40px;height:18px;border:1px solid #ccc;background-color:#C27A76;"
-                                        /></td>
-                            </tr>
-
-                            <!-- 9 -->
-                            <tr>
-                                <td>Deep Pastel Moss</td>
-                                <td><code>#7A8F6A</code></td>
-                                <td><span
-                                            style="display:inline-block;width:40px;height:18px;border:1px solid #ccc;background-color:#7A8F6A;"
-                                        /></td>
-                            </tr>
-
-                            <!-- 10 -->
-                            <tr>
-                                <td>End Use Case</td>
-                                <td><code>#6E7BA5</code></td>
-                                <td><span
-                                            style="display:inline-block;width:40px;height:18px;border:1px solid #ccc;background-color:#6E7BA5;"
-                                        /></td>
-                            </tr>
-
-                        </tbody>
-                    </table>
-                </div>
             </xpath>
         </data>
     </field>

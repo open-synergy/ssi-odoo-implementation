@@ -5,9 +5,9 @@
 from odoo import fields, models
 
 
-class OdooUseCaseConditionalPostcondition(models.Model):
-    _name = "odoo_use_case_specification.conditional_postcondition"
-    _description = "Odoo Use Case Specification - Conditional Postcondition"
+class OdooUseCaseSpecificationActor(models.Model):
+    _name = "odoo_use_case_specification.actor"
+    _description = "Odoo Use Case Specification Actor"
     _order = "use_case_specification_id, sequence, id"
 
     use_case_specification_id = fields.Many2one(
@@ -17,7 +17,5 @@ class OdooUseCaseConditionalPostcondition(models.Model):
         ondelete="cascade",
     )
     sequence = fields.Integer(string="Sequence", required=True, default=10)
-    code = fields.Char(string="Code", required=True)
-    flow = fields.Char(string="Flow", required=True)
-    name = fields.Char(string="Condition", required=False)
-    postcondition = fields.Text(string="Postcondition")
+    code = fields.Char(string="Actor Code")
+    actor = fields.Text(string="Actor")
