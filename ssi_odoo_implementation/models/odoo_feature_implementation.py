@@ -98,6 +98,27 @@ class OdooFeatureImplementation(models.Model):
         column1="feature_implementation_id",
         column2="module_id",
     )
+    need_ccr = fields.Boolean(
+        string="Need Configuration Change Record",
+    )
+    odoo_configuration_change_record_ids = fields.Many2many(
+        string="Odoo Configuration Change Records",
+        comodel_name="odoo_configuration_change_record",
+        relation="rel_feature_implementation_2_ccr",
+        column1="feature_implementation_id",
+        column2="ccr_id",
+    )
+    ccr_state = fields.Selection(
+        string="CCR State",
+        selection=[
+            ("not_needed", "Not Needed"),
+            ("in_progress", "In Progress"),
+            ("done", "Done"),
+        ],
+        compute="_compute_ccr_state",
+        store=True,
+        compute_sudo=True,
+    )
     state = fields.Selection(
         string="State",
         selection=[
@@ -117,9 +138,30 @@ class OdooFeatureImplementation(models.Model):
     def _default_date(self):
         return fields.Date.today()
 
+    @api.depends(
+        "need_ccr",
+        "odoo_configuration_change_record_ids.state",
+    )
+    def _compute_ccr_state(self):
+        for record in self.sudo():
+            if not record.need_ccr:
+                record.ccr_state = "not_needed"
+            elif record.need_ccr and not record.odoo_configuration_change_record_ids:
+                record.ccr_state = "in_progress"
+            elif (
+                record.need_ccr
+                and record.odoo_configuration_change_record_ids
+                and record.odoo_configuration_change_record_ids.filtered(
+                    lambda r: r.state != "done"
+                )
+            ):
+                record.ccr_state = "in_progress"
+            else:
+                record.ccr_state = "done"
+
     @api.model
     def _get_policy_field(self):
-        res = super(OdooFeatureImplementation, self)._get_policy_field()
+        res = super()._get_policy_field()
         policy_field = [
             "confirm_ok",
             "approve_ok",
