@@ -35,6 +35,7 @@ class OdooModule(models.Model):
         string="Dependencies",
         comodel_name="odoo_module",
         compute="_compute_dependency",
+        compute_sudo=True,
         store=False,
     )
 

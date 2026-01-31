@@ -74,6 +74,7 @@ class OdooFeatureImplementation(models.Model):
         comodel_name="res.partner",
         related="implementation_id.partner_id",
         store=True,
+        compute_sudo=True,
     )
     contact_id = fields.Many2one(
         string="Contact",
@@ -90,6 +91,7 @@ class OdooFeatureImplementation(models.Model):
         comodel_name="odoo_feature_category",
         related="feature_id.category_id",
         store=True,
+        compute_sudo=True,
     )
     installed_module_ids = fields.Many2many(
         string="Installed Modules",
