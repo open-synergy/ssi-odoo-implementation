@@ -403,6 +403,11 @@ msgid "Buttons"
 msgstr ""
 
 #. module: ssi_odoo_implementation
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_implementation__ccr_state
+msgid "CCR State"
+msgstr ""
+
+#. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__approve_ok
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__approve_ok
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__approve_ok
@@ -660,6 +665,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record_detail__configuration_change_record_id
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_feature_implementation_view_form
 msgid "Configuration Change Record"
 msgstr ""
 
@@ -895,6 +901,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields.selection,name:ssi_odoo_implementation.selection__odoo_deployment__state__done
+#: model:ir.model.fields.selection,name:ssi_odoo_implementation.selection__odoo_feature_implementation__ccr_state__done
 msgid "Done"
 msgstr ""
 
@@ -1283,6 +1290,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields.selection,name:ssi_odoo_implementation.selection__odoo_deployment__state__open
+#: model:ir.model.fields.selection,name:ssi_odoo_implementation.selection__odoo_feature_implementation__ccr_state__in_progress
 msgid "In Progress"
 msgstr ""
 
@@ -1711,6 +1719,11 @@ msgid "Name"
 msgstr ""
 
 #. module: ssi_odoo_implementation
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_implementation__need_ccr
+msgid "Need Configuration Change Record"
+msgstr ""
+
+#. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__need_task
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__need_task
 msgid "Need Task"
@@ -1825,6 +1838,11 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields.selection,name:ssi_odoo_implementation.selection__odoo_implementation__state__draft
 msgid "Not Deployed"
+msgstr ""
+
+#. module: ssi_odoo_implementation
+#: model:ir.model.fields.selection,name:ssi_odoo_implementation.selection__odoo_feature_implementation__ccr_state__not_needed
+msgid "Not Needed"
 msgstr ""
 
 #. module: ssi_odoo_implementation
@@ -2014,6 +2032,11 @@ msgid "Odoo Configuration Change Record Detail"
 msgstr ""
 
 #. module: ssi_odoo_implementation
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_implementation__odoo_configuration_change_record_ids
+msgid "Odoo Configuration Change Records"
+msgstr ""
+
+#. module: ssi_odoo_implementation
 #: model:ir.module.category,name:ssi_odoo_implementation.odoo_configuration_change_record_data_ownership_module_category
 #: model:ir.module.category,name:ssi_odoo_implementation.odoo_configuration_change_record_workflow_module_category
 msgid "Odoo Configuration Record Change"
@@ -2091,6 +2114,7 @@ msgstr ""
 #: model:ir.module.category,name:ssi_odoo_implementation.odoo_implementation_data_ownership_module_category
 #: model:ir.module.category,name:ssi_odoo_implementation.odoo_implementation_workflow_module_category
 #: model:ir.ui.menu,name:ssi_odoo_implementation.menu_root_odoo
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_feature_implementation_view_form
 #: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_search
 msgid "Odoo Implementation"
 msgstr ""
@@ -2321,6 +2345,11 @@ msgid "Reporting"
 msgstr ""
 
 #. module: ssi_odoo_implementation
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_feature_implementation_view_form
+msgid "Required"
+msgstr ""
+
+#. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__user_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__user_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_deployment__user_id
@@ -2453,6 +2482,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__state
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_implementation__state
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification__state
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_feature_implementation_view_form
 msgid "State"
 msgstr ""
 
