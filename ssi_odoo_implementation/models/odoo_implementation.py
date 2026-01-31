@@ -95,35 +95,41 @@ class OdooImplementation(models.Model):
         string="Default Modules",
         comodel_name="odoo_module",
         compute="_compute_module",
+        compute_sudo=True,
         store=False,
     )
     extra_module_ids = fields.Many2many(
         string="Extra Modules",
         comodel_name="odoo_module",
         compute="_compute_module",
+        compute_sudo=True,
         store=False,
     )
     missing_module_ids = fields.Many2many(
         string="Missing Modules",
         comodel_name="odoo_module",
         compute="_compute_module",
+        compute_sudo=True,
         store=False,
     )
     missing_core_module_ids = fields.Many2many(
         string="Missing Core Modules",
         comodel_name="odoo_module",
         compute="_compute_module",
+        compute_sudo=True,
         store=False,
     )
     missing_website_theme_module_ids = fields.Many2many(
         string="Missing Website Theme Modules",
         comodel_name="odoo_module",
         compute="_compute_module",
+        compute_sudo=True,
         store=False,
     )
     missing_module_count = fields.Integer(
         string="Missing Module Count",
         compute="_compute_module",
+        compute_sudo=True,
         store=True,
     )
 
@@ -132,29 +138,34 @@ class OdooImplementation(models.Model):
         string="Modules To Be Installed",
         comodel_name="odoo_module",
         compute="_compute_module",
+        compute_sudo=True,
         store=False,
     )
     to_be_installed_core_module_ids = fields.Many2many(
         string="Core Modules To Be Installed",
         comodel_name="odoo_module",
         compute="_compute_module",
+        compute_sudo=True,
         store=False,
     )
     to_be_installed_feature_module_ids = fields.Many2many(
         string="Feature Modules To Be Installed",
         comodel_name="odoo_module",
         compute="_compute_module",
+        compute_sudo=True,
         store=False,
     )
     to_be_installed_website_theme_module_ids = fields.Many2many(
         string="Website Theme Modules To Be Installed",
         comodel_name="odoo_module",
         compute="_compute_module",
+        compute_sudo=True,
         store=False,
     )
     to_be_installed_module_count = fields.Integer(
         string="To Be Installed Module Count",
         compute="_compute_module",
+        compute_sudo=True,
         store=True,
     )
 
