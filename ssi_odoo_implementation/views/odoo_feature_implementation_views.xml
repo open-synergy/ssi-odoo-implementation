@@ -90,6 +90,25 @@
                     <field name="date" />
                 </xpath>
                 <xpath expr="//page[1]" position="before">
+                    <page string="Odoo Implementation">
+                         <group
+                            name="ccr"
+                            string="Configuration Change Record"
+                            colspan="4"
+                            col="2"
+                        >
+                              <field
+                                name="need_ccr"
+                                string="Required"
+                                widget="boolean_toggle"
+                            />
+                              <field name="ccr_state" string="State" />
+                         </group>
+                         <field
+                            name="odoo_configuration_change_record_ids"
+                            nolabel="1"
+                        />
+                    </page>
                     <page name="module" string="Modules">
                         <group
                             name="installed_module"
