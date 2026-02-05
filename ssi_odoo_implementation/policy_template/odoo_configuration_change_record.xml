@@ -147,7 +147,7 @@ if not document.approval_template_id:
     <field name="restrict_state" eval="1" />
     <field
             name="state_ids"
-            search="[('field_id.model_id.model','=','odoo_configuration_change_record'),('value','=','cancel')]"
+            search="[('field_id.model_id.model','=','odoo_configuration_change_record'),('value','in',['cancel','reject'])]"
         />
     <field name="restrict_user" eval="1" />
     <field name="computation_method">use_group</field>
