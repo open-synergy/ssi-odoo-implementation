@@ -1004,6 +1004,11 @@ msgid "Feature Category"
 msgstr ""
 
 #. module: ssi_odoo_implementation
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_configuration_change_record_view_form
+msgid "Feature Implementation"
+msgstr ""
+
+#. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_implementation__feature_implementation_ids
 #: model:ir.ui.menu,name:ssi_odoo_implementation.odoo_feature_implementation_menu
 msgid "Feature Implementations"
@@ -1490,6 +1495,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__timebox_latest_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__timebox_latest_id
 msgid "Letest Timebox"
+msgstr ""
+
+#. module: ssi_odoo_implementation
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_configuration_change_record_view_form
+msgid "Links"
 msgstr ""
 
 #. module: ssi_odoo_implementation
@@ -2092,6 +2102,7 @@ msgstr ""
 
 #. module: ssi_odoo_implementation
 #: model:ir.actions.act_window,name:ssi_odoo_implementation.odoo_feature_implementation_action
+#: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__odoo_feature_implementation_ids
 msgid "Odoo Feature Implementations"
 msgstr ""
 
