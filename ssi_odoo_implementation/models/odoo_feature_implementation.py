@@ -72,9 +72,8 @@ class OdooFeatureImplementation(models.Model):
     partner_id = fields.Many2one(
         string="Client",
         comodel_name="res.partner",
-        related="implementation_id.partner_id",
-        store=True,
-        compute_sudo=True,
+        related=False,
+        required=True,
     )
     contact_id = fields.Many2one(
         string="Contact",
@@ -139,6 +138,12 @@ class OdooFeatureImplementation(models.Model):
     @api.model
     def _default_date(self):
         return fields.Date.today()
+
+    @api.onchange(
+        "partner_id",
+    )
+    def onchange_implementation_id(self):
+        self.implementation_id = False
 
     @api.depends(
         "need_ccr",
