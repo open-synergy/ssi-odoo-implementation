@@ -9,4 +9,5 @@ from . import (
     odoo_change_request,
     odoo_configuration_change_record,
     odoo_use_case_specification,
+    odoo_feature_implementation,
 )
