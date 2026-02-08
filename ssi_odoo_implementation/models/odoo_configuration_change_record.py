@@ -85,6 +85,13 @@ class OdooConfigurationChangeRecord(models.Model):
         readonly=True,
         states={"draft": [("readonly", False)]},
     )
+    odoo_feature_implementation_ids = fields.Many2many(
+        string="Odoo Feature Implementations",
+        comodel_name="odoo_feature_implementation",
+        relation="rel_feature_implementation_2_ccr",
+        column1="ccr_id",
+        column2="feature_implementation_id",
+    )
 
     @api.model
     def _default_date(self):

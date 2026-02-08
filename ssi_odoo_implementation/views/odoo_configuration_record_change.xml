@@ -111,6 +111,13 @@
                             </form>
                         </field>
                     </page>
+                    <page name="Links" string="Links">
+                        <separator
+                            name="feature_implementation"
+                            string="Feature Implementation"
+                        />
+                        <field name="odoo_feature_implementation_ids" />
+                    </page>
                 </xpath>
             </data>
         </field>
