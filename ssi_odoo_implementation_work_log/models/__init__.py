@@ -10,4 +10,5 @@ from . import (
     odoo_configuration_change_record,
     odoo_use_case_specification,
     odoo_feature_implementation,
+    odoo_module,
 )
