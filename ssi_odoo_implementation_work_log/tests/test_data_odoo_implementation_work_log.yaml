@@ -1,0 +1,39 @@
+scenarios:
+  - name: "Odoo Implementation Work Log - work_log_ids field available"
+    steps:
+      - step: "Setup - create odoo version"
+        action: "create"
+        model: "odoo_version"
+        save_as: "version"
+        values:
+          name: "Odoo 14.0 WL"
+          code: "14WL"
+
+      - step: "Setup - create odoo environment"
+        action: "create"
+        model: "odoo_environment"
+        save_as: "environment"
+        values:
+          name: "Production WL"
+          code: "PRODWL"
+
+      - step: "Create odoo implementation with work log extension"
+        action: "create"
+        model: "odoo_implementation"
+        save_as: "implementation"
+        as_user: "base.user_admin"
+        values:
+          domain: "wl.example.com"
+          version_id: "EVAL: registry['version'].id"
+          environment_id: "EVAL: registry['environment'].id"
+
+      - step: "Assert implementation created in draft with work log field"
+        action: "assert"
+        target: "implementation"
+        asserts:
+          state:
+            type: "value"
+            expected: "draft"
+          work_log_ids:
+            type: "value"
+            expected: false
