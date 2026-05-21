@@ -76,14 +76,17 @@
         <field name="arch" type="xml">
             <data>
                 <xpath expr="//field[@name='user_id']" position="after">
-                    
+
                     <field name="partner_id" widget="many2one_avatar" />
                     <field
                         name="contact_id"
                         widget="many2one_avatar"
                         domain="[('commercial_partner_id','=',partner_id),('is_company','=',False)]"
                     />
-                    <field name="implementation_id" domain="[('partner_id','=',partner_id)]"/>
+                    <field
+                        name="implementation_id"
+                        domain="[('partner_id','=',partner_id)]"
+                    />
                 </xpath>
                 <xpath expr="//group[@name='header_right']" position="inside">
                     <field name="feature_id" />

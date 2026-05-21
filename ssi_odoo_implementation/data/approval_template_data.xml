@@ -2,8 +2,7 @@
 <!-- Copyright 2022 OpenSynergy Indonesia
      Copyright 2022 PT. Simetri Sinergi Indonesia
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
-<odoo>
-<data noupdate="1">
+<odoo noupdate="1">
 <record id="approval_template_odoo_feature_implementation" model="approval.template">
     <field name="name">Standard</field>
     <field name="model_id" ref="model_odoo_feature_implementation" />
@@ -14,15 +13,15 @@
 </record>
 
 <record
-            id="approval_template_odoo_feature_implementation_detail"
-            model="approval.template_detail"
-        >
+        id="approval_template_odoo_feature_implementation_detail"
+        model="approval.template_detail"
+    >
     <field name="template_id" ref="approval_template_odoo_feature_implementation" />
     <field name="approver_selection_method">use_group</field>
     <field
-                name="approver_group_ids"
-                eval="[(6,0,[ref('odoo_feature_implementation_validator_group')])]"
-            />
+            name="approver_group_ids"
+            eval="[(6,0,[ref('odoo_feature_implementation_validator_group')])]"
+        />
 </record>
 
 <record id="approval_template_odoo_feature_issue" model="approval.template">
@@ -35,15 +34,15 @@
 </record>
 
 <record
-            id="approval_template_odoo_feature_issue_detail"
-            model="approval.template_detail"
-        >
+        id="approval_template_odoo_feature_issue_detail"
+        model="approval.template_detail"
+    >
     <field name="template_id" ref="approval_template_odoo_feature_issue" />
     <field name="approver_selection_method">use_group</field>
     <field
-                name="approver_group_ids"
-                eval="[(6,0,[ref('odoo_feature_issue_validator_group')])]"
-            />
+            name="approver_group_ids"
+            eval="[(6,0,[ref('odoo_feature_issue_validator_group')])]"
+        />
 </record>
 
 <!-- Odoo Deployment -->
@@ -60,11 +59,10 @@
     <field name="template_id" ref="approval_template_odoo_deployment" />
     <field name="approver_selection_method">use_group</field>
     <field
-                name="approver_group_ids"
-                eval="[(6,0,[ref('odoo_deployment_validator_group')])]"
-            />
+            name="approver_group_ids"
+            eval="[(6,0,[ref('odoo_deployment_validator_group')])]"
+        />
 </record>
 
 
-</data>
 </odoo>

@@ -1,0 +1,137 @@
+scenarios:
+  - name: "Odoo Use Case Specification - Full Workflow: draft to done"
+    steps:
+      - step: "Setup - create odoo feature"
+        action: "create"
+        model: "odoo_feature"
+        save_as: "feature"
+        values:
+          name: "Test Feature UCS"
+          code: "FTUCS"
+          ttype: "transaction"
+
+      - step: "Setup - create odoo use case"
+        action: "create"
+        model: "odoo_use_case"
+        save_as: "use_case"
+        values:
+          name: "Test Use Case UCS"
+          code: "UCUCS"
+          use_case: "<p>Test use case description</p>"
+
+      - step: "Create use case specification"
+        action: "create"
+        model: "odoo_use_case_specification"
+        save_as: "ucs"
+        as_user: "base.user_admin"
+        values:
+          feature_id: "EVAL: registry['feature'].id"
+          use_case_id: "EVAL: registry['use_case'].id"
+
+      - step: "Assert use case specification created in draft"
+        action: "assert"
+        target: "ucs"
+        asserts:
+          state:
+            type: "value"
+            expected: "draft"
+
+      - step: "Confirm use case specification"
+        action: "call"
+        target: "ucs"
+        method: "action_confirm"
+        as_user: "base.user_admin"
+        context:
+          bypass_policy_check: true
+        asserts:
+          state:
+            type: "value"
+            expected: "confirm"
+
+      - step: "Invalidate cache after confirm"
+        action: "call"
+        target: "ucs"
+        method: "invalidate_cache"
+
+      - step: "Approve use case specification"
+        action: "call"
+        target: "ucs"
+        method: "action_approve_approval"
+        as_user: "base.user_admin"
+        asserts:
+          state:
+            type: "value"
+            expected: "done"
+
+  - name: "Odoo Use Case Specification - Cancel and Restart"
+    steps:
+      - step: "Setup - create odoo feature"
+        action: "create"
+        model: "odoo_feature"
+        save_as: "feature2"
+        values:
+          name: "Test Feature UCS 2"
+          code: "FTUCS2"
+          ttype: "master"
+
+      - step: "Setup - create odoo use case"
+        action: "create"
+        model: "odoo_use_case"
+        save_as: "use_case2"
+        values:
+          name: "Test Use Case UCS 2"
+          code: "UCUCS2"
+          use_case: "<p>Test use case description 2</p>"
+
+      - step: "Create use case specification"
+        action: "create"
+        model: "odoo_use_case_specification"
+        save_as: "ucs2"
+        as_user: "base.user_admin"
+        values:
+          feature_id: "EVAL: registry['feature2'].id"
+          use_case_id: "EVAL: registry['use_case2'].id"
+
+      - step: "Confirm use case specification"
+        action: "call"
+        target: "ucs2"
+        method: "action_confirm"
+        as_user: "base.user_admin"
+        context:
+          bypass_policy_check: true
+        asserts:
+          state:
+            type: "value"
+            expected: "confirm"
+
+      - step: "Invalidate cache after confirm"
+        action: "call"
+        target: "ucs2"
+        method: "invalidate_cache"
+
+      - step: "Reject approval"
+        action: "call"
+        target: "ucs2"
+        method: "action_reject_approval"
+        as_user: "base.user_admin"
+        asserts:
+          state:
+            type: "value"
+            expected: "reject"
+
+      - step: "Invalidate cache after reject"
+        action: "call"
+        target: "ucs2"
+        method: "invalidate_cache"
+
+      - step: "Restart to draft"
+        action: "call"
+        target: "ucs2"
+        method: "action_restart"
+        as_user: "base.user_admin"
+        context:
+          bypass_policy_check: true
+        asserts:
+          state:
+            type: "value"
+            expected: "draft"
