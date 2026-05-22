@@ -34,6 +34,6 @@ scenarios:
           state:
             type: "value"
             expected: "draft"
-          data_requirement_ids:
+          data_requirement_status:
             type: "value"
-            expected: false
+            expected: "not_needed"
