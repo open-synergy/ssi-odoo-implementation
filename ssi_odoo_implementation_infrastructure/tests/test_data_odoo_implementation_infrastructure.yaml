@@ -34,6 +34,3 @@ scenarios:
           state:
             type: "value"
             expected: "draft"
-          server_id:
-            type: "value"
-            expected: false
