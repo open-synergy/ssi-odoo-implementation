@@ -1,0 +1,39 @@
+scenarios:
+  - name: "Odoo Implementation Data Requirement - data_requirement_ids field available"
+    steps:
+      - step: "Setup - create odoo version"
+        action: "create"
+        model: "odoo_version"
+        save_as: "version"
+        values:
+          name: "Odoo 14.0 DR"
+          code: "14DR"
+
+      - step: "Setup - create odoo environment"
+        action: "create"
+        model: "odoo_environment"
+        save_as: "environment"
+        values:
+          name: "Production DR"
+          code: "PRODDR"
+
+      - step: "Create odoo implementation with data requirement extension"
+        action: "create"
+        model: "odoo_implementation"
+        save_as: "implementation"
+        as_user: "base.user_admin"
+        values:
+          domain: "dr.example.com"
+          version_id: "EVAL: registry['version'].id"
+          environment_id: "EVAL: registry['environment'].id"
+
+      - step: "Assert implementation created in draft with data requirement field"
+        action: "assert"
+        target: "implementation"
+        asserts:
+          state:
+            type: "value"
+            expected: "draft"
+          data_requirement_status:
+            type: "value"
+            expected: "not_needed"

@@ -1,0 +1,134 @@
+scenarios:
+  - name: "Odoo Change Request - Full Workflow: draft to open"
+    steps:
+      - step: "Setup - create odoo version"
+        action: "create"
+        model: "odoo_version"
+        save_as: "version"
+        values:
+          name: "Odoo 14.0 CR"
+          code: "14CR"
+
+      - step: "Create odoo change request"
+        action: "create"
+        model: "odoo_change_request"
+        save_as: "change_request"
+        as_user: "base.user_admin"
+        values:
+          summary: "Test Change Request"
+          version_id: "EVAL: registry['version'].id"
+
+      - step: "Assert change request created in draft"
+        action: "assert"
+        target: "change_request"
+        asserts:
+          state:
+            type: "value"
+            expected: "draft"
+
+      - step: "Confirm change request"
+        action: "call"
+        target: "change_request"
+        method: "action_confirm"
+        as_user: "base.user_admin"
+        context:
+          bypass_policy_check: true
+        asserts:
+          state:
+            type: "value"
+            expected: "confirm"
+
+      - step: "Invalidate cache after confirm"
+        action: "call"
+        target: "change_request"
+        method: "invalidate_cache"
+
+      - step: "Approve change request"
+        action: "call"
+        target: "change_request"
+        method: "action_approve_approval"
+        as_user: "base.user_admin"
+        asserts:
+          state:
+            type: "value"
+            expected: "ready"
+
+      - step: "Invalidate cache after approve"
+        action: "call"
+        target: "change_request"
+        method: "invalidate_cache"
+
+      - step: "Open change request"
+        action: "call"
+        target: "change_request"
+        method: "action_open"
+        as_user: "base.user_admin"
+        context:
+          bypass_policy_check: true
+        asserts:
+          state:
+            type: "value"
+            expected: "open"
+
+  - name: "Odoo Change Request - Cancel and Restart"
+    steps:
+      - step: "Setup - create odoo version"
+        action: "create"
+        model: "odoo_version"
+        save_as: "version_cr"
+        values:
+          name: "Odoo 15.0 CR"
+          code: "15CR"
+
+      - step: "Create odoo change request"
+        action: "create"
+        model: "odoo_change_request"
+        save_as: "change_request2"
+        as_user: "base.user_admin"
+        values:
+          summary: "Test Change Request Cancel"
+          version_id: "EVAL: registry['version_cr'].id"
+
+      - step: "Confirm change request"
+        action: "call"
+        target: "change_request2"
+        method: "action_confirm"
+        as_user: "base.user_admin"
+        context:
+          bypass_policy_check: true
+        asserts:
+          state:
+            type: "value"
+            expected: "confirm"
+
+      - step: "Invalidate cache after confirm"
+        action: "call"
+        target: "change_request2"
+        method: "invalidate_cache"
+
+      - step: "Reject change request approval"
+        action: "call"
+        target: "change_request2"
+        method: "action_reject_approval"
+        as_user: "base.user_admin"
+        asserts:
+          state:
+            type: "value"
+            expected: "reject"
+
+      - step: "Invalidate cache after reject"
+        action: "call"
+        target: "change_request2"
+        method: "invalidate_cache"
+
+      - step: "Restart change request to draft"
+        action: "call"
+        target: "change_request2"
+        method: "action_restart"
+        as_user: "base.user_admin"
+        context:
+          bypass_policy_check: true
+        asserts:
+          state:
+            type: "value"
+            expected: "draft"

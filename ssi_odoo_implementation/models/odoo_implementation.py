@@ -243,11 +243,15 @@ class OdooImplementation(models.Model):
     def _compute_module(self):
         for record in self:
             core_modules = default_modules = record.version_id.default_module_ids
-            website_modules = feature_modules = to_be_installed_modules = (
+            website_modules = (
+                feature_modules
+            ) = (
+                to_be_installed_modules
+            ) = (
                 to_be_installed_core_modules
-            ) = to_be_installed_feature_modules = (
-                to_be_installed_website_theme_modules
-            ) = self.env["odoo_module"]
+            ) = (
+                to_be_installed_feature_modules
+            ) = to_be_installed_website_theme_modules = self.env["odoo_module"]
             for core_module in core_modules:
                 default_modules += core_module.all_dependency_ids
                 core_modules += core_module.all_dependency_ids

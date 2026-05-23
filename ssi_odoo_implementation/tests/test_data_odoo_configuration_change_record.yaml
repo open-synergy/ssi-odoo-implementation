@@ -1,0 +1,181 @@
+scenarios:
+  - name: "Odoo Configuration Change Record - Full Workflow: draft to done"
+    steps:
+      - step: "Setup - create odoo version"
+        action: "create"
+        model: "odoo_version"
+        save_as: "version"
+        values:
+          name: "Odoo 14.0 CCR"
+          code: "14CCR"
+
+      - step: "Setup - create odoo environment"
+        action: "create"
+        model: "odoo_environment"
+        save_as: "environment"
+        values:
+          name: "Production CCR"
+          code: "PRODCCR"
+
+      - step: "Setup - create odoo implementation"
+        action: "create"
+        model: "odoo_implementation"
+        save_as: "implementation"
+        as_user: "base.user_admin"
+        values:
+          domain: "ccr.example.com"
+          version_id: "EVAL: registry['version'].id"
+          environment_id: "EVAL: registry['environment'].id"
+
+      - step: "Open implementation"
+        action: "call"
+        target: "implementation"
+        method: "action_open"
+        as_user: "base.user_admin"
+        context:
+          bypass_policy_check: true
+
+      - step: "Invalidate cache after open implementation"
+        action: "call"
+        target: "implementation"
+        method: "invalidate_cache"
+
+      - step: "Create configuration change record"
+        action: "create"
+        model: "odoo_configuration_change_record"
+        save_as: "ccr"
+        as_user: "base.user_admin"
+        values:
+          summary: "Test Configuration Change"
+          odoo_implementation_id: "EVAL: registry['implementation'].id"
+          partner_id: "EVAL: self.env.ref('base.user_admin').partner_id.id"
+
+      - step: "Assert configuration change record created in draft"
+        action: "assert"
+        target: "ccr"
+        asserts:
+          state:
+            type: "value"
+            expected: "draft"
+
+      - step: "Confirm configuration change record"
+        action: "call"
+        target: "ccr"
+        method: "action_confirm"
+        as_user: "base.user_admin"
+        context:
+          bypass_policy_check: true
+        asserts:
+          state:
+            type: "value"
+            expected: "confirm"
+
+      - step: "Invalidate cache after confirm"
+        action: "call"
+        target: "ccr"
+        method: "invalidate_cache"
+
+      - step: "Approve configuration change record"
+        action: "call"
+        target: "ccr"
+        method: "action_approve_approval"
+        as_user: "base.user_admin"
+        asserts:
+          state:
+            type: "value"
+            expected: "done"
+
+  - name: "Odoo Configuration Change Record - Cancel and Restart"
+    steps:
+      - step: "Setup - create odoo version"
+        action: "create"
+        model: "odoo_version"
+        save_as: "version2"
+        values:
+          name: "Odoo 16.0 CCR"
+          code: "16CCR"
+
+      - step: "Setup - create odoo environment"
+        action: "create"
+        model: "odoo_environment"
+        save_as: "environment2"
+        values:
+          name: "Dev CCR"
+          code: "DEVCCR"
+
+      - step: "Setup - create odoo implementation"
+        action: "create"
+        model: "odoo_implementation"
+        save_as: "implementation2"
+        as_user: "base.user_admin"
+        values:
+          domain: "dev.example.com"
+          version_id: "EVAL: registry['version2'].id"
+          environment_id: "EVAL: registry['environment2'].id"
+
+      - step: "Open implementation"
+        action: "call"
+        target: "implementation2"
+        method: "action_open"
+        as_user: "base.user_admin"
+        context:
+          bypass_policy_check: true
+
+      - step: "Invalidate cache after open"
+        action: "call"
+        target: "implementation2"
+        method: "invalidate_cache"
+
+      - step: "Create configuration change record"
+        action: "create"
+        model: "odoo_configuration_change_record"
+        save_as: "ccr2"
+        as_user: "base.user_admin"
+        values:
+          summary: "Test CCR Cancel"
+          odoo_implementation_id: "EVAL: registry['implementation2'].id"
+          partner_id: "EVAL: self.env.ref('base.user_admin').partner_id.id"
+
+      - step: "Confirm configuration change record"
+        action: "call"
+        target: "ccr2"
+        method: "action_confirm"
+        as_user: "base.user_admin"
+        context:
+          bypass_policy_check: true
+        asserts:
+          state:
+            type: "value"
+            expected: "confirm"
+
+      - step: "Invalidate cache after confirm"
+        action: "call"
+        target: "ccr2"
+        method: "invalidate_cache"
+
+      - step: "Reject approval"
+        action: "call"
+        target: "ccr2"
+        method: "action_reject_approval"
+        as_user: "base.user_admin"
+        asserts:
+          state:
+            type: "value"
+            expected: "reject"
+
+      - step: "Invalidate cache after reject"
+        action: "call"
+        target: "ccr2"
+        method: "invalidate_cache"
+
+      - step: "Restart to draft"
+        action: "call"
+        target: "ccr2"
+        method: "action_restart"
+        as_user: "base.user_admin"
+        context:
+          bypass_policy_check: true
+        asserts:
+          state:
+            type: "value"
+            expected: "draft"

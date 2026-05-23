@@ -1,0 +1,36 @@
+scenarios:
+  - name: "Odoo Implementation Project - project_id field available"
+    steps:
+      - step: "Setup - create odoo version"
+        action: "create"
+        model: "odoo_version"
+        save_as: "version"
+        values:
+          name: "Odoo 14.0 Proj"
+          code: "14PROJ"
+
+      - step: "Setup - create odoo environment"
+        action: "create"
+        model: "odoo_environment"
+        save_as: "environment"
+        values:
+          name: "Production Proj"
+          code: "PRODPROJ"
+
+      - step: "Create odoo implementation with project extension"
+        action: "create"
+        model: "odoo_implementation"
+        save_as: "implementation"
+        as_user: "base.user_admin"
+        values:
+          domain: "proj.example.com"
+          version_id: "EVAL: registry['version'].id"
+          environment_id: "EVAL: registry['environment'].id"
+
+      - step: "Assert implementation created with project_id field"
+        action: "assert"
+        target: "implementation"
+        asserts:
+          state:
+            type: "value"
+            expected: "draft"

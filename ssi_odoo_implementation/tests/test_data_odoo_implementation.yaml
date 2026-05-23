@@ -1,0 +1,139 @@
+scenarios:
+  - name: "Odoo Implementation - Full Workflow: draft to done"
+    steps:
+      - step: "Setup - create odoo version"
+        action: "create"
+        model: "odoo_version"
+        save_as: "version"
+        values:
+          name: "Odoo 14.0"
+          code: "14.0"
+
+      - step: "Setup - create odoo environment"
+        action: "create"
+        model: "odoo_environment"
+        save_as: "environment"
+        values:
+          name: "Production"
+          code: "PROD"
+
+      - step: "Create odoo implementation"
+        action: "create"
+        model: "odoo_implementation"
+        save_as: "implementation"
+        as_user: "base.user_admin"
+        values:
+          domain: "test.example.com"
+          version_id: "EVAL: registry['version'].id"
+          environment_id: "EVAL: registry['environment'].id"
+
+      - step: "Assert implementation created in draft"
+        action: "assert"
+        target: "implementation"
+        asserts:
+          state:
+            type: "value"
+            expected: "draft"
+
+      - step: "Open implementation"
+        action: "call"
+        target: "implementation"
+        method: "action_open"
+        as_user: "base.user_admin"
+        context:
+          bypass_policy_check: true
+        asserts:
+          state:
+            type: "value"
+            expected: "open"
+
+      - step: "Invalidate cache after open"
+        action: "call"
+        target: "implementation"
+        method: "invalidate_cache"
+
+      - step: "Done implementation"
+        action: "call"
+        target: "implementation"
+        method: "action_done"
+        as_user: "base.user_admin"
+        context:
+          bypass_policy_check: true
+        asserts:
+          state:
+            type: "value"
+            expected: "done"
+
+  - name: "Odoo Implementation - Restart from done to draft"
+    steps:
+      - step: "Setup - create odoo version"
+        action: "create"
+        model: "odoo_version"
+        save_as: "version2"
+        values:
+          name: "Odoo 16.0"
+          code: "16.0"
+
+      - step: "Setup - create odoo environment"
+        action: "create"
+        model: "odoo_environment"
+        save_as: "environment2"
+        values:
+          name: "Staging"
+          code: "STG"
+
+      - step: "Create odoo implementation"
+        action: "create"
+        model: "odoo_implementation"
+        save_as: "implementation2"
+        as_user: "base.user_admin"
+        values:
+          domain: "staging.example.com"
+          version_id: "EVAL: registry['version2'].id"
+          environment_id: "EVAL: registry['environment2'].id"
+
+      - step: "Open implementation"
+        action: "call"
+        target: "implementation2"
+        method: "action_open"
+        as_user: "base.user_admin"
+        context:
+          bypass_policy_check: true
+        asserts:
+          state:
+            type: "value"
+            expected: "open"
+
+      - step: "Invalidate cache after open"
+        action: "call"
+        target: "implementation2"
+        method: "invalidate_cache"
+
+      - step: "Done implementation"
+        action: "call"
+        target: "implementation2"
+        method: "action_done"
+        as_user: "base.user_admin"
+        context:
+          bypass_policy_check: true
+        asserts:
+          state:
+            type: "value"
+            expected: "done"
+
+      - step: "Invalidate cache after done"
+        action: "call"
+        target: "implementation2"
+        method: "invalidate_cache"
+
+      - step: "Restart implementation to draft"
+        action: "call"
+        target: "implementation2"
+        method: "action_restart"
+        as_user: "base.user_admin"
+        context:
+          bypass_policy_check: true
+        asserts:
+          state:
+            type: "value"
+            expected: "draft"
