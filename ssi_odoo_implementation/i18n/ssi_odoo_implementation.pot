@@ -982,6 +982,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_feature_issue_view_search
 #: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_implementation_view_form
 #: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_search
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_view_search
 msgid "Feature"
 msgstr ""
 
@@ -1286,6 +1287,11 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_change_request_view_form
 msgid "Impacted Modules"
+msgstr ""
+
+#. module: ssi_odoo_implementation
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_configuration_change_record_view_search
+msgid "Implementation"
 msgstr ""
 
 #. module: ssi_odoo_implementation
@@ -2245,6 +2251,7 @@ msgstr ""
 #. module: ssi_odoo_implementation
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_configuration_change_record__partner_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_use_case_specification__partner_id
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_configuration_change_record_view_search
 #: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_use_case_specification_view_search
 msgid "Partner"
 msgstr ""
@@ -2880,6 +2887,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_change_request__version_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_feature_issue__version_id
 #: model:ir.model.fields,field_description:ssi_odoo_implementation.field_odoo_implementation__version_id
+#: model_terms:ir.ui.view,arch_db:ssi_odoo_implementation.odoo_module_view_search
 msgid "Version"
 msgstr ""
 
