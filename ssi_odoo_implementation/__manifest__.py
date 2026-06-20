@@ -4,7 +4,7 @@
 
 {
     "name": "Odoo Implementation",
-    "version": "14.0.5.26.0",
+    "version": "14.0.5.27.0",
     "website": "https://simetri-sinergi.id",
     "author": "OpenSynergy Indonesia, PT. Simetri Sinergi Indonesia",
     "license": "AGPL-3",
