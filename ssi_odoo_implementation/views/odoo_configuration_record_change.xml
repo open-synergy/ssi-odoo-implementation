@@ -9,7 +9,25 @@
             ref="ssi_transaction_mixin.mixin_transaction_view_search"
         />
         <field name="arch" type="xml">
-            <search />
+            <data>
+                <xpath expr="//field[@name='company_id']" position="after">
+                    <field name="partner_id" widget="many2one_avatar" />
+                    <field name="odoo_implementation_id" />
+                    <field name="summary" />
+                </xpath>
+                <xpath expr="//filter[@name='grp_responsible']" position="after">
+                    <filter
+                        name="grp_partner_id"
+                        string="Partner"
+                        context="{'group_by':'partner_id'}"
+                    />
+                    <filter
+                        name="grp_odoo_implementation_id"
+                        string="Implementation"
+                        context="{'group_by':'odoo_implementation_id'}"
+                    />
+                </xpath>
+            </data>
         </field>
     </record>
 
