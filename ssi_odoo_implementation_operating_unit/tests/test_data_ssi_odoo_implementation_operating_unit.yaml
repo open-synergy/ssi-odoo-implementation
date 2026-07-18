@@ -1,0 +1,366 @@
+scenarios:
+  - name: "Odoo Implementation - Operating Unit is set"
+    steps:
+      - step: "Setup - create odoo version"
+        action: "create"
+        model: "odoo_version"
+        save_as: "version"
+        values:
+          name: "Odoo 14.0 OU"
+          code: "14OU"
+
+      - step: "Setup - create odoo environment"
+        action: "create"
+        model: "odoo_environment"
+        save_as: "environment"
+        values:
+          name: "Production OU"
+          code: "PRODOU"
+
+      - step: "Create odoo implementation with operating_unit_id"
+        action: "create"
+        model: "odoo_implementation"
+        save_as: "implementation"
+        as_user: "base.user_admin"
+        values:
+          domain: "ou-test.example.com"
+          version_id: "EVAL: registry['version'].id"
+          environment_id: "EVAL: registry['environment'].id"
+          operating_unit_id: "REF: operating_unit.main_operating_unit"
+
+      - step: "Assert implementation operating_unit_id is set"
+        action: "assert"
+        target: "implementation"
+        asserts:
+          operating_unit_id:
+            type: "value"
+            operator: "is_truthy"
+
+  - name: "Odoo Change Request - Operating Unit is set"
+    steps:
+      - step: "Setup - create odoo version"
+        action: "create"
+        model: "odoo_version"
+        save_as: "version"
+        values:
+          name: "Odoo 14.0 CR OU"
+          code: "14CROU"
+
+      - step: "Create odoo change request with operating_unit_id"
+        action: "create"
+        model: "odoo_change_request"
+        save_as: "change_request"
+        as_user: "base.user_admin"
+        values:
+          summary: "Test Change Request OU"
+          version_id: "EVAL: registry['version'].id"
+          operating_unit_id: "REF: operating_unit.main_operating_unit"
+
+      - step: "Assert change request operating_unit_id is set"
+        action: "assert"
+        target: "change_request"
+        asserts:
+          operating_unit_id:
+            type: "value"
+            operator: "is_truthy"
+
+  - name: "Odoo Feature Issue - Operating Unit is set"
+    steps:
+      - step: "Setup - create odoo version"
+        action: "create"
+        model: "odoo_version"
+        save_as: "version"
+        values:
+          name: "Odoo 14.0 FI OU"
+          code: "14FIOU"
+
+      - step: "Create odoo feature issue with operating_unit_id"
+        action: "create"
+        model: "odoo_feature_issue"
+        save_as: "feature_issue"
+        as_user: "base.user_admin"
+        values:
+          summary: "Test Feature Issue OU"
+          version_id: "EVAL: registry['version'].id"
+          operating_unit_id: "REF: operating_unit.main_operating_unit"
+
+      - step: "Assert feature issue operating_unit_id is set"
+        action: "assert"
+        target: "feature_issue"
+        asserts:
+          operating_unit_id:
+            type: "value"
+            operator: "is_truthy"
+
+  - name: "Odoo Feature Implementation - Operating Unit is set"
+    steps:
+      - step: "Setup - create odoo version"
+        action: "create"
+        model: "odoo_version"
+        save_as: "version"
+        values:
+          name: "Odoo 14.0 FIMPL OU"
+          code: "14FIMPLOU"
+
+      - step: "Setup - create odoo environment"
+        action: "create"
+        model: "odoo_environment"
+        save_as: "environment"
+        values:
+          name: "Production FIMPL OU"
+          code: "PRODFIMPLOU"
+
+      - step: "Setup - create odoo implementation"
+        action: "create"
+        model: "odoo_implementation"
+        save_as: "implementation"
+        as_user: "base.user_admin"
+        values:
+          domain: "fimpl-ou-test.example.com"
+          version_id: "EVAL: registry['version'].id"
+          environment_id: "EVAL: registry['environment'].id"
+
+      - step: "Setup - create odoo feature"
+        action: "create"
+        model: "odoo_feature"
+        save_as: "feature"
+        values:
+          name: "Test Feature FIMPL OU"
+          code: "FTFIMPLOU"
+          ttype: "transaction"
+
+      - step: "Setup - create client partner"
+        action: "create"
+        model: "res.partner"
+        save_as: "client"
+        values:
+          name: "Feature Implementation OU Test Client"
+          is_company: true
+
+      - step: "Create odoo feature implementation with operating_unit_id"
+        action: "create"
+        model: "odoo_feature_implementation"
+        save_as: "feature_implementation"
+        as_user: "base.user_admin"
+        values:
+          implementation_id: "REC: implementation.id"
+          partner_id: "REC: client.id"
+          feature_id: "REC: feature.id"
+          operating_unit_id: "REF: operating_unit.main_operating_unit"
+
+      - step: "Assert feature implementation operating_unit_id is set"
+        action: "assert"
+        target: "feature_implementation"
+        asserts:
+          operating_unit_id:
+            type: "value"
+            operator: "is_truthy"
+
+  - name: "Odoo Deployment - Operating Unit is set"
+    steps:
+      - step: "Setup - create odoo version"
+        action: "create"
+        model: "odoo_version"
+        save_as: "version"
+        values:
+          name: "Odoo 14.0 DEPL OU"
+          code: "14DEPLOU"
+
+      - step: "Setup - create odoo environment"
+        action: "create"
+        model: "odoo_environment"
+        save_as: "environment"
+        values:
+          name: "Production DEPL OU"
+          code: "PRODDEPLOU"
+
+      - step: "Setup - create odoo implementation"
+        action: "create"
+        model: "odoo_implementation"
+        save_as: "implementation"
+        as_user: "base.user_admin"
+        values:
+          domain: "depl-ou-test.example.com"
+          version_id: "EVAL: registry['version'].id"
+          environment_id: "EVAL: registry['environment'].id"
+
+      - step: "Setup - create client partner"
+        action: "create"
+        model: "res.partner"
+        save_as: "client"
+        values:
+          name: "Deployment OU Test Client"
+          is_company: true
+
+      - step: "Create odoo deployment with operating_unit_id"
+        action: "create"
+        model: "odoo_deployment"
+        save_as: "deployment"
+        as_user: "base.user_admin"
+        values:
+          partner_id: "REC: client.id"
+          implementation_id: "REC: implementation.id"
+          operating_unit_id: "REF: operating_unit.main_operating_unit"
+
+      - step: "Assert deployment operating_unit_id is set"
+        action: "assert"
+        target: "deployment"
+        asserts:
+          operating_unit_id:
+            type: "value"
+            operator: "is_truthy"
+
+  - name: "Odoo Configuration Change Record - Operating Unit is set"
+    steps:
+      - step: "Setup - create odoo version"
+        action: "create"
+        model: "odoo_version"
+        save_as: "version"
+        values:
+          name: "Odoo 14.0 CCR OU"
+          code: "14CCROU"
+
+      - step: "Setup - create odoo environment"
+        action: "create"
+        model: "odoo_environment"
+        save_as: "environment"
+        values:
+          name: "Production CCR OU"
+          code: "PRODCCROU"
+
+      - step: "Setup - create odoo implementation"
+        action: "create"
+        model: "odoo_implementation"
+        save_as: "implementation"
+        as_user: "base.user_admin"
+        values:
+          domain: "ccr-ou-test.example.com"
+          version_id: "EVAL: registry['version'].id"
+          environment_id: "EVAL: registry['environment'].id"
+
+      - step: "Create configuration change record with operating_unit_id"
+        action: "create"
+        model: "odoo_configuration_change_record"
+        save_as: "ccr"
+        as_user: "base.user_admin"
+        values:
+          summary: "Test Configuration Change OU"
+          odoo_implementation_id: "REC: implementation.id"
+          partner_id: "EVAL: self.env.ref('base.user_admin').partner_id.id"
+          operating_unit_id: "REF: operating_unit.main_operating_unit"
+
+      - step: "Assert configuration change record operating_unit_id is set"
+        action: "assert"
+        target: "ccr"
+        asserts:
+          operating_unit_id:
+            type: "value"
+            operator: "is_truthy"
+
+  - name: "Odoo Use Case Specification - Operating Unit is set"
+    steps:
+      - step: "Setup - create odoo feature"
+        action: "create"
+        model: "odoo_feature"
+        save_as: "feature"
+        values:
+          name: "Test Feature UCS OU"
+          code: "FTUCSOU"
+          ttype: "transaction"
+
+      - step: "Setup - create odoo use case"
+        action: "create"
+        model: "odoo_use_case"
+        save_as: "use_case"
+        values:
+          name: "Test Use Case UCS OU"
+          code: "UCUCSOU"
+          use_case: "<p>Test use case description OU</p>"
+
+      - step: "Create use case specification with operating_unit_id"
+        action: "create"
+        model: "odoo_use_case_specification"
+        save_as: "ucs"
+        as_user: "base.user_admin"
+        values:
+          feature_id: "REC: feature.id"
+          use_case_id: "REC: use_case.id"
+          operating_unit_id: "REF: operating_unit.main_operating_unit"
+
+      - step: "Assert use case specification operating_unit_id is set"
+        action: "assert"
+        target: "ucs"
+        asserts:
+          operating_unit_id:
+            type: "value"
+            operator: "is_truthy"
+
+  - name: "Odoo Implementation - ir.rule denies access outside assigned operating unit"
+    steps:
+      - step: "Setup - create odoo version"
+        action: "create"
+        model: "odoo_version"
+        save_as: "version"
+        values:
+          name: "Odoo 14.0 Rule OU"
+          code: "14RULEOU"
+
+      - step: "Setup - create odoo environment"
+        action: "create"
+        model: "odoo_environment"
+        save_as: "environment"
+        values:
+          name: "Production Rule OU"
+          code: "PRODRULEOU"
+
+      - step: "Create odoo implementation with operating_unit_id"
+        action: "create"
+        model: "odoo_implementation"
+        save_as: "implementation"
+        as_user: "base.user_admin"
+        values:
+          domain: "rule-ou-test.example.com"
+          version_id: "EVAL: registry['version'].id"
+          environment_id: "EVAL: registry['environment'].id"
+          operating_unit_id: "REF: operating_unit.main_operating_unit"
+
+      - step: "Create user restricted to a different operating unit"
+        action: "create"
+        model: "res.users"
+        save_as: "restricted_user"
+        values:
+          name: "Odoo Implementation OU Restricted User"
+          login: "ou_restricted_odoo_implementation@example.com"
+          groups_id:
+            [
+              [
+                6,
+                0,
+                [
+                  "REF: base.group_user",
+                  "REF: ssi_odoo_implementation.odoo_implementation_user_group",
+                  "REF:
+                  ssi_odoo_implementation_operating_unit.odoo_implementation_ou_group",
+                ],
+              ],
+            ]
+          assigned_operating_unit_ids: [[6, 0, []]]
+
+      - step: "Restricted user cannot read the record outside their operating unit"
+        action: "call"
+        target: "implementation"
+        method: "read"
+        as_user: "restricted_user"
+        args:
+          - ["operating_unit_id"]
+        expect_error:
+          type: "AccessError"
+
+      - step: "Restricted user cannot write the record outside their operating unit"
+        action: "write"
+        target: "implementation"
+        as_user: "restricted_user"
+        expect_error:
+          type: "AccessError"
+        values:
+          domain: "rule-ou-test-changed.example.com"
