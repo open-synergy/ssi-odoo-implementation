@@ -22,6 +22,7 @@ addon | version | maintainers | summary
 [ssi_odoo_implementation_data_requirement](ssi_odoo_implementation_data_requirement/) | 14.0.1.2.0 |  | Odoo Implementation - Data Requirement Integration
 [ssi_odoo_implementation_git](ssi_odoo_implementation_git/) | 14.0.2.2.0 |  | Odoo Implementation - Git Integration
 [ssi_odoo_implementation_infrastructure](ssi_odoo_implementation_infrastructure/) | 14.0.2.2.0 |  | Odoo Implementation - Infrastructure Integration
+[ssi_odoo_implementation_operating_unit](ssi_odoo_implementation_operating_unit/) | 14.0.1.0.0 |  | Odoo Implementation + Operating Unit
 [ssi_odoo_implementation_project](ssi_odoo_implementation_project/) | 14.0.1.7.0 |  | Odoo Implementation - Project Integration
 [ssi_odoo_implementation_work_log](ssi_odoo_implementation_work_log/) | 14.0.1.7.0 |  | Odoo Implementation - Work Log Integration
 
